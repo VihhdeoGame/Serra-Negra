@@ -1,0 +1,15 @@
+{
+    "dialogs":
+    [
+        {
+            "id":0,
+            "name":"Zia",
+            "sentenses":"Quem é você?"
+        },
+        {
+            "id":1,
+            "name":"Outra Zia",
+            "sentenses":"Eu sou você só que melhor>Agora trema de medo da minha superioridade!!!>HAHAHAHAHA!"
+        }
+    ]
+}
