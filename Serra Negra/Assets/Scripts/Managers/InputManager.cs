@@ -35,4 +35,11 @@ public class InputManager : MonoBehaviour
     {
         return playerInputActions.Player.Look.ReadValue<Vector2>();
     }
+    public bool GetPlayerRight()
+    {
+        return playerInputActions.Player.MoveRight.triggered;
+    }public bool GetPlayerLeft()
+    {
+        return playerInputActions.Player.MoveLeft.triggered;
+    }
 }

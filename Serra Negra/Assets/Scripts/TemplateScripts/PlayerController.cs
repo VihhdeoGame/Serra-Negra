@@ -1,53 +1,86 @@
 using UnityEngine;
 using Cinemachine;
 
-[RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
-    private InputManager playerInput;
-    private CharacterController controller;
-    public Transform movePoint;
     [SerializeField]
-    private float playerSpeed;
-    [SerializeField]
-    private float gridSize;
-    [SerializeField]
-    private CinemachineVirtualCamera vCam;
+    bool smoothTransition = false;
+    float transitionSpeed = 10f;
+    float transitionRotationSpeed = 500f;
 
-    private void Start()
+    InputManager playerInput;
+    Vector3 targetGridPos;
+    Vector3 prevTargetGridPos;
+    Vector3 targetRotation;
+    Vector2 playerMove;
+    bool AtRest
     {
-        movePoint.parent = null;
-        controller = GetComponent<CharacterController>();
+        get
+        {
+            if((Vector3.Distance(transform.position, targetGridPos) < 0.05f) &&
+               (Vector3.Distance(transform.eulerAngles,targetRotation) < 0.05f))
+                
+                return true;
+            else
+
+                return false;
+        }
+    }
+        private void Start()
+    {
         playerInput = InputManager.PlayerInput;
+        targetGridPos = Vector3Int.RoundToInt(transform.position);
     }
 
     void Update()
     {
-        Move(playerInput.GetPlayerMovement());
+        playerMove = playerInput.GetPlayerMovement();
+        if(playerMove.y > 0.1f){MoveFoward();}
+        if(playerMove.y < -0.1f){MoveBackward();}
+        if(playerMove.x > 0.1f){RotateRight();}
+        if(playerMove.x < -0.1f){RotateLeft();}
+        if(playerInput.GetPlayerRight()){MoveRight();}
+        if(playerInput.GetPlayerLeft()){MoveLeft();}
+    }
+    private void FixedUpdate()
+    {
+        MovePlayer();
     }
 
-    public void RotateSelf(Vector2 _movement)
+    void MovePlayer()
     {
-        if(transform.rotation != movePoint.rotation)
+        if(true)
         {
-            transform.rotation = Quaternion.Lerp(transform.rotation, movePoint.rotation, Time.deltaTime * playerSpeed);
+            prevTargetGridPos = targetGridPos;
+            Vector3 TargetPosition = targetGridPos;
+            
+            if(targetRotation.y > 270f && targetRotation.y < 361f) targetRotation.y = 0f;
+            if(targetRotation.y < 0f) targetRotation.y = 270f;
+
+            if(!smoothTransition)
+            {
+                transform.position = TargetPosition;
+                transform.rotation = Quaternion.Euler(targetRotation);
+            }
+            else
+            {
+                transform.position = Vector3.MoveTowards(transform.position,targetGridPos, Time.fixedDeltaTime * transitionSpeed);
+                transform.rotation = Quaternion.RotateTowards(transform.rotation,Quaternion.Euler(targetRotation), Time.fixedDeltaTime * transitionRotationSpeed); 
+            }
+
         }
         else
-            if(Mathf.Abs(_movement.x)>0.1f)
-            {
-                movePoint.rotation = Quaternion.Euler(0,movePoint.rotation.y + (_movement.normalized.x*90),0);
-            }
-    }
-    public void Move(Vector2 _movement)
-    {
-        Vector3 offset = movePoint.position - transform.position;
-        if(offset.magnitude > .1f)
         {
-            offset = offset.normalized * playerSpeed;
-            controller.Move(offset * Time.deltaTime);
+            targetGridPos = prevTargetGridPos;
         }
-        else 
-            if(Mathf.Abs(_movement.y)>0.1f)
-                movePoint.position += new Vector3(0,0,_movement.normalized.y*gridSize);
-    }    
+
+    }
+
+    void RotateLeft() {if (AtRest) targetRotation -= Vector3.up * 90f;}
+    void RotateRight() {if (AtRest) targetRotation += Vector3.up * 90f;}
+    void MoveFoward() {if (AtRest) targetGridPos += transform.forward;}
+    void MoveBackward() {if (AtRest) targetGridPos -= transform.forward;}
+    void MoveLeft() {if (AtRest) targetGridPos -= transform.right;}
+    void MoveRight() {if (AtRest) targetGridPos += transform.right;}
+
 }
