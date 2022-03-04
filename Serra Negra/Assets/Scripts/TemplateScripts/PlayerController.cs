@@ -1,12 +1,13 @@
 using UnityEngine;
-using Cinemachine;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
     bool smoothTransition = false;
+    [SerializeField]
     float transitionSpeed = 10f;
     float transitionRotationSpeed = 500f;
+    float gridSize = 3f;
 
     InputManager playerInput;
     Vector3 targetGridPos;
@@ -29,7 +30,8 @@ public class PlayerController : MonoBehaviour
         private void Start()
     {
         playerInput = InputManager.PlayerInput;
-        targetGridPos = Vector3Int.RoundToInt(transform.position);
+        targetGridPos = transform.position;
+        prevTargetGridPos = targetGridPos;
     }
 
     void Update()
@@ -49,7 +51,7 @@ public class PlayerController : MonoBehaviour
 
     void MovePlayer()
     {
-        if(true)
+        if(!Physics.Linecast (prevTargetGridPos, targetGridPos))
         {
             prevTargetGridPos = targetGridPos;
             Vector3 TargetPosition = targetGridPos;
@@ -78,9 +80,9 @@ public class PlayerController : MonoBehaviour
 
     void RotateLeft() {if (AtRest) targetRotation -= Vector3.up * 90f;}
     void RotateRight() {if (AtRest) targetRotation += Vector3.up * 90f;}
-    void MoveFoward() {if (AtRest) targetGridPos += transform.forward;}
-    void MoveBackward() {if (AtRest) targetGridPos -= transform.forward;}
-    void MoveLeft() {if (AtRest) targetGridPos -= transform.right;}
-    void MoveRight() {if (AtRest) targetGridPos += transform.right;}
+    void MoveFoward() {if (AtRest) targetGridPos += transform.forward * gridSize;}
+    void MoveBackward() {if (AtRest) targetGridPos -= transform.forward * gridSize;}
+    void MoveLeft() {if (AtRest) targetGridPos -= transform.right * gridSize;}
+    void MoveRight() {if (AtRest) targetGridPos += transform.right * gridSize;}
 
 }
