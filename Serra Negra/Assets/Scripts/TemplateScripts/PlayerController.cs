@@ -75,13 +75,15 @@ public class PlayerController : MonoBehaviour
 
             if(!smoothTransition)
             {
-                RecenterCamera();
+                povCam.rotation = Quaternion.Euler(0,0,0);
+                yaw = pitch = 0f;
                 transform.position = TargetPosition;
                 transform.rotation = Quaternion.Euler(targetRotation);
             }
             else
             {
-                RecenterCamera();
+                povCam.localRotation = Quaternion.Slerp(povCam.localRotation, Quaternion.Euler(0,0,0), Time.fixedDeltaTime * mouseSpeed);
+                yaw = pitch = 0f;
                 transform.position = Vector3.MoveTowards(transform.position,targetGridPos, Time.fixedDeltaTime * transitionSpeed);
                 transform.rotation = Quaternion.RotateTowards(transform.rotation,Quaternion.Euler(targetRotation), Time.fixedDeltaTime * transitionRotationSpeed); 
             }
@@ -112,26 +114,35 @@ public class PlayerController : MonoBehaviour
     }
     void UpdateCamera()
     {
+        Debug.Log("update camera");
         povCam.localRotation = Quaternion.Euler(pitch* Time.fixedDeltaTime * mouseSpeed,yaw * Time.fixedDeltaTime * mouseSpeed,0);
         if(yaw != 0 || pitch != 0)
         {
-            if(offCenterPosition.x == yaw && offCenterPosition.y == pitch)
+            if(offCenterPosition.y == yaw && offCenterPosition.x == pitch)
             {
                 offcenterTimer += Time.deltaTime;
-                if(offcenterTimer > 1.5) RecenterCamera();
+                if(offcenterTimer > 1.5)
+                    RecenterCamera();
+                 
             }
             else
             {
                 offcenterTimer = 0;
-                offCenterPosition = new Vector2(yaw,pitch); 
+                offCenterPosition = new Vector2(pitch,yaw); 
             }
         }
 
     }
     void RecenterCamera()
     {
-        povCam.localRotation = Quaternion.Lerp(povCam.localRotation, Quaternion.Euler(0,0,0), Time.deltaTime * mouseSpeed);
-        yaw = 0;
-        pitch = 0;
+        Debug.Log("rodou "+ povCam.localRotation.ToString());
+        Vector2 recenterPosition = Vector2.Lerp(offCenterPosition, Vector2.zero, Time.fixedDeltaTime * mouseSpeed);
+        RecenterCursor(recenterPosition);
+    }
+    void RecenterCursor(Vector2 _recenterPosition)
+    {
+        yaw = _recenterPosition.y;
+        pitch = _recenterPosition.x;
+        offCenterPosition = new Vector2(pitch,yaw);
     }
 }
