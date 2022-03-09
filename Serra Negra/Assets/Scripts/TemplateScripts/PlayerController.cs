@@ -114,7 +114,6 @@ public class PlayerController : MonoBehaviour
     }
     void UpdateCamera()
     {
-        Debug.Log("update camera");
         povCam.localRotation = Quaternion.Euler(pitch* Time.fixedDeltaTime * mouseSpeed,yaw * Time.fixedDeltaTime * mouseSpeed,0);
         if(yaw != 0 || pitch != 0)
         {
@@ -135,7 +134,6 @@ public class PlayerController : MonoBehaviour
     }
     void RecenterCamera()
     {
-        Debug.Log("rodou "+ povCam.localRotation.ToString());
         Vector2 recenterPosition = Vector2.Lerp(offCenterPosition, Vector2.zero, Time.fixedDeltaTime * mouseSpeed);
         RecenterCursor(recenterPosition);
     }
