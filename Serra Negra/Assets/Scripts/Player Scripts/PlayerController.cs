@@ -59,6 +59,19 @@ public class PlayerController : MonoBehaviour
             if(playerInput.GetPlayerRight()){MoveRight();}
             if(playerInput.GetPlayerLeft()){MoveLeft();}
             if(Mathf.Abs(cameraMove.x)>0.1 || Mathf.Abs(cameraMove.y)>0.1){RotateCamera();}
+
+            if(playerInput.GetInteraction())
+            {
+                RaycastHit hit;
+                if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, gridSize))
+                {
+                    TriggerDialog dialogCheck = hit.collider.gameObject.GetComponent<TriggerDialog>(); 
+                    if(dialogCheck != null)
+                    {
+                        dialogCheck.CheckDialog();
+                    }
+                }
+            }
         }
     }
     private void FixedUpdate()

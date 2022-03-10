@@ -7,8 +7,6 @@ using UnityEngine.UI;
 public class TriggerDialog : MonoBehaviour
 {
     [SerializeField]
-    Camera cam;
-    [SerializeField]
     private GameObject crosshair;
     [SerializeField]
     private GameObject display;
@@ -35,24 +33,6 @@ public class TriggerDialog : MonoBehaviour
         playerInput = InputManager.PlayerInput;
         speakers = Resources.LoadAll("Speakers", typeof(Sprite));
     }
-    private void Update() 
-    {
-        if(playerInput.GetInteraction())
-        {
-            RaycastHit hit;
-            if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, gridSize))
-            {
-                if(!InventoryManager.Inventory.GetInventory().items.ContainsKey(itemKey))
-                if(!display.activeSelf)
-                {
-                    display.SetActive(true);
-                    crosshair.SetActive(false);
-                    DisplayDialog(dialog.text);
-                }    
-            }
-        }
-    }
-    
     private void DisplayDialog(string _dialog)
     {
         dialogParse = JsonUtility.FromJson<Dialogs>(_dialog);
@@ -76,7 +56,7 @@ public class TriggerDialog : MonoBehaviour
                     textBox.text += sentenses[k][i];
                     yield return null;
                 }
-                yield return new WaitUntil(()=>Input.GetMouseButtonDown(0));
+                yield return new WaitUntil(()=>playerInput.GetInteraction());
             }
         }
         display.SetActive(false);
@@ -86,6 +66,17 @@ public class TriggerDialog : MonoBehaviour
             GiveItem(itemKey,item);
         }
     }
+
+    public void CheckDialog()
+    {
+        if(!InventoryManager.Inventory.GetInventory().items.ContainsKey(itemKey))
+            if(!display.activeSelf)
+            {
+                display.SetActive(true);
+                crosshair.SetActive(false);
+                DisplayDialog(dialog.text);
+            }
+    } 
 
     void GiveItem(int key,Item _item)
     {
