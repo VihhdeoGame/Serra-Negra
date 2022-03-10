@@ -17,6 +17,8 @@ public class InputManager : MonoBehaviour
         {
             playerInput = this;
         }
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         playerInputActions = new PlayerInputActions();        
     }
     private void OnEnable()
@@ -38,8 +40,14 @@ public class InputManager : MonoBehaviour
     public bool GetPlayerRight()
     {
         return playerInputActions.Player.MoveRight.triggered;
-    }public bool GetPlayerLeft()
+    }
+    public bool GetPlayerLeft()
     {
         return playerInputActions.Player.MoveLeft.triggered;
     }
+    public bool GetInteraction()
+    {
+        return playerInputActions.Player.Interact.triggered;
+    }
+
 }
