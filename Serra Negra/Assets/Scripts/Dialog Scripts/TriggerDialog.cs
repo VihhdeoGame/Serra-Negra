@@ -27,7 +27,6 @@ public class TriggerDialog : MonoBehaviour
     [SerializeField]
     private int itemKey;
     InputManager playerInput;
-    float gridSize = 3f;
     private void Start() 
     {
         playerInput = InputManager.PlayerInput;
