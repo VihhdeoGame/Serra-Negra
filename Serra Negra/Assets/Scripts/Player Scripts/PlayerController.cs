@@ -23,7 +23,8 @@ public class PlayerController : MonoBehaviour
     Vector2 offCenterPosition;
     [SerializeField]
     Transform povCam;
-
+    [SerializeField]
+    GameObject UI;
     bool AtRest
     {
         get
@@ -47,26 +48,34 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        playerMove = playerInput.GetPlayerMovement();
-        cameraMove = playerInput.MouseDelta();
-        if(playerMove.y > 0.1f){MoveFoward();}
-        if(playerMove.y < -0.1f){MoveBackward();}
-        if(playerMove.x > 0.1f){RotateRight();}
-        if(playerMove.x < -0.1f){RotateLeft();}
-        if(playerInput.GetPlayerRight()){MoveRight();}
-        if(playerInput.GetPlayerLeft()){MoveLeft();}
-        if(Mathf.Abs(cameraMove.x)>0.1 || Mathf.Abs(cameraMove.y)>0.1){RotateCamera();}
+        if(!UI.activeSelf)
+        {
+            playerMove = playerInput.GetPlayerMovement();
+            cameraMove = playerInput.MouseDelta();
+            if(playerMove.y > 0.1f){MoveFoward();}
+            if(playerMove.y < -0.1f){MoveBackward();}
+            if(playerMove.x > 0.1f){RotateRight();}
+            if(playerMove.x < -0.1f){RotateLeft();}
+            if(playerInput.GetPlayerRight()){MoveRight();}
+            if(playerInput.GetPlayerLeft()){MoveLeft();}
+            if(Mathf.Abs(cameraMove.x)>0.1 || Mathf.Abs(cameraMove.y)>0.1){RotateCamera();}
+        }
     }
     private void FixedUpdate()
     {
         if(!AtRest) MovePlayer();
-        if(AtRest) UpdateCamera();
+        if(AtRest && !UI.activeSelf) UpdateCamera();
     }
 
     void MovePlayer()
     {
-        if(!Physics.Linecast (prevTargetGridPos, targetGridPos))
-        {
+        RaycastHit hit;
+        if(Physics.Linecast (prevTargetGridPos, targetGridPos,out hit) && hit.transform.tag == "Wall")
+        {            
+            targetGridPos = prevTargetGridPos;
+        }
+        else
+        {   
             prevTargetGridPos = targetGridPos;
             Vector3 TargetPosition = targetGridPos;
             
@@ -87,11 +96,6 @@ public class PlayerController : MonoBehaviour
                 transform.position = Vector3.MoveTowards(transform.position,targetGridPos, Time.fixedDeltaTime * transitionSpeed);
                 transform.rotation = Quaternion.RotateTowards(transform.rotation,Quaternion.Euler(targetRotation), Time.fixedDeltaTime * transitionRotationSpeed); 
             }
-
-        }
-        else
-        {
-            targetGridPos = prevTargetGridPos;
         }
 
     }
@@ -107,9 +111,9 @@ public class PlayerController : MonoBehaviour
         if (AtRest)
         {
             yaw += cameraMove.x;
-            yaw = Mathf.Clamp(yaw,-75,75);
+            yaw = Mathf.Clamp(yaw,-270,270);
             pitch -= cameraMove.y;
-            pitch = Mathf.Clamp(pitch,-75,75); 
+            pitch = Mathf.Clamp(pitch,-270,270); 
         }
     }
     void UpdateCamera()

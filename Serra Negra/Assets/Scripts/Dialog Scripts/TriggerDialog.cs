@@ -4,8 +4,12 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class OpenUI : MonoBehaviour
+public class TriggerDialog : MonoBehaviour
 {
+    [SerializeField]
+    Camera cam;
+    [SerializeField]
+    private GameObject crosshair;
     [SerializeField]
     private GameObject display;
     [SerializeField]
@@ -18,21 +22,38 @@ public class OpenUI : MonoBehaviour
     private Image speakerSprite;
     private Dialogs dialogParse;
     private Object[] speakers;
-    
+    [SerializeField]
+    private Item item;
+    [SerializeField]
+    private bool containsItem;
+    [SerializeField]
+    private int itemKey;
+    InputManager playerInput;
+    float gridSize = 3f;
     private void Start() 
     {
+        playerInput = InputManager.PlayerInput;
         speakers = Resources.LoadAll("Speakers", typeof(Sprite));
     }
-    private void OnMouseDown()
+    private void Update() 
     {
-        if(!display.activeSelf)
+        if(playerInput.GetInteraction())
         {
-            display.SetActive(true);
-            TriggerDialog(dialog.text);
-        }    
+            RaycastHit hit;
+            if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, gridSize))
+            {
+                if(!InventoryManager.Inventory.GetInventory().items.ContainsKey(itemKey))
+                if(!display.activeSelf)
+                {
+                    display.SetActive(true);
+                    crosshair.SetActive(false);
+                    DisplayDialog(dialog.text);
+                }    
+            }
+        }
     }
     
-    private void TriggerDialog(string _dialog)
+    private void DisplayDialog(string _dialog)
     {
         dialogParse = JsonUtility.FromJson<Dialogs>(_dialog);
         StopAllCoroutines();
@@ -59,5 +80,17 @@ public class OpenUI : MonoBehaviour
             }
         }
         display.SetActive(false);
+        crosshair.SetActive(true);
+        if(containsItem)
+        {
+            GiveItem(itemKey,item);
+        }
+    }
+
+    void GiveItem(int key,Item _item)
+    {
+        InventoryManager.Inventory.AddItemtoInventory(key,_item.amount, _item.name,_item.isStorable, _item.description,_item.sprite);
+        if(_item.isStorable)
+            Destroy(this.gameObject); 
     }
 }
