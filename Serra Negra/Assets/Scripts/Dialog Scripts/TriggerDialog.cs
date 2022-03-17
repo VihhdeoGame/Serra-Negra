@@ -11,7 +11,7 @@ public class TriggerDialog : MonoBehaviour
     [SerializeField]
     private GameObject display;
     [SerializeField]
-    private TextAsset dialog;
+    private TextAsset[] dialogs;
     [SerializeField]
     private TextMeshProUGUI textBox;
     [SerializeField]
@@ -27,6 +27,12 @@ public class TriggerDialog : MonoBehaviour
     [SerializeField]
     private int itemKey;
     InputManager playerInput;
+    
+    [SerializeField]
+    private int requiredItemKey;
+    [SerializeField]
+    private int requiredAmount;
+    public bool requiredCheck;
     private void Start() 
     {
         playerInput = InputManager.PlayerInput;
@@ -64,17 +70,25 @@ public class TriggerDialog : MonoBehaviour
         {
             GiveItem(itemKey,item);
         }
+        if(CheckFlag())
+        {
+            OpenDoor();
+        }
     }
 
-    public void CheckDialog()
+    public void CheckDialog(int _id)
     {
         if(!InventoryManager.Inventory.GetInventory().items.ContainsKey(itemKey))
+        {
             if(!display.activeSelf)
             {
                 display.SetActive(true);
                 crosshair.SetActive(false);
-                DisplayDialog(dialog.text);
+                DisplayDialog(dialogs[_id].text);
             }
+        }
+        else if(InventoryManager.Inventory.GetInventory().items.ContainsKey(itemKey) && item.isStorable)
+            GiveItem(itemKey,item);
     } 
 
     void GiveItem(int key,Item _item)
@@ -82,5 +96,31 @@ public class TriggerDialog : MonoBehaviour
         InventoryManager.Inventory.AddItemtoInventory(key,_item.amount, _item.name,_item.isStorable, _item.description,_item.sprite);
         if(_item.isStorable)
             Destroy(this.gameObject); 
+    }
+    public bool CheckFlag()
+    {
+        if(InventoryManager.Inventory.GetInventory().items.ContainsKey(requiredItemKey))
+        {
+            Item _item = InventoryManager.Inventory.GetInventory().items[requiredItemKey];
+            if(_item.amount >= requiredAmount)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            return false;
+        }
+    }
+    
+    public void OpenDoor()
+    {
+        Item _item = InventoryManager.Inventory.GetInventory().items[requiredItemKey];
+        _item.amount -= requiredAmount;
+        Destroy(this.gameObject);
     }
 }

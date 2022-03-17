@@ -13,7 +13,7 @@ public class TriggerCheck : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            dialog.CheckDialog();
+            dialog.CheckDialog(0);
         }        
     }
 }

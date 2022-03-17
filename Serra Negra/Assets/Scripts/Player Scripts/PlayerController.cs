@@ -68,7 +68,21 @@ public class PlayerController : MonoBehaviour
                     TriggerDialog dialogCheck = hit.collider.gameObject.GetComponent<TriggerDialog>(); 
                     if(dialogCheck != null)
                     {
-                        dialogCheck.CheckDialog();
+                        if(dialogCheck.requiredCheck)
+                        {
+                            if(dialogCheck.CheckFlag())
+                            {
+                                dialogCheck.CheckDialog(1);
+                            }
+                            else
+                            {
+                                dialogCheck.CheckDialog(0);
+                            }
+                        }
+                        else
+                        {
+                            dialogCheck.CheckDialog(0);                            
+                        }
                     }
                 }
             }
