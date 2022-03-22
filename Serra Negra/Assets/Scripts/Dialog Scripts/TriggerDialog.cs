@@ -11,7 +11,9 @@ public class TriggerDialog : MonoBehaviour
     [SerializeField]
     private GameObject display;
     [SerializeField]
-    private TextAsset[] dialogs;
+    private TextAsset[] dialogs_PT;
+    [SerializeField]
+    private TextAsset[] dialogs_EN;
     [SerializeField]
     private TextMeshProUGUI textBox;
     [SerializeField]
@@ -84,7 +86,8 @@ public class TriggerDialog : MonoBehaviour
             {
                 display.SetActive(true);
                 crosshair.SetActive(false);
-                DisplayDialog(dialogs[_id].text);
+                if(GameManager.GameSettings.GameLanguage == GameLanguageType.PT_BR){DisplayDialog(dialogs_PT[_id].text);}
+                if(GameManager.GameSettings.GameLanguage == GameLanguageType.EN_US){DisplayDialog(dialogs_EN[_id].text);}
             }
         }
         else if(InventoryManager.Inventory.GetInventory().items.ContainsKey(itemKey) && item.isStorable)
@@ -102,14 +105,7 @@ public class TriggerDialog : MonoBehaviour
         if(InventoryManager.Inventory.GetInventory().items.ContainsKey(requiredItemKey))
         {
             Item _item = InventoryManager.Inventory.GetInventory().items[requiredItemKey];
-            if(_item.amount >= requiredAmount)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return(_item.amount >= requiredAmount);
         }
         else
         {

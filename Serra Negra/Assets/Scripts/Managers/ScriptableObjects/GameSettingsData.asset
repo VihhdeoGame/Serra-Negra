@@ -2,14 +2,14 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
-  m_ObjectHideFlags: 32
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 912bbff2434dd5c4898f2f20d7362131, type: 3}
-  m_Name: GameManagerData
+  m_Script: {fileID: 11500000, guid: c40ad4f5f96ba724c8006f1d2010ca96, type: 3}
+  m_Name: GameSettingsData
   m_EditorClassIdentifier: 
-  gameSettings: {fileID: 11400000, guid: f46d63a8b7dbf9447843edd1168c427c, type: 2}
+  gameLanguage: 0

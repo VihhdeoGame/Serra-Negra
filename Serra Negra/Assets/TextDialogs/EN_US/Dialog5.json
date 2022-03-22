@@ -1,0 +1,10 @@
+{
+    "dialogs":
+    [
+        {
+            "id":1,
+            "name":"Zia",
+            "sentenses":"I can open this door and leave now!"
+        }
+    ]
+}
