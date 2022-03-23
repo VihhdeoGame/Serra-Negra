@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: GameManagerData
   m_EditorClassIdentifier: 
   gameSettings: {fileID: 11400000, guid: f46d63a8b7dbf9447843edd1168c427c, type: 2}
+  textSettings: {fileID: 11400000, guid: ac9f777b18a5b394e961c9d761f28772, type: 2}
+  audioSettings: {fileID: 11400000, guid: 88f9aab4035c2c74ba62844cb1cbb41b, type: 2}

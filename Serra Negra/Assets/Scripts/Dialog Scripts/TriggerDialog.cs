@@ -61,7 +61,7 @@ public class TriggerDialog : MonoBehaviour
                 for(int i = 0; i < sentenses[k].Length;i++)
                 {
                     textBox.text += sentenses[k][i];
-                    yield return null;
+                    yield return new WaitForSeconds(GameManager.TextSettings.Speed);
                 }
                 yield return new WaitUntil(()=>playerInput.GetInteraction());
             }
