@@ -2,7 +2,9 @@
     "dialogs":
     [
         {
-            "id":1,
+            "spriteId":1,
+            "musicIds":[0],
+            "sfxIds":[0],
             "name":"Zia",
             "sentenses":"Oh my god, a cube!>I can open doors with it."
         }

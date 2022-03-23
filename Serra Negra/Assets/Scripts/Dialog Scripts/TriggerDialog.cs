@@ -22,6 +22,13 @@ public class TriggerDialog : MonoBehaviour
     private Image speakerSprite;
     private Dialogs dialogParse;
     private Object[] speakers;
+    private Object[] sfxs;
+    private Object[] musics;
+
+    [SerializeField]
+    private AudioSource musicPlayer;
+    [SerializeField]
+    private AudioSource sfxPlayer;
     [SerializeField]
     private Item item;
     [SerializeField]
@@ -39,6 +46,8 @@ public class TriggerDialog : MonoBehaviour
     {
         playerInput = InputManager.PlayerInput;
         speakers = Resources.LoadAll("Speakers", typeof(Sprite));
+        sfxs = Resources.LoadAll("Audio/SFX", typeof(AudioClip));
+        musics = Resources.LoadAll("Audio/Music", typeof(AudioClip));
     }
     private void DisplayDialog(string _dialog)
     {
@@ -53,13 +62,29 @@ public class TriggerDialog : MonoBehaviour
         {
             nameBox.text = "";
             string[]sentenses = _dialog[j].sentenses.Split('>');
-            speakerSprite.sprite = (Sprite)speakers[_dialog[j].id];
+            speakerSprite.sprite = (Sprite)speakers[_dialog[j].spriteId];
             nameBox.text = _dialog[j].name;
+            int musicIndex = 0;
+            int sfxIndex = 0;
             for (int k = 0; k < sentenses.Length; k++)
             {
                 textBox.text = "";
                 for(int i = 0; i < sentenses[k].Length;i++)
                 {
+                    if(sentenses[k][i].Equals('#'))
+                    {
+                        musicPlayer.clip = (AudioClip)musics[_dialog[j].musicIds[musicIndex]];
+                        musicPlayer.Play();
+                        musicIndex++;
+                        continue;
+                    }
+                    if(sentenses[k][i].Equals('*'))
+                    {
+                        sfxPlayer.clip = (AudioClip)sfxs[_dialog[j].sfxIds[sfxIndex]];
+                        sfxPlayer.Play();
+                        sfxIndex++;
+                        continue;
+                    }
                     textBox.text += sentenses[k][i];
                     yield return new WaitForSeconds(GameManager.TextSettings.Speed);
                 }

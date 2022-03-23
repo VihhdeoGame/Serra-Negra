@@ -2,7 +2,9 @@
     "dialogs":
     [
         {
-            "id":1,
+            "spriteId":1,
+            "musicIds":[],
+            "sfxIds":[],
             "name":"Zia",
             "sentenses":"Já Chegamos?>E Agora, já chegamos?"
         }
