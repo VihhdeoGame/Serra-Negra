@@ -3,52 +3,76 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public class TriggerDialog : MonoBehaviour
 {
     [SerializeField]
-    private GameObject crosshair;
-    [SerializeField]
-    private GameObject display;
+    private int itemKey;
+    
     [SerializeField]
     private TextAsset[] dialogs_PT;
     [SerializeField]
     private TextAsset[] dialogs_EN;
+    
+    
     [SerializeField]
-    private TextMeshProUGUI textBox;
+    private bool containsItem;
     [SerializeField]
-    private TextMeshProUGUI nameBox;
-    [SerializeField]
-    private Image speakerSprite;
+    private Item item;
+
+    public bool requiredCheck;
+    private int requiredItemKey;
+    private int requiredAmount;
+
+#if UNITY_EDITOR
+    [CustomEditor(typeof(TriggerDialog))]
+    public class TriggerDialogEditor : Editor {
+        public override void OnInspectorGUI()
+        {
+            base.OnInspectorGUI();
+            TriggerDialog triggerDialog = (TriggerDialog)target;
+            if(triggerDialog.containsItem)
+            {
+
+            }
+            if(triggerDialog.requiredCheck)
+            {
+                EditorGUILayout.BeginHorizontal();
+                EditorGUILayout.LabelField("Required Item ID",GUILayout.MaxWidth(100));
+                triggerDialog.requiredItemKey = EditorGUILayout.IntField(triggerDialog.requiredItemKey);
+                EditorGUILayout.LabelField("Required Item Amount",GUILayout.MaxWidth(130));
+                triggerDialog.requiredAmount = EditorGUILayout.IntField(triggerDialog.requiredAmount);
+                EditorGUILayout.EndHorizontal();
+            }       
+        }
+    }
+#endif
+    
+
+    private GameObject crosshair;
     private Dialogs dialogParse;
     private Object[] speakers;
     private Object[] sfxs;
     private Object[] musics;
-
-    [SerializeField]
     private AudioSource musicPlayer;
-    [SerializeField]
     private AudioSource sfxPlayer;
-    [SerializeField]
-    private Item item;
-    [SerializeField]
-    private bool containsItem;
-    [SerializeField]
-    private int itemKey;
     InputManager playerInput;
-    
-    [SerializeField]
-    private int requiredItemKey;
-    [SerializeField]
-    private int requiredAmount;
-    public bool requiredCheck;
+    DialogCanvas dialogCanvas;
     private void Start() 
     {
+        crosshair = GameObject.FindGameObjectWithTag("Crosshair");
+        sfxPlayer = FindObjectOfType<PlayerController>().SfxPlayer;
+        musicPlayer = FindObjectOfType<MusicManager>().GetComponent<AudioSource>();
+        dialogCanvas = FindObjectOfType<DialogCanvas>(true);
         playerInput = InputManager.PlayerInput;
         speakers = Resources.LoadAll("Speakers", typeof(Sprite));
         sfxs = Resources.LoadAll("Audio/SFX", typeof(AudioClip));
         musics = Resources.LoadAll("Audio/Music", typeof(AudioClip));
     }
+
     private void DisplayDialog(string _dialog)
     {
         dialogParse = JsonUtility.FromJson<Dialogs>(_dialog);
@@ -60,15 +84,15 @@ public class TriggerDialog : MonoBehaviour
     {
         for (int j = 0; j < _dialog.Length; j++)
         {
-            nameBox.text = "";
+            dialogCanvas.NameBox.text = "";
             string[]sentenses = _dialog[j].sentenses.Split('>');
-            speakerSprite.sprite = (Sprite)speakers[_dialog[j].spriteId];
-            nameBox.text = _dialog[j].name;
+            dialogCanvas.SpeakerSprite.sprite = (Sprite)speakers[_dialog[j].spriteId];
+            dialogCanvas.NameBox.text = _dialog[j].name;
             int musicIndex = 0;
             int sfxIndex = 0;
             for (int k = 0; k < sentenses.Length; k++)
             {
-                textBox.text = "";
+                dialogCanvas.TextBox.text = "";
                 for(int i = 0; i < sentenses[k].Length;i++)
                 {
                     if(sentenses[k][i].Equals('#'))
@@ -85,13 +109,13 @@ public class TriggerDialog : MonoBehaviour
                         sfxIndex++;
                         continue;
                     }
-                    textBox.text += sentenses[k][i];
+                    dialogCanvas.TextBox.text += sentenses[k][i];
                     yield return new WaitForSeconds(GameManager.TextSettings.Speed);
                 }
                 yield return new WaitUntil(()=>playerInput.GetInteraction());
             }
         }
-        display.SetActive(false);
+        dialogCanvas.Canvas.SetActive(false);
         crosshair.SetActive(true);
         if(containsItem)
         {
@@ -107,9 +131,9 @@ public class TriggerDialog : MonoBehaviour
     {
         if(!InventoryManager.Inventory.GetInventory().items.ContainsKey(itemKey))
         {
-            if(!display.activeSelf)
+            if(!dialogCanvas.Canvas.activeSelf)
             {
-                display.SetActive(true);
+                dialogCanvas.Canvas.SetActive(true);
                 crosshair.SetActive(false);
                 if(GameManager.GameSettings.GameLanguage == GameLanguageType.PT_BR){DisplayDialog(dialogs_PT[_id].text);}
                 if(GameManager.GameSettings.GameLanguage == GameLanguageType.EN_US){DisplayDialog(dialogs_EN[_id].text);}

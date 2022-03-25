@@ -3,6 +3,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
+    AudioSource sfxPlayer;
+    [SerializeField]
     bool smoothTransition = false;
     [SerializeField]
     float transitionSpeed = 10f;
@@ -23,8 +25,9 @@ public class PlayerController : MonoBehaviour
     Vector2 offCenterPosition;
     [SerializeField]
     Transform povCam;
-    [SerializeField]
-    GameObject UI;
+    DialogCanvas dialogCanvas;
+
+    public AudioSource SfxPlayer{get{return sfxPlayer;}}
     bool AtRest
     {
         get
@@ -40,6 +43,7 @@ public class PlayerController : MonoBehaviour
     }
         private void Start()
     {
+        dialogCanvas = FindObjectOfType<DialogCanvas>(true);
         playerInput = InputManager.PlayerInput;
         targetGridPos = transform.position;
         prevTargetGridPos = targetGridPos;
@@ -48,7 +52,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if(!UI.activeSelf)
+        if(!dialogCanvas.Canvas.activeSelf)
         {
             playerMove = playerInput.GetPlayerMovement();
             cameraMove = playerInput.MouseDelta();
@@ -91,7 +95,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         if(!AtRest) MovePlayer();
-        if(AtRest && !UI.activeSelf) UpdateCamera();
+        if(AtRest && !dialogCanvas.Canvas.activeSelf) UpdateCamera();
     }
 
     void MovePlayer()

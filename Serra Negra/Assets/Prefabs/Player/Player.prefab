@@ -129,10 +129,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 634b80e5ee8164a4da16f360883b7c6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sfxPlayer: {fileID: 8695146363177557386}
   smoothTransition: 1
   transitionSpeed: 10
   povCam: {fileID: 1891081353926877765}
-  UI: {fileID: 0}
 --- !u!1 &1933490556958434382
 GameObject:
   m_ObjectHideFlags: 0
