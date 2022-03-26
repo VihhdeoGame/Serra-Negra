@@ -1224,11 +1224,13 @@ MonoBehaviour:
   containsItem: 1
   item:
     name: 
-    isStorable: 0
+    isStorable: 1
     description: 
     sprite: {fileID: 0}
     amount: 0
   requiredCheck: 0
+  requiredItemKey: 0
+  requiredAmount: 0
 --- !u!65 &453388357
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2183,6 +2185,8 @@ MonoBehaviour:
     sprite: {fileID: 0}
     amount: 0
   requiredCheck: 1
+  requiredItemKey: 0
+  requiredAmount: 0
 --- !u!1 &1033576515
 GameObject:
   m_ObjectHideFlags: 0
@@ -2222,12 +2226,14 @@ MonoBehaviour:
   - {fileID: 4900000, guid: f4da6fde77f074f4ba1212116419ff19, type: 3}
   containsItem: 1
   item:
-    name: cubo
+    name: Cubo
     isStorable: 1
-    description: "\xC9 um cubo"
-    sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+    description: "\xE9 um cubo"
+    sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
     amount: 1
   requiredCheck: 0
+  requiredItemKey: 0
+  requiredAmount: 0
 --- !u!65 &1033576517
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2343,12 +2349,14 @@ MonoBehaviour:
   - {fileID: 4900000, guid: f4da6fde77f074f4ba1212116419ff19, type: 3}
   containsItem: 1
   item:
-    name: cubo
+    name: Cubo
     isStorable: 1
     description: "\xC9 um cubo"
-    sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+    sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
     amount: 1
   requiredCheck: 0
+  requiredItemKey: 0
+  requiredAmount: 0
 --- !u!65 &1197839239
 BoxCollider:
   m_ObjectHideFlags: 0

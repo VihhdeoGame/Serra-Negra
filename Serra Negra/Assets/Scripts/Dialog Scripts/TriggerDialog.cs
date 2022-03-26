@@ -16,15 +16,16 @@ public class TriggerDialog : MonoBehaviour
     private TextAsset[] dialogs_PT;
     [SerializeField]
     private TextAsset[] dialogs_EN;
-    
-    
-    [SerializeField]
+    [SerializeField,HideInInspector]
     private bool containsItem;
-    [SerializeField]
+    [SerializeField,HideInInspector]
     private Item item;
 
+    [HideInInspector]
     public bool requiredCheck;
+    [SerializeField,HideInInspector]
     private int requiredItemKey;
+    [SerializeField,HideInInspector]
     private int requiredAmount;
 
 #if UNITY_EDITOR
@@ -34,10 +35,21 @@ public class TriggerDialog : MonoBehaviour
         {
             base.OnInspectorGUI();
             TriggerDialog triggerDialog = (TriggerDialog)target;
+            triggerDialog.containsItem = EditorGUILayout.Toggle("Contains Item?",triggerDialog.containsItem);
+
             if(triggerDialog.containsItem)
             {
-
+                EditorGUILayout.LabelField("Item");
+                triggerDialog.item.name = EditorGUILayout.TextField("Name",triggerDialog.item.name);
+                triggerDialog.item.amount = EditorGUILayout.IntField("Amount",triggerDialog.item.amount);
+                triggerDialog.item.description = EditorGUILayout.TextField("Description",triggerDialog.item.description);
+                EditorGUILayout.BeginHorizontal();
+                EditorGUILayout.PrefixLabel("Sprite");
+                triggerDialog.item.sprite = (Sprite)EditorGUILayout.ObjectField(triggerDialog.item.sprite, typeof(Sprite),true);
+                EditorGUILayout.EndHorizontal();
+                triggerDialog.item.isStorable = EditorGUILayout.Toggle("Is it Storable?",triggerDialog.item.isStorable);
             }
+            triggerDialog.requiredCheck = EditorGUILayout.Toggle("Requires an Item Check?",triggerDialog.requiredCheck);
             if(triggerDialog.requiredCheck)
             {
                 EditorGUILayout.BeginHorizontal();
