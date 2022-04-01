@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class InputManager : MonoBehaviour
 {
+    public bool is2D;
     private static InputManager playerInput;
     public static InputManager PlayerInput{ get{ return playerInput; } }
     private PlayerInputActions playerInputActions;
@@ -16,6 +17,11 @@ public class InputManager : MonoBehaviour
         else
         {
             playerInput = this;
+        }
+        if(!is2D)
+        {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         }
         playerInputActions = new PlayerInputActions();        
     }
@@ -38,8 +44,19 @@ public class InputManager : MonoBehaviour
     public bool GetPlayerRight()
     {
         return playerInputActions.Player.MoveRight.triggered;
-    }public bool GetPlayerLeft()
+    }
+    public bool GetPlayerLeft()
     {
         return playerInputActions.Player.MoveLeft.triggered;
     }
+    public bool GetInteraction()
+    {
+        return playerInputActions.Player.Interact.triggered;
+    }
+
+    public Vector2 GetMousePosition()
+    {
+        return playerInputActions.Player.MousePosition.ReadValue<Vector2>();
+    }
+
 }

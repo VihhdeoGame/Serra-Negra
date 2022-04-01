@@ -3,6 +3,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
+    AudioSource sfxPlayer;
+    [SerializeField]
     bool smoothTransition = false;
     [SerializeField]
     float transitionSpeed = 10f;
@@ -23,7 +25,9 @@ public class PlayerController : MonoBehaviour
     Vector2 offCenterPosition;
     [SerializeField]
     Transform povCam;
+    DialogCanvas dialogCanvas;
 
+    public AudioSource SfxPlayer{get{return sfxPlayer;}}
     bool AtRest
     {
         get
@@ -39,6 +43,7 @@ public class PlayerController : MonoBehaviour
     }
         private void Start()
     {
+        dialogCanvas = FindObjectOfType<DialogCanvas>(true);
         playerInput = InputManager.PlayerInput;
         targetGridPos = transform.position;
         prevTargetGridPos = targetGridPos;
@@ -47,26 +52,61 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        playerMove = playerInput.GetPlayerMovement();
-        cameraMove = playerInput.MouseDelta();
-        if(playerMove.y > 0.1f){MoveFoward();}
-        if(playerMove.y < -0.1f){MoveBackward();}
-        if(playerMove.x > 0.1f){RotateRight();}
-        if(playerMove.x < -0.1f){RotateLeft();}
-        if(playerInput.GetPlayerRight()){MoveRight();}
-        if(playerInput.GetPlayerLeft()){MoveLeft();}
-        if(Mathf.Abs(cameraMove.x)>0.1 || Mathf.Abs(cameraMove.y)>0.1){RotateCamera();}
+        if(!dialogCanvas.Canvas.activeSelf)
+        {
+            playerMove = playerInput.GetPlayerMovement();
+            cameraMove = playerInput.MouseDelta();
+            if(playerMove.y > 0.1f){MoveFoward();}
+            if(playerMove.y < -0.1f){MoveBackward();}
+            if(playerMove.x > 0.1f){RotateRight();}
+            if(playerMove.x < -0.1f){RotateLeft();}
+            if(playerInput.GetPlayerRight()){MoveRight();}
+            if(playerInput.GetPlayerLeft()){MoveLeft();}
+            if(Mathf.Abs(cameraMove.x)>0.1 || Mathf.Abs(cameraMove.y)>0.1){RotateCamera();}
+
+            if(playerInput.GetInteraction())
+            {
+                RaycastHit hit;
+                if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, gridSize))
+                {
+                    Trigger3DDialog dialogCheck = hit.collider.gameObject.GetComponent<Trigger3DDialog>(); 
+                    if(dialogCheck != null)
+                    {
+                        if(dialogCheck.requiredCheck)
+                        {
+                            if(dialogCheck.CheckFlag())
+                            {
+                                dialogCheck.CheckDialog(1);
+                            }
+                            else
+                            {
+                                dialogCheck.CheckDialog(0);
+                            }
+                        }
+                        else
+                        {
+                            dialogCheck.CheckDialog(0);                            
+                        }
+                    }
+                }
+            }
+        }
     }
     private void FixedUpdate()
     {
         if(!AtRest) MovePlayer();
-        if(AtRest) UpdateCamera();
+        if(AtRest && !dialogCanvas.Canvas.activeSelf) UpdateCamera();
     }
 
     void MovePlayer()
     {
-        if(!Physics.Linecast (prevTargetGridPos, targetGridPos))
-        {
+        RaycastHit hit;
+        if(Physics.Linecast (prevTargetGridPos, targetGridPos,out hit) && hit.transform.tag == "Wall")
+        {            
+            targetGridPos = prevTargetGridPos;
+        }
+        else
+        {   
             prevTargetGridPos = targetGridPos;
             Vector3 TargetPosition = targetGridPos;
             
@@ -87,11 +127,6 @@ public class PlayerController : MonoBehaviour
                 transform.position = Vector3.MoveTowards(transform.position,targetGridPos, Time.fixedDeltaTime * transitionSpeed);
                 transform.rotation = Quaternion.RotateTowards(transform.rotation,Quaternion.Euler(targetRotation), Time.fixedDeltaTime * transitionRotationSpeed); 
             }
-
-        }
-        else
-        {
-            targetGridPos = prevTargetGridPos;
         }
 
     }
@@ -107,9 +142,9 @@ public class PlayerController : MonoBehaviour
         if (AtRest)
         {
             yaw += cameraMove.x;
-            yaw = Mathf.Clamp(yaw,-75,75);
+            yaw = Mathf.Clamp(yaw,-270,270);
             pitch -= cameraMove.y;
-            pitch = Mathf.Clamp(pitch,-75,75); 
+            pitch = Mathf.Clamp(pitch,-270,270); 
         }
     }
     void UpdateCamera()

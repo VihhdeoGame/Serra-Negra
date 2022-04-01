@@ -1,0 +1,12 @@
+{
+    "dialogs":
+    [
+        {
+            "spriteId":1,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"Zia",
+            "sentenses":"Preciso de algo para abrir essa porta!"
+        }
+    ]
+}

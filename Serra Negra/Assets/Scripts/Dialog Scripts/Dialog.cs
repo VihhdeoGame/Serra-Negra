@@ -3,7 +3,9 @@ using System;
 [Serializable]
 public class Dialog
 {
-    public int id;
+    public int spriteId;
+    public int[] musicIds;
+    public int[] sfxIds;
     public string name;
     public string sentenses;
 }
