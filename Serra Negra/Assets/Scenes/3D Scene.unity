@@ -1218,13 +1218,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemKey: 2
   dialogs_PT:
-  - {fileID: 4900000, guid: 71d8e5fe91e6fa541941d9a3a7fafb9f, type: 3}
+  - {fileID: 4900000, guid: ef7cec7b5d9fd1d4db8e2e4c6ca1a6b1, type: 3}
   dialogs_EN:
   - {fileID: 4900000, guid: ef7cec7b5d9fd1d4db8e2e4c6ca1a6b1, type: 3}
-  containsItem: 1
+  containsItem: 0
   item:
     name: 
-    isStorable: 1
+    isStorable: 0
     description: 
     sprite: {fileID: 0}
     amount: 0
@@ -2173,10 +2173,10 @@ MonoBehaviour:
   itemKey: 1
   dialogs_PT:
   - {fileID: 4900000, guid: 40cf12434a2adf549b58eaf034747f8d, type: 3}
-  - {fileID: 4900000, guid: da89ae2b865ea754fa9a826252c8ca69, type: 3}
+  - {fileID: 4900000, guid: 9f158656a7d826942a7e65888697078b, type: 3}
   dialogs_EN:
   - {fileID: 4900000, guid: 2c3de9c98dbd97e45a4c61f5e5c4e430, type: 3}
-  - {fileID: 4900000, guid: 9f158656a7d826942a7e65888697078b, type: 3}
+  - {fileID: 4900000, guid: da89ae2b865ea754fa9a826252c8ca69, type: 3}
   containsItem: 0
   item:
     name: 
@@ -2186,7 +2186,7 @@ MonoBehaviour:
     amount: 0
   requiredCheck: 1
   requiredItemKey: 0
-  requiredAmount: 0
+  requiredAmount: 1
 --- !u!1 &1033576515
 GameObject:
   m_ObjectHideFlags: 0
@@ -2228,8 +2228,8 @@ MonoBehaviour:
   item:
     name: Cubo
     isStorable: 1
-    description: "\xE9 um cubo"
-    sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    description: "\xC9 um cubo"
+    sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
     amount: 1
   requiredCheck: 0
   requiredItemKey: 0
@@ -2344,15 +2344,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemKey: 0
   dialogs_PT:
-  - {fileID: 4900000, guid: d4f3c916b8392e041aca0ced6a782855, type: 3}
-  dialogs_EN:
   - {fileID: 4900000, guid: f4da6fde77f074f4ba1212116419ff19, type: 3}
+  dialogs_EN:
+  - {fileID: 4900000, guid: d4f3c916b8392e041aca0ced6a782855, type: 3}
   containsItem: 1
   item:
     name: Cubo
     isStorable: 1
-    description: "\xC9 um cubo"
-    sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    description: "\xE9 cubo"
+    sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
     amount: 1
   requiredCheck: 0
   requiredItemKey: 0
@@ -2603,7 +2603,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh18530
+  m_Name: pb_Mesh21106
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

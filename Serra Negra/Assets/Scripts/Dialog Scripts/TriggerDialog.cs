@@ -1,82 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
-using UnityEngine.UI;
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
 
 public class TriggerDialog : MonoBehaviour
 {
     [SerializeField]
-    private int itemKey;
-    
+    protected int itemKey;
     [SerializeField]
-    private TextAsset[] dialogs_PT;
+    protected TextAsset[] dialogs_PT;
     [SerializeField]
-    private TextAsset[] dialogs_EN;
+    protected TextAsset[] dialogs_EN;
     [SerializeField,HideInInspector]
-    private bool containsItem;
+    protected bool containsItem;
     [SerializeField,HideInInspector]
-    private Item item;
-
+    protected Item item;
     [HideInInspector]
     public bool requiredCheck;
     [SerializeField,HideInInspector]
-    private int requiredItemKey;
+    protected int requiredItemKey;
     [SerializeField,HideInInspector]
-    private int requiredAmount;
+    protected int requiredAmount;
+    protected Dialogs dialogParse;
+    protected Object[] speakers;
+    protected Object[] sfxs;
+    protected Object[] musics;
+    protected AudioSource musicPlayer;
+    protected AudioSource sfxPlayer;
+    protected InputManager playerInput;
+    protected DialogCanvas dialogCanvas;
 
-#if UNITY_EDITOR
-    [CustomEditor(typeof(TriggerDialog))]
-    public class TriggerDialogEditor : Editor {
-        public override void OnInspectorGUI()
-        {
-            base.OnInspectorGUI();
-            TriggerDialog triggerDialog = (TriggerDialog)target;
-            triggerDialog.containsItem = EditorGUILayout.Toggle("Contains Item?",triggerDialog.containsItem);
-
-            if(triggerDialog.containsItem)
-            {
-                EditorGUILayout.LabelField("Item");
-                triggerDialog.item.name = EditorGUILayout.TextField("Name",triggerDialog.item.name);
-                triggerDialog.item.amount = EditorGUILayout.IntField("Amount",triggerDialog.item.amount);
-                triggerDialog.item.description = EditorGUILayout.TextField("Description",triggerDialog.item.description);
-                EditorGUILayout.BeginHorizontal();
-                EditorGUILayout.PrefixLabel("Sprite");
-                triggerDialog.item.sprite = (Sprite)EditorGUILayout.ObjectField(triggerDialog.item.sprite, typeof(Sprite),true);
-                EditorGUILayout.EndHorizontal();
-                triggerDialog.item.isStorable = EditorGUILayout.Toggle("Is it Storable?",triggerDialog.item.isStorable);
-            }
-            triggerDialog.requiredCheck = EditorGUILayout.Toggle("Requires an Item Check?",triggerDialog.requiredCheck);
-            if(triggerDialog.requiredCheck)
-            {
-                EditorGUILayout.BeginHorizontal();
-                EditorGUILayout.LabelField("Required Item ID",GUILayout.MaxWidth(100));
-                triggerDialog.requiredItemKey = EditorGUILayout.IntField(triggerDialog.requiredItemKey);
-                EditorGUILayout.LabelField("Required Item Amount",GUILayout.MaxWidth(130));
-                triggerDialog.requiredAmount = EditorGUILayout.IntField(triggerDialog.requiredAmount);
-                EditorGUILayout.EndHorizontal();
-            }       
-        }
-    }
-#endif
-    
-
-    private GameObject crosshair;
-    private Dialogs dialogParse;
-    private Object[] speakers;
-    private Object[] sfxs;
-    private Object[] musics;
-    private AudioSource musicPlayer;
-    private AudioSource sfxPlayer;
-    InputManager playerInput;
-    DialogCanvas dialogCanvas;
-    private void Start() 
+    protected virtual void Start()
     {
-        crosshair = GameObject.FindGameObjectWithTag("Crosshair");
-        sfxPlayer = FindObjectOfType<PlayerController>().SfxPlayer;
         musicPlayer = FindObjectOfType<MusicManager>().GetComponent<AudioSource>();
         dialogCanvas = FindObjectOfType<DialogCanvas>(true);
         playerInput = InputManager.PlayerInput;
@@ -85,13 +39,12 @@ public class TriggerDialog : MonoBehaviour
         musics = Resources.LoadAll("Audio/Music", typeof(AudioClip));
     }
 
-    private void DisplayDialog(string _dialog)
+     protected void DisplayDialog(string _dialog)
     {
         dialogParse = JsonUtility.FromJson<Dialogs>(_dialog);
         StopAllCoroutines();
         StartCoroutine(TypeSentense(dialogParse.dialogs));
     }
-
     IEnumerator TypeSentense(Dialog[] _dialog)
     {
         for (int j = 0; j < _dialog.Length; j++)
@@ -128,17 +81,17 @@ public class TriggerDialog : MonoBehaviour
             }
         }
         dialogCanvas.Canvas.SetActive(false);
-        crosshair.SetActive(true);
+        UpdateDisplay(true);
         if(containsItem)
         {
             GiveItem(itemKey,item);
         }
         if(CheckFlag())
         {
-            OpenDoor();
+            FinalInteraction();            
         }
     }
-
+    
     public void CheckDialog(int _id)
     {
         if(!InventoryManager.Inventory.GetInventory().items.ContainsKey(itemKey))
@@ -146,21 +99,21 @@ public class TriggerDialog : MonoBehaviour
             if(!dialogCanvas.Canvas.activeSelf)
             {
                 dialogCanvas.Canvas.SetActive(true);
-                crosshair.SetActive(false);
+                UpdateDisplay(false);
                 if(GameManager.GameSettings.GameLanguage == GameLanguageType.PT_BR){DisplayDialog(dialogs_PT[_id].text);}
                 if(GameManager.GameSettings.GameLanguage == GameLanguageType.EN_US){DisplayDialog(dialogs_EN[_id].text);}
             }
         }
         else if(InventoryManager.Inventory.GetInventory().items.ContainsKey(itemKey) && item.isStorable)
             GiveItem(itemKey,item);
-    } 
-
-    void GiveItem(int key,Item _item)
+    }
+    protected void GiveItem(int key,Item _item)
     {
         InventoryManager.Inventory.AddItemtoInventory(key,_item.amount, _item.name,_item.isStorable, _item.description,_item.sprite);
         if(_item.isStorable)
             Destroy(this.gameObject); 
     }
+     
     public bool CheckFlag()
     {
         if(InventoryManager.Inventory.GetInventory().items.ContainsKey(requiredItemKey))
@@ -173,11 +126,13 @@ public class TriggerDialog : MonoBehaviour
             return false;
         }
     }
-    
-    public void OpenDoor()
+    protected virtual void UpdateDisplay(bool active)
     {
-        Item _item = InventoryManager.Inventory.GetInventory().items[requiredItemKey];
-        _item.amount -= requiredAmount;
-        Destroy(this.gameObject);
+
+    }
+    protected virtual void FinalInteraction()
+    {
+        
     }
 }
+

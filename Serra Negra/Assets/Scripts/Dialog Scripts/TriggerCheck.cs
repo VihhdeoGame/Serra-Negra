@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class TriggerCheck : MonoBehaviour
 {
-    TriggerDialog dialog;
+    Trigger3DDialog dialog;
     private void Awake()
     {
-        dialog = GetComponent<TriggerDialog>();        
+        dialog = GetComponent<Trigger3DDialog>();        
     }
     private void OnTriggerEnter(Collider other)
     {

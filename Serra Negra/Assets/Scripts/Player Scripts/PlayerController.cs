@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
                 RaycastHit hit;
                 if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, gridSize))
                 {
-                    TriggerDialog dialogCheck = hit.collider.gameObject.GetComponent<TriggerDialog>(); 
+                    Trigger3DDialog dialogCheck = hit.collider.gameObject.GetComponent<Trigger3DDialog>(); 
                     if(dialogCheck != null)
                     {
                         if(dialogCheck.requiredCheck)

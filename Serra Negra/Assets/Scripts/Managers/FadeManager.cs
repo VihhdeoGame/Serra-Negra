@@ -10,6 +10,7 @@ public class FadeManager : MonoBehaviour
     private Image fade;
     [SerializeField]
     private float waitTime;
+    public float WaitTime{get {return waitTime;}} 
     private void Awake()
     {
         if(fadeManager != null && fadeManager != this)
@@ -28,10 +29,10 @@ public class FadeManager : MonoBehaviour
     }
     public void FadeOut()
     {
-        fade.CrossFadeAlpha(0,waitTime, false);
+        fade.CrossFadeAlpha(0,waitTime, true);
     }
     public void FadeIn()
     {
-        fade.CrossFadeAlpha(1,waitTime, false);
+        fade.CrossFadeAlpha(1,waitTime, true);
     }
 }
