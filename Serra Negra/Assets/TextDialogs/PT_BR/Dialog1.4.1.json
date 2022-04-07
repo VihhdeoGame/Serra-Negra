@@ -1,0 +1,12 @@
+{
+    "dialogs":
+    [
+        {
+            "spriteId":2,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"Zia",
+            "sentenses":"(Oxi não está aqui também, onde sera que ela pode estar?)"
+        }
+    ]
+}

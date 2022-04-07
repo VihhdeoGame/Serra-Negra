@@ -1,0 +1,12 @@
+{
+    "dialogs":
+    [
+        {
+            "spriteId":2,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"Zia",
+            "sentenses":"(Já procurei pela casa toda. Sera que ela saiu a esta hora da madrugada?)"
+        }
+    ]
+}

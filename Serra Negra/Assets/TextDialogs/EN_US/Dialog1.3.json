@@ -1,0 +1,19 @@
+{
+    "dialogs":
+    [
+        {
+            "spriteId":1,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"Zia",
+            "sentenses":"Lilia? Are you awake?"
+        },
+        {
+            "spriteId":2,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"Zia",
+            "sentenses":"(She isn't here, is she also having trouble sleeping? Maybe I can get her some tea as well.)"
+        }
+    ]
+}

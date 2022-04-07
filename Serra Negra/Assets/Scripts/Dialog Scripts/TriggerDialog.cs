@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class TriggerDialog : MonoBehaviour
 {
@@ -17,9 +18,11 @@ public class TriggerDialog : MonoBehaviour
     [HideInInspector]
     public bool requiredCheck;
     [SerializeField,HideInInspector]
-    protected int requiredItemKey;
+    protected int[] requiredItemKey;
     [SerializeField,HideInInspector]
-    protected int requiredAmount;
+    protected int[] requiredAmount;
+    protected int arrayCount = 0;
+    protected int[] dummy;
     protected Dialogs dialogParse;
     protected Object[] speakers;
     protected Object[] sfxs;
@@ -29,7 +32,7 @@ public class TriggerDialog : MonoBehaviour
     protected InputManager playerInput;
     protected DialogCanvas dialogCanvas;
 
-    protected virtual void Start()
+    protected virtual void OnEnable()
     {
         musicPlayer = FindObjectOfType<MusicManager>().GetComponent<AudioSource>();
         dialogCanvas = FindObjectOfType<DialogCanvas>(true);
@@ -91,7 +94,6 @@ public class TriggerDialog : MonoBehaviour
             FinalInteraction();            
         }
     }
-    
     public void CheckDialog(int _id)
     {
         if(!InventoryManager.Inventory.GetInventory().items.ContainsKey(itemKey))
@@ -116,15 +118,22 @@ public class TriggerDialog : MonoBehaviour
      
     public bool CheckFlag()
     {
-        if(InventoryManager.Inventory.GetInventory().items.ContainsKey(requiredItemKey))
+        for (int i = 0; i < requiredItemKey.Length; i++)
         {
-            Item _item = InventoryManager.Inventory.GetInventory().items[requiredItemKey];
-            return(_item.amount >= requiredAmount);
+            if(InventoryManager.Inventory.GetInventory().items.ContainsKey(requiredItemKey[i]))
+            {
+                Item _item = InventoryManager.Inventory.GetInventory().items[requiredItemKey[i]];
+                if(_item.amount < requiredAmount[i])
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
         }
-        else
-        {
-            return false;
-        }
+        return true;
     }
     protected virtual void UpdateDisplay(bool active)
     {

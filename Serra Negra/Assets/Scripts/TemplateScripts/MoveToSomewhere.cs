@@ -1,43 +1,30 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class MoveToSomewhere : MonoBehaviour
 {
     [SerializeField]
-    private Image fade;
-    [SerializeField]
-    private SpriteRenderer background;
-    [SerializeField]
-    private float waitTime;
-    [SerializeField]
-    private Sprite[] backgounds;
-    [SerializeField]
-    private int backgroundId;
-    private void Start() 
+    MainGameCanvas canvas;
+    GenericCanvas parent;
+    private void OnEnable()
     {
-        FadeOut();
-    }
-    private void OnMouseDown() 
-    {
-        StopAllCoroutines();
-        StartCoroutine(MoveTo(backgroundId));
-    }
-    private void FadeOut()
-    {
-        fade.CrossFadeAlpha(0,waitTime, false);
-    }
-    private void FadeIn()
-    {
-        fade.CrossFadeAlpha(1,waitTime, false);
+        parent = gameObject.GetComponentInParent<GenericCanvas>();
     }
 
-    IEnumerator MoveTo(int _backgroundId)
+    public void Move(int _canvas)
     {
-        FadeIn();
-        yield return new WaitForSeconds(waitTime);
-        background.sprite = backgounds[_backgroundId];
-        FadeOut();
+        StopAllCoroutines();
+        StartCoroutine(StartMoving(_canvas));
     }
+    IEnumerator StartMoving(int _canvas)
+    {
+        Debug.Log("mova caralho");
+        FadeManager.Fade.FadeIn();
+        yield return new WaitForSeconds(FadeManager.Fade.WaitTime);
+        parent.Hide();
+        canvas.Canvases[_canvas].Show();
+        FadeManager.Fade.FadeOut();
+        yield return new WaitForSeconds(FadeManager.Fade.WaitTime);
+    }
+
 }
