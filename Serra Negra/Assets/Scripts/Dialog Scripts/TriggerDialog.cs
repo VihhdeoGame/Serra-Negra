@@ -85,9 +85,13 @@ public class TriggerDialog : MonoBehaviour
         }
         dialogCanvas.Canvas.SetActive(false);
         UpdateDisplay(true);
-        if(containsItem)
+        if(containsItem && !requiredCheck)
         {
             GiveItem(itemKey,item);
+        }
+        else if(containsItem && requiredCheck && CheckFlag())
+        {
+            GiveItem(itemKey,item);            
         }
         if(CheckFlag())
         {

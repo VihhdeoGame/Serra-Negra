@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[RequireComponent(typeof(Trigger2DDialog))]
 public class GenericCanvas : MonoBehaviour
 {
+    [SerializeField]
     private Trigger2DDialog dialog;
+
+    public Trigger2DDialog Dialog{get {return dialog;} set{dialog = value;}}
     [SerializeField]
     private MainGameCanvas mainGameCanvases;
     public void FirstInitialize(MainGameCanvas _canvases)
@@ -21,7 +23,21 @@ public class GenericCanvas : MonoBehaviour
     }
     private void OnEnable()
     {
-        dialog = GetComponent<Trigger2DDialog>();
-        dialog.CheckDialog(0);                
+        dialog.gameObject.SetActive(true);
+        if(dialog.requiredCheck)
+        {
+            if(dialog.CheckFlag())
+            {
+                dialog.CheckDialog(1);
+            }
+            else
+            {
+                dialog.CheckDialog(0);
+            }
+        }
+        else
+        {
+            dialog.CheckDialog(0);                            
+        }                
     }
 }
