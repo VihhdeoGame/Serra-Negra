@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2179671321637642936}
   - component: {fileID: 2179671321637642937}
+  - component: {fileID: 269826951143490320}
   m_Layer: 0
   m_Name: 'Inventory Manager '
-  m_TagString: Untagged
+  m_TagString: IManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,3 +44,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ceb5122e217724595a9b9e5290b939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &269826951143490320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2179671321637642939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc5163ff91d43f04f9b7a3a262f96280, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameTag: IManager

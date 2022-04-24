@@ -8,6 +8,8 @@ TagManager:
   - Crosshair
   - SFXPlayer
   - Background
+  - GManager
+  - IManager
   layers:
   - Default
   - TransparentFX

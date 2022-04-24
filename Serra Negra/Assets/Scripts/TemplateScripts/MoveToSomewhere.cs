@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 public class MoveToSomewhere : MonoBehaviour
 {
     [SerializeField]
@@ -33,9 +34,13 @@ public class MoveToSomewhere : MonoBehaviour
             }
         }
     }
+    public void ChangeScene(int _scene)
+    {
+        StopAllCoroutines();
+        StartCoroutine(UpdateScene(_scene));
+    }
     IEnumerator StartMoving(int _canvas)
     {
-        Debug.Log("mova caralho");
         FadeManager.Fade.FadeIn();
         yield return new WaitForSeconds(FadeManager.Fade.WaitTime);
         parent.Hide();
@@ -45,9 +50,8 @@ public class MoveToSomewhere : MonoBehaviour
     }
     IEnumerator UpdateScene(int _scene)
     {
-        Debug.Log("mova caralho");
         FadeManager.Fade.FadeIn();
         yield return new WaitForSeconds(FadeManager.Fade.WaitTime);
-        //Insira aqui o metodo para atualizar a cena, weeee.
+        SceneManager.LoadScene(_scene);
     }
 }
