@@ -35,19 +35,58 @@ public class Trigger3DDialog : TriggerDialog
             if (triggerDialog.requiredCheck)
             {
                 EditorGUILayout.BeginHorizontal();
-                EditorGUILayout.LabelField("Required Item ID", GUILayout.MaxWidth(100));
-                triggerDialog.requiredItemKey = EditorGUILayout.IntField(triggerDialog.requiredItemKey);
-                EditorGUILayout.LabelField("Required Item Amount", GUILayout.MaxWidth(130));
-                triggerDialog.requiredAmount = EditorGUILayout.IntField(triggerDialog.requiredAmount);
+                if(GUILayout.Button("Add Required ID"))
+                {
+                    triggerDialog.arrayCount++;
+                    triggerDialog.dummy = new int[triggerDialog.requiredItemKey.Length];
+                    triggerDialog.requiredItemKey.CopyTo(triggerDialog.dummy,0);
+                    triggerDialog.requiredItemKey = new int[triggerDialog.arrayCount];
+                    triggerDialog.dummy.CopyTo(triggerDialog.requiredItemKey,0);
+                    triggerDialog.dummy = new int[triggerDialog.requiredAmount.Length];
+                    triggerDialog.requiredAmount.CopyTo(triggerDialog.dummy,0);
+                    triggerDialog.requiredAmount = new int[triggerDialog.arrayCount];
+                    triggerDialog.dummy.CopyTo(triggerDialog.requiredAmount,0);
+                }
+                if(GUILayout.Button("Remove Required ID"))
+                {
+                    if(triggerDialog.arrayCount > 0)
+                    {
+                        triggerDialog.arrayCount--;
+                        triggerDialog.dummy = new int[triggerDialog.requiredItemKey.Length-1];
+                        for (int i = 0; i < triggerDialog.dummy.Length; i++)
+                        {
+                            triggerDialog.dummy[i] = triggerDialog.requiredItemKey[i]; 
+                        }
+                        triggerDialog.requiredItemKey = new int[triggerDialog.arrayCount];
+                        triggerDialog.dummy.CopyTo(triggerDialog.requiredItemKey,0);
+                        triggerDialog.dummy = new int[triggerDialog.requiredAmount.Length-1];
+                        for (int i = 0; i < triggerDialog.dummy.Length; i++)
+                        {
+                            triggerDialog.dummy[i] = triggerDialog.requiredAmount[i]; 
+                        }
+                        triggerDialog.requiredAmount = new int[triggerDialog.arrayCount];
+                        triggerDialog.dummy.CopyTo(triggerDialog.requiredAmount,0);
+                    }
+                }
                 EditorGUILayout.EndHorizontal();
+
+                for (int i = 0; i < triggerDialog.requiredItemKey.Length; i++)
+                {
+                    EditorGUILayout.BeginHorizontal();
+                    EditorGUILayout.LabelField("Required Item ID", GUILayout.MaxWidth(100));
+                    triggerDialog.requiredItemKey[i] = EditorGUILayout.IntField(triggerDialog.requiredItemKey[i]);
+                    EditorGUILayout.LabelField("Required Item Amount", GUILayout.MaxWidth(130));
+                    triggerDialog.requiredAmount[i] = EditorGUILayout.IntField(triggerDialog.requiredAmount[i]);
+                    EditorGUILayout.EndHorizontal();
+                }
             }
         }
     }
 #endif
     private GameObject crosshair;
-    protected override void Start() 
+    protected override void OnEnable() 
     {
-        base.Start();
+        base.OnEnable();
         crosshair = GameObject.FindGameObjectWithTag("Crosshair");
         sfxPlayer = FindObjectOfType<PlayerController>().SfxPlayer;
     }
@@ -61,8 +100,11 @@ public class Trigger3DDialog : TriggerDialog
     }
     public void OpenDoor()
     {
-        Item _item = InventoryManager.Inventory.GetInventory().items[requiredItemKey];
-        _item.amount -= requiredAmount;
+        for (int i = 0; i < requiredItemKey.Length; i++)
+        {
+            Item _item = InventoryManager.Inventory.GetInventory().items[requiredItemKey[i]];
+            _item.amount -= requiredAmount[i];
+        }
         Destroy(this.gameObject);
     }
 }

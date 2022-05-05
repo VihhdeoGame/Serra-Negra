@@ -1,0 +1,12 @@
+{
+    "dialogs":
+    [
+        {
+            "spriteId":2,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"Zia",
+            "sentenses":"(Ahhh man, what time is it?)>(It's 2:00 am and I haven't slept yet, I think these new drugs that the doctor prescribed me aren't working.)>(Well, I think I'll have a warm cup of tea to calm down and maybe the anxiety will go away.)"
+        }
+    ]
+}

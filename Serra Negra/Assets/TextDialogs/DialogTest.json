@@ -1,0 +1,33 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"Personagem 1",
+            "sentenses":"Este é um dialogo modelo. É possivel criar falas seguindo este padrão"
+        },
+        {
+            "spriteId":1,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"Personagem 2",
+            "sentenses":"Cada repetição pode ser utilizada para exibir um sprite diferente além de alterar o nome que esta sendo exibido"
+        },
+        {
+            "spriteId":2,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"Personagem 3",
+            "sentenses":"É possivel manter o mesmo personagem falando por multiplos quadros, separando cada quadro pelo com o sinal>Assim na hora da leitura eles aparecem de forma separada"
+        },
+        {
+            "spriteId":3,
+            "musicIds":[0,1,2],
+            "sfxIds":[0,3,5],
+            "name":"Personagem 4",
+            "sentenses":"Além do que é possivel tocar efeitos sonoros e trocar a musica ambiente utilizando os simbolos # para trocar as musicas seguindo os ids que estão no campo musicIds respectivamente e o simbolo * reproduziria um sfx seguindo a mesma logica"
+        }
+    ]
+}

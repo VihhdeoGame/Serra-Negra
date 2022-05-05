@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class FadeManager : MonoBehaviour
 {
+    Trigger2DDialog dialog;
     private static FadeManager fadeManager;
     public static FadeManager Fade{ get{ return fadeManager; } }
     private Image fade;
@@ -21,6 +22,7 @@ public class FadeManager : MonoBehaviour
         {
             fadeManager = this;
         }
+        dialog = GetComponent<Trigger2DDialog>();
     }
     private void Start() 
     {

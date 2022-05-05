@@ -1,43 +1,57 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class MoveToSomewhere : MonoBehaviour
 {
     [SerializeField]
-    private Image fade;
+    bool check;
     [SerializeField]
-    private SpriteRenderer background;
-    [SerializeField]
-    private float waitTime;
-    [SerializeField]
-    private Sprite[] backgounds;
-    [SerializeField]
-    private int backgroundId;
-    private void Start() 
+    MainGameCanvas canvas;
+    GenericCanvas parent;
+    Trigger2DDialog dialog;
+    private void OnEnable()
     {
-        FadeOut();
+        parent = gameObject.GetComponentInParent<GenericCanvas>();
     }
-    private void OnMouseDown() 
+    public void Move(int _canvas)
+    {
+        if(!check)
+        {
+            StopAllCoroutines();
+            StartCoroutine(StartMoving(_canvas));
+        }
+        else
+        {
+            dialog = GetComponent<Trigger2DDialog>();
+            if(dialog.CheckFlag())
+            {
+                StopAllCoroutines();
+                StartCoroutine(StartMoving(_canvas));
+            }
+            else
+            {
+                dialog.CheckDialog(0);
+            }
+        }
+    }
+    public void ChangeScene(int _scene)
     {
         StopAllCoroutines();
-        StartCoroutine(MoveTo(backgroundId));
+        StartCoroutine(UpdateScene(_scene));
     }
-    private void FadeOut()
+    IEnumerator StartMoving(int _canvas)
     {
-        fade.CrossFadeAlpha(0,waitTime, false);
+        FadeManager.Fade.FadeIn();
+        yield return new WaitForSeconds(FadeManager.Fade.WaitTime);
+        parent.Hide();
+        canvas.Canvases[_canvas].Show();
+        FadeManager.Fade.FadeOut();
+        yield return new WaitForSeconds(FadeManager.Fade.WaitTime);
     }
-    private void FadeIn()
+    IEnumerator UpdateScene(int _scene)
     {
-        fade.CrossFadeAlpha(1,waitTime, false);
-    }
-
-    IEnumerator MoveTo(int _backgroundId)
-    {
-        FadeIn();
-        yield return new WaitForSeconds(waitTime);
-        background.sprite = backgounds[_backgroundId];
-        FadeOut();
+        FadeManager.Fade.FadeIn();
+        yield return new WaitForSeconds(FadeManager.Fade.WaitTime);
+        SceneManager.LoadScene(_scene);
     }
 }

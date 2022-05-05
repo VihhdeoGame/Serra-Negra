@@ -53,10 +53,8 @@ public class InputManager : MonoBehaviour
     {
         return playerInputActions.Player.Interact.triggered;
     }
-
     public Vector2 GetMousePosition()
     {
         return playerInputActions.Player.MousePosition.ReadValue<Vector2>();
     }
-
 }

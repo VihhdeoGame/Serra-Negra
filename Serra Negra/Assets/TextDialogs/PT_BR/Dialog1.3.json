@@ -1,0 +1,19 @@
+{
+    "dialogs":
+    [
+        {
+            "spriteId":1,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"Zia",
+            "sentenses":"Lilia? Você está acordada?"
+        },
+        {
+            "spriteId":2,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"Zia",
+            "sentenses":"(Ela não está aqui, será que está com insônia? Talvez ela precise de um chá também.)"
+        }
+    ]
+}
