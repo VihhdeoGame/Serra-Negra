@@ -18,6 +18,7 @@ public class InputManager : MonoBehaviour
         {
             playerInput = this;
         }
+
         if(!is2D)
         {
         Cursor.visible = false;
@@ -43,11 +44,11 @@ public class InputManager : MonoBehaviour
     }
     public bool GetPlayerRight()
     {
-        return playerInputActions.Player.MoveRight.triggered;
+        return playerInputActions.Player.MoveRight.IsPressed();
     }
     public bool GetPlayerLeft()
     {
-        return playerInputActions.Player.MoveLeft.triggered;
+        return playerInputActions.Player.MoveLeft.IsPressed();
     }
     public bool GetInteraction()
     {
@@ -56,5 +57,13 @@ public class InputManager : MonoBehaviour
     public Vector2 GetMousePosition()
     {
         return playerInputActions.Player.MousePosition.ReadValue<Vector2>();
+    }
+    public bool Clicked()
+    {
+        return playerInputActions.UI.Click.IsPressed();
+    }
+    public bool StartButton()
+    {
+        return playerInputActions.UI.StartButton.triggered;
     }
 }
