@@ -10,6 +10,9 @@ TagManager:
   - Background
   - GManager
   - IManager
+  - IADisplay
+  - INDisplay
+  - IDDisplay
   layers:
   - Default
   - TransparentFX

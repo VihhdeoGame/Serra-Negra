@@ -24,7 +24,7 @@ public class InventoryManager : MonoBehaviour
         inventory = new Items();
     }
 
-    public void AddItemtoInventory(int key,int _amount,string _name=null, bool _isStorable=false, string _description = null, Sprite _sprite = null)
+    public void AddItemtoInventory(int key,int _amount,string _name_PT=null,string _name_EN=null, bool _isStorable=false, string _description_PT = null,string _description_EN = null, Sprite _sprite = null)
     {
         if(inventory.items.ContainsKey(key))
         {
@@ -32,7 +32,7 @@ public class InventoryManager : MonoBehaviour
         }
         else
         {
-            Item _item = new Item(_name, _isStorable, _description, _sprite, _amount);
+            Item _item = new Item(_name_PT,_name_EN, _isStorable, _description_PT,_description_EN, _sprite, _amount);
             inventory.items.Add(key,_item);
         }        
     }
