@@ -4,19 +4,26 @@ using UnityEngine;
 
 public class CursorController : MonoBehaviour
 {
+    public bool is2D;
     [SerializeField]
     Texture2D cursor;
     [SerializeField]
     Texture2D cursorClicked;
     InputManager playerInput;
+    GameObject crosshair;
     bool click;
-    private void Awake() 
-    {
-        ChangeCursor(cursor);
-    }
     private void Start()
-    {
+    {   
+        crosshair = GameObject.FindGameObjectWithTag("Crosshair");
         playerInput = InputManager.PlayerInput;
+        if(is2D)
+        {
+            EnableCursor();
+        }
+        else
+        {
+           DisableCursor();
+        }
     }
     private void Update() 
     {
@@ -45,5 +52,17 @@ public class CursorController : MonoBehaviour
     {
         ChangeCursor(cursor);
     }
-   
+    public void DisableCursor()
+    {
+        crosshair.SetActive(true);
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+    public void EnableCursor()
+    {
+        ChangeCursor(cursor);
+        crosshair.SetActive(false);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Confined;
+    }
 }

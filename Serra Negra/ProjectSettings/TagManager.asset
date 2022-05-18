@@ -13,6 +13,7 @@ TagManager:
   - IADisplay
   - INDisplay
   - IDDisplay
+  - PauseCanvas
   layers:
   - Default
   - TransparentFX

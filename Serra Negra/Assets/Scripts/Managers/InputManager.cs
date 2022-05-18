@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 public class InputManager : MonoBehaviour
 {
-    public bool is2D;
     private static InputManager playerInput;
     public static InputManager PlayerInput{ get{ return playerInput; } }
     private PlayerInputActions playerInputActions;
@@ -17,12 +16,6 @@ public class InputManager : MonoBehaviour
         else
         {
             playerInput = this;
-        }
-
-        if(!is2D)
-        {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
         }
         playerInputActions = new PlayerInputActions();        
     }
@@ -65,5 +58,18 @@ public class InputManager : MonoBehaviour
     public bool StartButton()
     {
         return playerInputActions.UI.StartButton.triggered;
+    }
+    public bool Pause()
+    {
+        return playerInputActions.UI.Pause.triggered;
+    }
+    public void DisablePlayerInput()
+    {
+        playerInputActions.Player.Disable();
+    }
+    
+    public void EnablePlayerInput()
+    {
+        playerInputActions.Player.Enable();
     }
 }
