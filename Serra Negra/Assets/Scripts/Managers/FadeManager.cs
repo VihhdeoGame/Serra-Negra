@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class FadeManager : MonoBehaviour
 {
-    Trigger2DDialog dialog;
     private static FadeManager fadeManager;
     public static FadeManager Fade{ get{ return fadeManager; } }
     private Image fade;
@@ -22,7 +21,6 @@ public class FadeManager : MonoBehaviour
         {
             fadeManager = this;
         }
-        dialog = GetComponent<Trigger2DDialog>();
     }
     private void Start() 
     {
@@ -31,10 +29,10 @@ public class FadeManager : MonoBehaviour
     }
     public void FadeOut()
     {
-        fade.CrossFadeAlpha(0,waitTime, true);
+        fade.CrossFadeAlpha(0,waitTime, false);
     }
     public void FadeIn()
     {
-        fade.CrossFadeAlpha(1,waitTime, true);
+        fade.CrossFadeAlpha(1,waitTime, false);
     }
 }

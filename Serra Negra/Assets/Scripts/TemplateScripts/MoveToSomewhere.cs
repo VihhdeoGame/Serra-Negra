@@ -5,6 +5,7 @@ public class MoveToSomewhere : MonoBehaviour
 {
     [SerializeField]
     bool check;
+    bool moving = false;
     [SerializeField]
     MainGameCanvas canvas;
     GenericCanvas parent;
@@ -13,14 +14,18 @@ public class MoveToSomewhere : MonoBehaviour
     {
         parent = gameObject.GetComponentInParent<GenericCanvas>();
     }
+    private void OnDisable()
+    {
+        moving = false;
+    }
     public void Move(int _canvas)
     {
-        if(!check)
+        if(!check && !moving)
         {
             StopAllCoroutines();
             StartCoroutine(StartMoving(_canvas));
         }
-        else
+        else if(check && !moving)
         {
             dialog = GetComponent<Trigger2DDialog>();
             if(dialog.CheckFlag())
@@ -41,12 +46,14 @@ public class MoveToSomewhere : MonoBehaviour
     }
     IEnumerator StartMoving(int _canvas)
     {
+        moving = true;
         FadeManager.Fade.FadeIn();
         yield return new WaitForSeconds(FadeManager.Fade.WaitTime);
         parent.Hide();
         canvas.Canvases[_canvas].Show();
         FadeManager.Fade.FadeOut();
         yield return new WaitForSeconds(FadeManager.Fade.WaitTime);
+        moving = false;
     }
     IEnumerator UpdateScene(int _scene)
     {

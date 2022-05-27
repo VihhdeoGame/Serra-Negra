@@ -1,0 +1,40 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":4,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Esse “T. Wasser” não me parece ser alguém muito são, ele está dizendo que se encontrou com a Iara e teve uma ideia de trazer ela a vida. Mas ela é só uma lenda, não sei se contaram isso para ele."
+        },
+        {
+            "spriteId":13,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"Realmente ele não parece muito bem."
+        },
+        {
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"De qualquer maneira não faço ideia do que isso está fazendo aqui, talvez seja alguém que estava escrevendo uma história fantasiosa e o vento trouxe essas folhas para cá."
+        },
+        {
+            "spriteId":99,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"Será que o que Seu Chico ou sua irmã escreveu isso?"
+        },
+        {
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Não, Seu Chico é um homem simples, e minha irmã também não é criativa e nem gosta de escrever."
+        }
+    ]
+}

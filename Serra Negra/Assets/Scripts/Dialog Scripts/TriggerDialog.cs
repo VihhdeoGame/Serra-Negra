@@ -115,7 +115,7 @@ public class TriggerDialog : MonoBehaviour
     }
     protected void GiveItem(int key,Item _item)
     {
-        InventoryManager.Inventory.AddItemtoInventory(key,_item.amount, _item.name,_item.isStorable, _item.description,_item.sprite);
+        InventoryManager.Inventory.AddItemtoInventory(key,_item.amount, _item.name_PT,_item.name_EN,_item.isStorable, _item.description_PT,_item.description_EN,_item.sprite);
         if(_item.isStorable)
             Destroy(this.gameObject); 
     }

@@ -1,0 +1,40 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Esse graveto tem um formato perfeito para um bastão de trilha."
+        },
+        {
+            "spriteId":99,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"Bastão de trilha?"
+        },
+        {
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Sim, é um item usado para ajudar na caminhada de lugares difíceis e também para cutucar moitas e saber se não há algo que possa te surpreender."
+        },
+        {
+            "spriteId":4,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Diferentemente da minha irmã eu me exercito muito, então… Bom eu tenho prática com trilhas então sei do que estou falando."
+        },
+        {
+            "spriteId":13,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"Está certo então."
+        }
+    ]
+}

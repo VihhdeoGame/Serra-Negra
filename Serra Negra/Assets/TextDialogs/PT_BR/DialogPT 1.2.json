@@ -1,0 +1,19 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":4,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Ahhh cara que horas são?>São 02:00 da manhã e eu ainda não dormi, acho que esses novos remédios que o doutor me receitou não estão fazendo efeito"
+        },
+        {
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Bem acho que vou tomar um chá pra ver se me acalmo e a ansiedade vai embora."
+        }
+    ]
+}

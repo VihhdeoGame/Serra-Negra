@@ -22,9 +22,11 @@ public class Trigger3DDialog : TriggerDialog
             if (triggerDialog.containsItem)
             {
                 EditorGUILayout.LabelField("Item");
-                triggerDialog.item.name = EditorGUILayout.TextField("Name", triggerDialog.item.name);
+                triggerDialog.item.name_PT = EditorGUILayout.TextField("Name PT", triggerDialog.item.name_PT);
+                triggerDialog.item.name_EN = EditorGUILayout.TextField("Name EN", triggerDialog.item.name_EN);
                 triggerDialog.item.amount = EditorGUILayout.IntField("Amount", triggerDialog.item.amount);
-                triggerDialog.item.description = EditorGUILayout.TextField("Description", triggerDialog.item.description);
+                triggerDialog.item.description_PT = EditorGUILayout.TextField("Description PT", triggerDialog.item.description_PT);
+                triggerDialog.item.description_EN = EditorGUILayout.TextField("Description EN", triggerDialog.item.description_EN);
                 EditorGUILayout.BeginHorizontal();
                 EditorGUILayout.PrefixLabel("Sprite");
                 triggerDialog.item.sprite = (Sprite)EditorGUILayout.ObjectField(triggerDialog.item.sprite, typeof(Sprite), true);
