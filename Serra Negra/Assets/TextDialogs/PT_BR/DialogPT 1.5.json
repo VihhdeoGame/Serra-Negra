@@ -1,0 +1,12 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":1,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Ué a porta está da sala está aberta, para onde será que ela foi a esta hora?"
+        }
+    ]
+}

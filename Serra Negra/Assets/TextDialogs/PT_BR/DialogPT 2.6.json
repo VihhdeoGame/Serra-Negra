@@ -1,0 +1,68 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":2,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Espera! Essa blusa é da Lilia!"
+        },
+        {
+            "spriteId":1,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Por quê ela deixaria sua blusa aqui?"
+        },
+        {
+            "spriteId":13,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"Ela não parece ter deixado."
+        },
+        {
+            "spriteId":2,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"É você tem razão, não teria motivos para ela ter deixado. A menos que ela estivesse fugindo e queria deixar uma pista, um rastro como em filmes."
+        },
+        {
+            "spriteId":13,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"E do que ela estaria fugindo?"
+        },
+        {
+            "spriteId":4,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Não faço ideia. A única pessoa que estava causando problemas para ela ultimamente era o Luke, seu ex namorado ciumento que vivia tentando controlar a vida e as companhias da minha irmã."
+        },
+        {
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Mas desde que eu disse poucas e boas para ele e o ameacei uns dias atrás ele não apareceu mais."
+        },
+        {
+            "spriteId":13,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"Você acha que ele esteve aqui?"
+        },
+        {
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Espero que não pelo bem dele."
+        }
+    ]
+}

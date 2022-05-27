@@ -1,0 +1,12 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":4,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Oxi não está aqui também, vou procurar por ela para saber se preciso colocar mais água para o chá."
+        }
+    ]
+}
