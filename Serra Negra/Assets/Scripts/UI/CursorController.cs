@@ -36,10 +36,9 @@ public class CursorController : MonoBehaviour
         {
             click = true;
             StartedClick();
-        }
-        
+        }   
     }
-    private void ChangeCursor(Texture2D _cursorType)
+    public void ChangeCursor(Texture2D _cursorType)
     {
         Vector2 hotspot = new Vector2(0, _cursorType.height);
         Cursor.SetCursor(_cursorType, hotspot, CursorMode.Auto);

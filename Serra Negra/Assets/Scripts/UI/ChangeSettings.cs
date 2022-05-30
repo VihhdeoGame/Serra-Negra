@@ -16,8 +16,6 @@ public class ChangeSettings : MonoBehaviour
     TMP_Dropdown languageDropdown;
     [SerializeField]
     TMP_Dropdown textSpeedDropdown;
-    [SerializeField]
-    TMP_Dropdown fontSizeDropdown;
     private void Start()
     {
         masterVolume.value = GameManager.AudioSettings.MasterVolume;
@@ -25,7 +23,6 @@ public class ChangeSettings : MonoBehaviour
         sfxVolume.value = GameManager.AudioSettings.SfxVolume;
         languageDropdown.value = (int)GameManager.GameSettings.GameLanguage;
         textSpeedDropdown.value = (int)GameManager.TextSettings.TextSpeed;
-        fontSizeDropdown.value = (int)GameManager.TextSettings.FontSize;
     }
 
     public void ChangeMasterVolume(float _value)
@@ -78,25 +75,33 @@ public class ChangeSettings : MonoBehaviour
             break;
         }
     }
-    public void ChangeFontSize(int _value)
+    /*public void SetQuality(int _value)
     {
         switch (_value)
         {
             case 0:
-                GameManager.TextSettings.FontSize = FontSize.Small;
+                GameManager.GameSettings.GameQuality = QualityType.Low;
             break;
 
             case 1:
-                GameManager.TextSettings.FontSize = FontSize.Medium;
+                GameManager.GameSettings.GameQuality = QualityType.Medium;
             break;
-
+            
             case 2:
-                GameManager.TextSettings.FontSize = FontSize.Large;
+                GameManager.GameSettings.GameQuality = QualityType.High;
+            break;
+            
+            case 3:
+                GameManager.GameSettings.GameQuality = QualityType.Very_High;
+            break;
+            
+            case 4:
+                GameManager.GameSettings.GameQuality = QualityType.Ultra;
             break;
 
             default:
-                GameManager.TextSettings.FontSize = FontSize.Medium;
+                GameManager.GameSettings.GameQuality = QualityType.Medium;
             break;
         }
-    }
+    }*/
 }

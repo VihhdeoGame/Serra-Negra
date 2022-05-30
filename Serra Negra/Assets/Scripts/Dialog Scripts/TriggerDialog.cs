@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 public class TriggerDialog : MonoBehaviour
@@ -31,11 +32,16 @@ public class TriggerDialog : MonoBehaviour
     protected AudioSource sfxPlayer;
     protected InputManager playerInput;
     protected DialogCanvas dialogCanvas;
+    protected Animator animator;
+    
+    [SerializeField]
+    protected UnityEvent runAfterClose;
 
     protected virtual void OnEnable()
     {
         musicPlayer = FindObjectOfType<MusicManager>().GetComponent<AudioSource>();
         dialogCanvas = FindObjectOfType<DialogCanvas>(true);
+        animator = dialogCanvas.gameObject.GetComponent<Animator>();
         playerInput = InputManager.PlayerInput;
         speakers = Resources.LoadAll("Speakers", typeof(Sprite));
         sfxs = Resources.LoadAll("Audio/SFX", typeof(AudioClip));
@@ -56,6 +62,8 @@ public class TriggerDialog : MonoBehaviour
             string[]sentenses = _dialog[j].sentenses.Split('>');
             dialogCanvas.SpeakerSprite.sprite = (Sprite)speakers[_dialog[j].spriteId];
             dialogCanvas.NameBox.text = _dialog[j].name;
+            dialogCanvas.TextBox.text = "";
+            if(j == 0) yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
             int musicIndex = 0;
             int sfxIndex = 0;
             for (int k = 0; k < sentenses.Length; k++)
@@ -80,10 +88,14 @@ public class TriggerDialog : MonoBehaviour
                     dialogCanvas.TextBox.text += sentenses[k][i];
                     yield return new WaitForSeconds(GameManager.TextSettings.Speed);
                 }
-                yield return new WaitUntil(()=>playerInput.GetInteraction());
+                if(GameManager.TextSettings.Auto) yield return new WaitForSeconds(GameManager.TextSettings.Speed * 10f);
+                else yield return new WaitUntil(()=>playerInput.GetInteraction());
             }
         }
+        animator.SetTrigger("Exit");
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
         dialogCanvas.Canvas.SetActive(false);
+        CloseDialog();
         UpdateDisplay(true);
         if(containsItem && !requiredCheck)
         {
@@ -98,6 +110,12 @@ public class TriggerDialog : MonoBehaviour
             FinalInteraction();            
         }
     }
+
+    private void CloseDialog()
+    {
+        runAfterClose.Invoke();        
+    }
+
     public void CheckDialog(int _id)
     {
         if(!InventoryManager.Inventory.GetInventory().items.ContainsKey(itemKey))

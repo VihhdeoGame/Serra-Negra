@@ -27,21 +27,35 @@ public class InputManager : MonoBehaviour
     {
         playerInputActions.Disable();        
     }
-    public Vector2 GetPlayerMovement()
+    public bool GetPlayerUp()
     {
-        return playerInputActions.Player.Move.ReadValue<Vector2>();
+        return playerInputActions.Player.MoveUp.triggered;
+    }
+    public bool GetPlayerDown()
+    {
+        return playerInputActions.Player.MoveDown.triggered;
+    }
+    
+    public bool GetPlayerLeft()
+    {
+        return playerInputActions.Player.MoveLeft.triggered;
+    }
+    
+    public bool GetPlayerRight()
+    {
+        return playerInputActions.Player.MoveRight.triggered;
     }
     public Vector2 MouseDelta()
     {
         return playerInputActions.Player.Look.ReadValue<Vector2>();
     }
-    public bool GetPlayerRight()
+    public bool GetPlayerRotateRight()
     {
-        return playerInputActions.Player.MoveRight.IsPressed();
+        return playerInputActions.Player.RotateRight.triggered;
     }
-    public bool GetPlayerLeft()
+    public bool GetPlayerRotateLeft()
     {
-        return playerInputActions.Player.MoveLeft.IsPressed();
+        return playerInputActions.Player.RotateLeft.triggered;
     }
     public bool GetInteraction()
     {

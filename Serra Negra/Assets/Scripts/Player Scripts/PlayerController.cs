@@ -19,7 +19,6 @@ public class PlayerController : MonoBehaviour
     Vector3 targetGridPos;
     Vector3 prevTargetGridPos;
     Vector3 targetRotation;
-    Vector2 playerMove;
     Vector2 cameraMove;
     Vector2 mouseMove;
     Vector2 offCenterPosition;
@@ -54,14 +53,13 @@ public class PlayerController : MonoBehaviour
     {
         if(!dialogCanvas.Canvas.activeSelf)
         {
-            playerMove = playerInput.GetPlayerMovement();
             cameraMove = playerInput.MouseDelta();
-            if(playerMove.y > 0.1f){MoveFoward();}
-            if(playerMove.y < -0.1f){MoveBackward();}
-            if(playerMove.x > 0.1f){RotateRight();}
-            if(playerMove.x < -0.1f){RotateLeft();}
+            if(playerInput.GetPlayerUp()){MoveFoward();}
+            if(playerInput.GetPlayerDown()){MoveBackward();}
             if(playerInput.GetPlayerRight()){MoveRight();}
             if(playerInput.GetPlayerLeft()){MoveLeft();}
+            if(playerInput.GetPlayerRotateRight()){RotateRight();}
+            if(playerInput.GetPlayerRotateLeft()){RotateLeft();}
             if(Mathf.Abs(cameraMove.x)>0.1 || Mathf.Abs(cameraMove.y)>0.1){RotateCamera();}
 
             if(playerInput.GetInteraction())

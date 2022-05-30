@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -85,28 +86,13 @@ public class Trigger2DDialog : TriggerDialog
         }
     }
 #endif
-/* 
-    [SerializeField]
-    int nextBackground;
-    SpriteRenderer backgoundSprite;
-    Object[] backgrounds; */
     protected override void OnEnable() 
     {
         base.OnEnable();
-        /* backgrounds = Resources.LoadAll("Backgrounds", typeof(Sprite)); */
         sfxPlayer = GameObject.FindGameObjectWithTag("SFXPlayer").GetComponent<AudioSource>();
-       /*  backgoundSprite = GameObject.FindGameObjectWithTag("Background").GetComponent<SpriteRenderer>(); */
     }
     protected override void FinalInteraction()
     {
-        /* StopAllCoroutines();
-        StartCoroutine(ChangeBackgound()); */      
+            
     }
-    /* IEnumerator ChangeBackgound()
-    {
-        FadeManager.Fade.FadeIn();
-        yield return new WaitForSeconds(FadeManager.Fade.WaitTime);
-        backgoundSprite.sprite = (Sprite)backgrounds[nextBackground];
-        FadeManager.Fade.FadeOut();
-    } */
 }
