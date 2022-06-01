@@ -93,6 +93,6 @@ public class Trigger2DDialog : TriggerDialog
     }
     protected override void FinalInteraction()
     {
-            
+        base.FinalInteraction();            
     }
 }

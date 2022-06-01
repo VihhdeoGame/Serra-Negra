@@ -27,12 +27,25 @@ public class FadeManager : MonoBehaviour
         fade = GetComponent<Image>();
         FadeOut();
     }
-    public void FadeOut()
+    public void FadeOut(float _waitTime = 0)
     {
-        fade.CrossFadeAlpha(0,waitTime, false);
+        if(_waitTime == 0)fade.CrossFadeAlpha(0,waitTime, false);
+        else fade.CrossFadeAlpha(0,_waitTime, false);
     }
-    public void FadeIn()
+    public void FadeIn(float _waitTime = 0)
     {
-        fade.CrossFadeAlpha(1,waitTime, false);
+        if(_waitTime == 0)fade.CrossFadeAlpha(1,waitTime, false);
+        else fade.CrossFadeAlpha(1,_waitTime, false);
     }
+    public void BlackOut()
+    {
+        StopAllCoroutines();
+        StartCoroutine(FlashDark());
+    }
+    IEnumerator FlashDark()
+    {
+        FadeIn(0.0001f);
+        yield return new WaitForSeconds(waitTime);
+        FadeOut();
+    } 
 }

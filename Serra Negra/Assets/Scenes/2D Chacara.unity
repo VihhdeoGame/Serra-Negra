@@ -492,6 +492,7 @@ MonoBehaviour:
   requiredCheck: 0
   requiredItemKey: 
   requiredAmount: 
+  skipAnim: 0
   runAfterClose:
     m_PersistentCalls:
       m_Calls: []
@@ -1883,6 +1884,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1283783642}
+--- !u!114 &498915379 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5516180878448836672, guid: f82576c5b38fa85478a0697627f90317,
+    type: 3}
+  m_PrefabInstance: {fileID: 802614391}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498915375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed7e330f23d2924d8b14c267b1fc9bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &517974569
 GameObject:
   m_ObjectHideFlags: 0
@@ -2050,6 +2063,7 @@ MonoBehaviour:
   requiredCheck: 0
   requiredItemKey: 
   requiredAmount: 
+  skipAnim: 0
   runAfterClose:
     m_PersistentCalls:
       m_Calls: []
@@ -2679,6 +2693,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 295469714}
+  - {fileID: 2046002899}
   m_Father: {fileID: 876539713}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3443,12 +3458,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 309540fd63bea334c8a2bc72606f8b96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemKey: 0
+  itemKey: 7
   dialogs_PT:
-  - {fileID: 0}
+  - {fileID: 4900000, guid: 8a8bd8388a808af42a64eda7def4df7c, type: 3}
   dialogs_EN:
-  - {fileID: 0}
-  containsItem: 0
+  - {fileID: 4900000, guid: 8a8bd8388a808af42a64eda7def4df7c, type: 3}
+  containsItem: 1
   item:
     name_PT: 
     name_EN: 
@@ -3460,6 +3475,7 @@ MonoBehaviour:
   requiredCheck: 0
   requiredItemKey: 
   requiredAmount: 
+  skipAnim: 0
   runAfterClose:
     m_PersistentCalls:
       m_Calls: []
@@ -3530,6 +3546,7 @@ MonoBehaviour:
   requiredCheck: 0
   requiredItemKey: 
   requiredAmount: 
+  skipAnim: 0
   runAfterClose:
     m_PersistentCalls:
       m_Calls:
@@ -5834,12 +5851,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 309540fd63bea334c8a2bc72606f8b96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemKey: 0
+  itemKey: 6
   dialogs_PT:
-  - {fileID: 0}
+  - {fileID: 4900000, guid: c05cd38d9bc1ba145b57c154f1d8fba0, type: 3}
   dialogs_EN:
-  - {fileID: 0}
-  containsItem: 0
+  - {fileID: 4900000, guid: c05cd38d9bc1ba145b57c154f1d8fba0, type: 3}
+  containsItem: 1
   item:
     name_PT: 
     name_EN: 
@@ -5851,6 +5868,7 @@ MonoBehaviour:
   requiredCheck: 0
   requiredItemKey: 
   requiredAmount: 
+  skipAnim: 0
   runAfterClose:
     m_PersistentCalls:
       m_Calls: []
@@ -5900,6 +5918,7 @@ MonoBehaviour:
   requiredCheck: 0
   requiredItemKey: 
   requiredAmount: 
+  skipAnim: 0
   runAfterClose:
     m_PersistentCalls:
       m_Calls: []
@@ -6183,6 +6202,7 @@ MonoBehaviour:
   requiredCheck: 0
   requiredItemKey: 
   requiredAmount: 
+  skipAnim: 0
   runAfterClose:
     m_PersistentCalls:
       m_Calls: []
@@ -6241,12 +6261,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 309540fd63bea334c8a2bc72606f8b96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemKey: 0
+  itemKey: 8
   dialogs_PT:
-  - {fileID: 0}
+  - {fileID: 4900000, guid: bdf50c76da5e421499aa27ba1597d4ba, type: 3}
   dialogs_EN:
-  - {fileID: 0}
-  containsItem: 0
+  - {fileID: 4900000, guid: bdf50c76da5e421499aa27ba1597d4ba, type: 3}
+  containsItem: 1
   item:
     name_PT: 
     name_EN: 
@@ -6258,9 +6278,22 @@ MonoBehaviour:
   requiredCheck: 0
   requiredItemKey: 
   requiredAmount: 
+  skipAnim: 1
   runAfterClose:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 498915379}
+        m_TargetAssemblyTypeName: FadeManager, Assembly-CSharp
+        m_MethodName: FadeIn
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.0001
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1558955569
 GameObject:
   m_ObjectHideFlags: 0
@@ -6505,6 +6538,7 @@ MonoBehaviour:
   requiredCheck: 0
   requiredItemKey: 
   requiredAmount: 
+  skipAnim: 0
   runAfterClose:
     m_PersistentCalls:
       m_Calls: []
@@ -6762,7 +6796,6 @@ GameObject:
   - component: {fileID: 1678620205}
   - component: {fileID: 1678620204}
   - component: {fileID: 1678620208}
-  - component: {fileID: 1678620209}
   m_Layer: 5
   m_Name: 'Kitchen_Hitbox '
   m_TagString: Untagged
@@ -6896,7 +6929,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cdebc108fe27744aa69d72af7cd36f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  check: 1
+  check: 0
   canvas: {fileID: 1283783642}
 --- !u!114 &1678620208
 MonoBehaviour:
@@ -6947,40 +6980,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &1678620209
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1678620202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 309540fd63bea334c8a2bc72606f8b96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemKey: 5
-  dialogs_PT:
-  - {fileID: 4900000, guid: 0ea6c88343c7fea458a44f967da15738, type: 3}
-  - {fileID: 4900000, guid: 0ea6c88343c7fea458a44f967da15738, type: 3}
-  dialogs_EN:
-  - {fileID: 4900000, guid: 0ea6c88343c7fea458a44f967da15738, type: 3}
-  - {fileID: 4900000, guid: 0ea6c88343c7fea458a44f967da15738, type: 3}
-  containsItem: 1
-  item:
-    name_PT: 
-    name_EN: 
-    isStorable: 0
-    description_PT: 
-    description_EN: 
-    sprite: {fileID: 0}
-    amount: 0
-  requiredCheck: 1
-  requiredItemKey: 03000000
-  requiredAmount: 00000000
-  runAfterClose:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1690160083
 GameObject:
   m_ObjectHideFlags: 0
@@ -8051,6 +8050,204 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_TargetDisplay: 0
+--- !u!1 &2046002898
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2046002899}
+  - component: {fileID: 2046002904}
+  - component: {fileID: 2046002903}
+  - component: {fileID: 2046002902}
+  - component: {fileID: 2046002901}
+  - component: {fileID: 2046002900}
+  m_Layer: 5
+  m_Name: BackExit_Hitbox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2046002899
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046002898}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 776643633}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.4, y: 0.3}
+  m_AnchorMax: {x: 0.55, y: 0.9}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2046002900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046002898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8596412883465278967, guid: 60ff99eea52cfee459a53047e599203b,
+            type: 3}
+          m_TargetAssemblyTypeName: CursorController, Assembly-CSharp
+          m_MethodName: ChangeCursor
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2800000, guid: 42f35ceed050f684994ab2c4d0a0278a,
+              type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8596412883465278967, guid: 60ff99eea52cfee459a53047e599203b,
+            type: 3}
+          m_TargetAssemblyTypeName: CursorController, Assembly-CSharp
+          m_MethodName: ChangeCursor
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2800000, guid: 1ff97974d42e8fb47ba6c2b21ac9c50c,
+              type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &2046002901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046002898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cdebc108fe27744aa69d72af7cd36f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  check: 0
+  canvas: {fileID: 1283783642}
+--- !u!114 &2046002902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046002898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 0
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 0
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 2046002903}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2046002901}
+        m_TargetAssemblyTypeName: MoveToSomewhere, Assembly-CSharp
+        m_MethodName: Move
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2046002903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046002898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2046002904
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046002898}
+  m_CullTransparentMesh: 1
 --- !u!1 &2051429270
 GameObject:
   m_ObjectHideFlags: 0
@@ -8282,7 +8479,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 6
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -9054,6 +9251,7 @@ GameObject:
   - component: {fileID: 2102849943}
   - component: {fileID: 2102849942}
   - component: {fileID: 2102849941}
+  - component: {fileID: 2102849946}
   m_Layer: 5
   m_Name: FrontExit_Hitbox
   m_TagString: Untagged
@@ -9224,6 +9422,51 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 2102849942}
   m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2102849946}
+        m_TargetAssemblyTypeName: TriggerDialog, Assembly-CSharp
+        m_MethodName: CheckDialog
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2102849946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102849939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309540fd63bea334c8a2bc72606f8b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemKey: 5
+  dialogs_PT:
+  - {fileID: 4900000, guid: b19d22c0a90f2fc46b83a35becfeca19, type: 3}
+  dialogs_EN:
+  - {fileID: 4900000, guid: b19d22c0a90f2fc46b83a35becfeca19, type: 3}
+  containsItem: 1
+  item:
+    name_PT: 
+    name_EN: 
+    isStorable: 0
+    description_PT: 
+    description_EN: 
+    sprite: {fileID: 0}
+    amount: 0
+  requiredCheck: 0
+  requiredItemKey: 
+  requiredAmount: 
+  skipAnim: 0
+  runAfterClose:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2102849944}

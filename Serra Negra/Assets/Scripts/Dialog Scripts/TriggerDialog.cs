@@ -33,6 +33,8 @@ public class TriggerDialog : MonoBehaviour
     protected InputManager playerInput;
     protected DialogCanvas dialogCanvas;
     protected Animator animator;
+    [SerializeField]
+    protected bool skipAnim;
     
     [SerializeField]
     protected UnityEvent runAfterClose;
@@ -93,9 +95,9 @@ public class TriggerDialog : MonoBehaviour
             }
         }
         animator.SetTrigger("Exit");
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+        if(!skipAnim)yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
         dialogCanvas.Canvas.SetActive(false);
-        CloseDialog();
+        RunAfter();
         UpdateDisplay(true);
         if(containsItem && !requiredCheck)
         {
@@ -111,7 +113,7 @@ public class TriggerDialog : MonoBehaviour
         }
     }
 
-    private void CloseDialog()
+    private void RunAfter()
     {
         runAfterClose.Invoke();        
     }
@@ -130,6 +132,9 @@ public class TriggerDialog : MonoBehaviour
         }
         else if(InventoryManager.Inventory.GetInventory().items.ContainsKey(itemKey) && item.isStorable)
             GiveItem(itemKey,item);
+        else if(InventoryManager.Inventory.GetInventory().items.ContainsKey(itemKey) && !item.isStorable)
+            RunAfter();
+
     }
     protected void GiveItem(int key,Item _item)
     {
