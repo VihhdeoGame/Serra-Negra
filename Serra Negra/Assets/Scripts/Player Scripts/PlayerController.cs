@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     Transform povCam;
     DialogCanvas dialogCanvas;
-
+    CursorController cursorController;
     public AudioSource SfxPlayer{get{return sfxPlayer;}}
     bool AtRest
     {
@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
     }
         private void Start()
     {
+        cursorController = FindObjectOfType<CursorController>();
         dialogCanvas = FindObjectOfType<DialogCanvas>(true);
         playerInput = InputManager.PlayerInput;
         targetGridPos = transform.position;
@@ -51,7 +52,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if(!dialogCanvas.Canvas.activeSelf)
+        if(!dialogCanvas.Canvas.activeSelf && !cursorController.is2D)
         {
             cameraMove = playerInput.MouseDelta();
             if(playerInput.GetPlayerUp()){MoveFoward();}
@@ -65,7 +66,7 @@ public class PlayerController : MonoBehaviour
             if(playerInput.GetInteraction())
             {
                 RaycastHit hit;
-                if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, gridSize))
+                if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, gridSize) && !cursorController.is2D)
                 {
                     Trigger3DDialog dialogCheck = hit.collider.gameObject.GetComponent<Trigger3DDialog>(); 
                     if(dialogCheck != null)

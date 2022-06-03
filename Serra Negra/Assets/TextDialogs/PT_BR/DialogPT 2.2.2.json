@@ -1,0 +1,12 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":3,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Podemos dar uma conferida na cabana agora, quem sabe achamos alguma pista."
+        }
+    ]
+}

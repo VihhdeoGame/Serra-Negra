@@ -38,6 +38,8 @@ public class TriggerDialog : MonoBehaviour
     
     [SerializeField]
     protected UnityEvent runAfterClose;
+    [SerializeField]
+    protected UnityEvent runAfterCheck;
 
     protected virtual void OnEnable()
     {
@@ -168,7 +170,7 @@ public class TriggerDialog : MonoBehaviour
     }
     protected virtual void FinalInteraction()
     {
-        
+        runAfterCheck.Invoke();        
     }
 }
 

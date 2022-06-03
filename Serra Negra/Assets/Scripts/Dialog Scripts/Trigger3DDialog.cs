@@ -9,6 +9,7 @@ using UnityEditor;
 
 public class Trigger3DDialog : TriggerDialog
 {
+    private GenericCanvas shackCanvas;
 #if UNITY_EDITOR
     [CustomEditor(typeof(Trigger3DDialog))]
     public class Trigger3DDialogEditor : Editor
@@ -91,6 +92,7 @@ public class Trigger3DDialog : TriggerDialog
         base.OnEnable();
         crosshair = GameObject.FindGameObjectWithTag("Crosshair");
         sfxPlayer = FindObjectOfType<PlayerController>().SfxPlayer;
+        shackCanvas = FindObjectOfType<GenericCanvas>(true);
     }
     protected override void UpdateDisplay(bool active)
     {
@@ -98,7 +100,7 @@ public class Trigger3DDialog : TriggerDialog
     }
     protected override void FinalInteraction()
     {
-        OpenDoor();
+        base.FinalInteraction();
     }
     public void OpenDoor()
     {
@@ -107,6 +109,23 @@ public class Trigger3DDialog : TriggerDialog
             Item _item = InventoryManager.Inventory.GetInventory().items[requiredItemKey[i]];
             _item.amount -= requiredAmount[i];
         }
+    }
+    public void DeleteObject()
+    {
         Destroy(this.gameObject);
+    }
+    public void OpenShack()
+    {
+        StopAllCoroutines();
+        StartCoroutine(OShack());   
+        IEnumerator OShack()
+        {
+            FadeManager.Fade.FadeIn();
+            yield return new WaitForSeconds(FadeManager.Fade.WaitTime);
+            FindObjectOfType<CursorController>().is2D = true;
+            FindObjectOfType<CursorController>().EnableCursor();
+            shackCanvas.Show();
+            FadeManager.Fade.FadeOut();
+        }   
     }
 }
