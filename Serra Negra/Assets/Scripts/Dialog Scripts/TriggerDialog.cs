@@ -41,7 +41,7 @@ public class TriggerDialog : MonoBehaviour
     [SerializeField]
     protected UnityEvent runAfterCheck;
 
-    protected virtual void OnEnable()
+    protected virtual void Start()
     {
         musicPlayer = FindObjectOfType<MusicManager>().GetComponent<AudioSource>();
         dialogCanvas = FindObjectOfType<DialogCanvas>(true);
@@ -92,6 +92,7 @@ public class TriggerDialog : MonoBehaviour
                     dialogCanvas.TextBox.text += sentenses[k][i];
                     yield return new WaitForSeconds(GameManager.TextSettings.Speed);
                 }
+                Debug.Log("Waiting for Interaction" + playerInput);
                 if(GameManager.TextSettings.Auto) yield return new WaitForSeconds(GameManager.TextSettings.Speed * 10f);
                 else yield return new WaitUntil(()=>playerInput.GetInteraction());
             }

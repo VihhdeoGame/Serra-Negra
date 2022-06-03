@@ -41560,6 +41560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28ee074a7caa2324cbbbf83404294109, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseCanvas: {fileID: 2051249124}
 --- !u!4 &1265766449 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8546501699287776424, guid: a5a9331ce0433f240a6db86523c183c5,
@@ -46987,7 +46988,7 @@ PrefabInstance:
     - target: {fileID: 4323735445015285576, guid: f82576c5b38fa85478a0697627f90317,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4753948301414513916, guid: f82576c5b38fa85478a0697627f90317,
         type: 3}
@@ -47018,11 +47019,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8210036278726090469, guid: f82576c5b38fa85478a0697627f90317,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9195868539678664078, guid: f82576c5b38fa85478a0697627f90317, type: 3}
@@ -61728,7 +61724,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 2
@@ -68421,6 +68417,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5a9331ce0433f240a6db86523c183c5, type: 3}
+--- !u!1 &2051249124 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8210036278726090469, guid: f82576c5b38fa85478a0697627f90317,
+    type: 3}
+  m_PrefabInstance: {fileID: 1450371906}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2052577444 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1428016034954843954, guid: f82576c5b38fa85478a0697627f90317,

@@ -86,9 +86,9 @@ public class Trigger2DDialog : TriggerDialog
         }
     }
 #endif
-    protected override void OnEnable() 
+    protected override void Start() 
     {
-        base.OnEnable();
+        base.Start();
         sfxPlayer = GameObject.FindGameObjectWithTag("SFXPlayer").GetComponent<AudioSource>();
     }
     protected override void FinalInteraction()

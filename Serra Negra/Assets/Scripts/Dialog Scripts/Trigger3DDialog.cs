@@ -87,9 +87,9 @@ public class Trigger3DDialog : TriggerDialog
     }
 #endif
     private GameObject crosshair;
-    protected override void OnEnable() 
+    protected override void Start() 
     {
-        base.OnEnable();
+        base.Start();
         crosshair = GameObject.FindGameObjectWithTag("Crosshair");
         sfxPlayer = FindObjectOfType<PlayerController>().SfxPlayer;
         shackCanvas = FindObjectOfType<GenericCanvas>(true);
