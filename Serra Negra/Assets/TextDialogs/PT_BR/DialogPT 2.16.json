@@ -1,0 +1,26 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":1,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Mãe D’água? Será que essa carta fala sobre a Iara?"
+        },
+        {
+            "spriteId":16,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"Iara?"
+        },
+        {
+            "spriteId":1,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"É uma lenda que diz sobre uma uma sereia que seduz homens e os leva para o fundo das águas. Mas o que esse papel está fazendo aqui? E quem é “T. wasser”?"
+        }
+    ]
+}

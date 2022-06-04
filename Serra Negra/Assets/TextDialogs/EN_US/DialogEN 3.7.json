@@ -1,0 +1,110 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":7,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"LILIA",
+            "sentenses":"Oh! My head! What happened here?"
+        },
+        {
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Sister! You woke up, let's go, we have to get out of here later I'll explain."
+        },
+        {
+            "spriteId":8,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"LILIA",
+            "sentenses":"Uhhh! Oh, I'm all sore."
+        },
+        {
+            "spriteId":4,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"You were kidnapped or whatever that crazy Dr Flávio was trying to do to you."
+        },
+		{
+            "spriteId":11,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"LILIA",
+            "sentenses":"You are crazy! What would Doctor Flávio want with me? And what would he be doing here?"
+        },
+		{
+            "spriteId":4,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"That actually wasn't even his name, apparently he was a maniac. He was saying something about an ancient water goddess and something about sacrifice."
+        },
+		{
+            "spriteId":8,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"LILIA",
+            "sentenses":"Sacrifice? My God! Was I going to be sacrificed?!"
+        },
+		{
+            "spriteId":3,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"I think so, but we saved you! Well, let's get out of here before he comes back."
+        },
+		{
+            "spriteId":8,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"LILIA",
+            "sentenses":"Saved me?"
+        },
+		{
+            "spriteId":2,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"There was a bird helping me, but there was a flash and it disappeared."
+        },
+		{
+            "spriteId":7,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"LILIA",
+            "sentenses":"Just look at your size! I'm just a weak girl."
+        },
+		{
+            "spriteId":8,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"LILIA",
+            "sentenses":"You fought for me, you saved me once again. Like that time that woman wanted to hit me."
+        },
+		{
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Well, you could listen to me more and learn to defend yourself, wouldn't you?"
+        },
+		{
+            "spriteId":9,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"LILIA",
+            "sentenses":"You're right, if I knew how to defend myself none of this would have happened."
+        },
+		{
+            "spriteId":6,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"LILIA",
+            "sentenses":"Come on Zia, let's get out of here. Something tells me we should head towards the city fountain."
+        }
+    ]
+}

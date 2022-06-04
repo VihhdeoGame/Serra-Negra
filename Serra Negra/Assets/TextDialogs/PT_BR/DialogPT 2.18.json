@@ -1,0 +1,33 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":2,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Essa é a saída dos fundos da fazenda, e aqui havia um mata-burro para os animais não fugirem mas desapareceu."
+        },
+        {
+            "spriteId":13,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"Falando nisso eu não vi nenhum animal por aqui."
+        },
+        {
+            "spriteId":1,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Como nossa família só vem pra cá passar uns dias ou para festas, a gente não cria animais."
+        },
+        {
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"De qualquer maneira precisamos achar um jeito de atravessar esse buraco."
+        }
+    ]
+}

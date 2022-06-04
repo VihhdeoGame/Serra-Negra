@@ -134,7 +134,13 @@ public class TriggerDialog : MonoBehaviour
             }
         }
         else if(InventoryManager.Inventory.GetInventory().items.ContainsKey(itemKey) && item.isStorable)
+        {
+            dialogCanvas.Canvas.SetActive(true);
+            UpdateDisplay(false);
+            if(GameManager.GameSettings.GameLanguage == GameLanguageType.PT_BR){DisplayDialog(dialogs_PT[_id+1].text);}
+            if(GameManager.GameSettings.GameLanguage == GameLanguageType.EN_US){DisplayDialog(dialogs_EN[_id+1].text);}
             GiveItem(itemKey,item);
+        }
         else if(InventoryManager.Inventory.GetInventory().items.ContainsKey(itemKey) && !item.isStorable)
             RunAfter();
 

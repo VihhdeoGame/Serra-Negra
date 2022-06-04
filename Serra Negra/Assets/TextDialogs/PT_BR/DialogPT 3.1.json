@@ -1,0 +1,12 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":1,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Acho que vou voltar para a casa e dar uma olhada novamente por lá. Estava tudo trancado e nem um sinal dela por aqui na rua."
+        }
+    ]
+}

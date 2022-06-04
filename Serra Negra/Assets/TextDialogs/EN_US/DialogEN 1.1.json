@@ -1,0 +1,33 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":3,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"We finally arrived Lilia! I can't believe we have the entire holiday with the house to ourselves!"
+        },
+        {
+            "spriteId":8,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"LILIA",
+            "sentenses":"Yes, by the way what were you doing at the doctor's this morning when we arrived? Are you sick Zia?"
+        },
+        {
+            "spriteId":4,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"No! I just went to get some sleeping pills, I've been having a lot of insomnia lately."
+        },
+        {
+            "spriteId":7,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"LILIA",
+            "sentenses":"Aaahhh."
+        }
+    ]
+}

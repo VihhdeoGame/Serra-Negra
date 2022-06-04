@@ -1,0 +1,61 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":2,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Lilia acorde! Lilia vamos acorde!"
+        },
+        {
+            "spriteId":16,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"Ela está viva?"
+        },
+        {
+            "spriteId":1,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Está sim, mas sua respiração está fraca."
+        },
+        {
+            "spriteId":17,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"???",
+            "sentenses":"Zia? Você está bem?"
+        },
+        {
+            "spriteId":2,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Dr. Flávio? O que está acontecendo aqui?"
+        },
+		{
+            "spriteId":19,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"DR. FLÁVIO",
+            "sentenses":"Eu não sei… Eu acordei agora à pouco do lado de fora e estava desorientado."
+        },
+		{
+            "spriteId":21,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"DR. FLÁVIO",
+            "sentenses":"Acabei entrando aqui e a encontrei assim, e aí fui na cozinha buscar uma água para ajudá-la a acordar."
+        },
+		{
+            "spriteId":3,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Venha doutor, me ajude a acordar ela."
+        }
+    ]
+}

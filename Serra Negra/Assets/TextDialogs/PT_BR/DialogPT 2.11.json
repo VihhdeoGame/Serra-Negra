@@ -2,11 +2,11 @@
     "dialogs": 
     [
         {
-            "spriteId":0,
+            "spriteId":1,
             "musicIds":[],
             "sfxIds":[],
             "name":"ZIA",
-            "sentenses":"Mais uma carta de “T. Wasser”, vamos ver se descubro algo."
+            "sentenses":"Eu tinha esperanças da Lilia ter vindo para cá por algum motivo..."
         }
     ]
 }

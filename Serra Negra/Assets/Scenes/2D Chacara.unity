@@ -479,7 +479,7 @@ MonoBehaviour:
   dialogs_PT:
   - {fileID: 4900000, guid: f7a6395ed6e10d04bbe3b7e40b066e84, type: 3}
   dialogs_EN:
-  - {fileID: 4900000, guid: f7a6395ed6e10d04bbe3b7e40b066e84, type: 3}
+  - {fileID: 4900000, guid: f39b2716cf6d9d74bb95d879619774f2, type: 3}
   containsItem: 1
   item:
     name_PT: 
@@ -2252,7 +2252,7 @@ MonoBehaviour:
   dialogs_PT:
   - {fileID: 4900000, guid: abac492ddd4e5734b90f69cedac325ff, type: 3}
   dialogs_EN:
-  - {fileID: 4900000, guid: abac492ddd4e5734b90f69cedac325ff, type: 3}
+  - {fileID: 4900000, guid: 8c0ea31787116d143a92d2bd45d64bce, type: 3}
   containsItem: 1
   item:
     name_PT: 
@@ -3667,7 +3667,7 @@ MonoBehaviour:
   dialogs_PT:
   - {fileID: 4900000, guid: 8a8bd8388a808af42a64eda7def4df7c, type: 3}
   dialogs_EN:
-  - {fileID: 4900000, guid: 8a8bd8388a808af42a64eda7def4df7c, type: 3}
+  - {fileID: 4900000, guid: b093d36acbead2d4ea758482abfdfe0a, type: 3}
   containsItem: 1
   item:
     name_PT: 
@@ -3741,7 +3741,7 @@ MonoBehaviour:
   dialogs_PT:
   - {fileID: 4900000, guid: 4a08d41515e673742b25e773d4279b79, type: 3}
   dialogs_EN:
-  - {fileID: 4900000, guid: 4a08d41515e673742b25e773d4279b79, type: 3}
+  - {fileID: 4900000, guid: 320ea2a975867e840b187cdaed7443ab, type: 3}
   containsItem: 1
   item:
     name_PT: 
@@ -6072,7 +6072,7 @@ MonoBehaviour:
   dialogs_PT:
   - {fileID: 4900000, guid: c05cd38d9bc1ba145b57c154f1d8fba0, type: 3}
   dialogs_EN:
-  - {fileID: 4900000, guid: c05cd38d9bc1ba145b57c154f1d8fba0, type: 3}
+  - {fileID: 4900000, guid: 40384cf0555286649bf3057cfe3d29d8, type: 3}
   containsItem: 1
   item:
     name_PT: 
@@ -6125,7 +6125,7 @@ MonoBehaviour:
   dialogs_PT:
   - {fileID: 4900000, guid: 0ea6c88343c7fea458a44f967da15738, type: 3}
   dialogs_EN:
-  - {fileID: 4900000, guid: 0ea6c88343c7fea458a44f967da15738, type: 3}
+  - {fileID: 4900000, guid: 8d32bb2e2c09e724a94e54c6c7a398b3, type: 3}
   containsItem: 1
   item:
     name_PT: 
@@ -6492,7 +6492,7 @@ MonoBehaviour:
   dialogs_PT:
   - {fileID: 4900000, guid: bdf50c76da5e421499aa27ba1597d4ba, type: 3}
   dialogs_EN:
-  - {fileID: 4900000, guid: bdf50c76da5e421499aa27ba1597d4ba, type: 3}
+  - {fileID: 4900000, guid: aba43aeea62dab644bc3cc6c21f4f5bb, type: 3}
   containsItem: 1
   item:
     name_PT: 
@@ -6803,7 +6803,7 @@ MonoBehaviour:
   dialogs_PT:
   - {fileID: 4900000, guid: 5b3d98a2719cd2d408ee32e2af4e27aa, type: 3}
   dialogs_EN:
-  - {fileID: 4900000, guid: 5b3d98a2719cd2d408ee32e2af4e27aa, type: 3}
+  - {fileID: 4900000, guid: 72b8a057113a3544eb31be4c61bb7ecf, type: 3}
   containsItem: 1
   item:
     name_PT: 

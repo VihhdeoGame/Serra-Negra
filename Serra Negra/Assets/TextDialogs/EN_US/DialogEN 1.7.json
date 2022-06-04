@@ -1,0 +1,152 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":14,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"???",
+            "sentenses":"Oh! My head! What happened here?"
+        },
+        {
+            "spriteId":4,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Wait, can you talk?"
+        },
+        {
+            "spriteId":16,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"???",
+            "sentenses":"Of course I know, what would I be if I didn't know?"
+        },
+        {
+            "spriteId":5,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"But birds do not know how to speak, maybe parrots and crows that speak a few words or phrases. Now actually talking, that is not even possible."
+        },
+        {
+            "spriteId":15,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"???",
+            "sentenses":"Uhhh! Oh, I'm all sore."
+        },
+        {
+            "spriteId":1,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Oh that? Well you attacked me first so I just retaliated."
+        },
+        {
+            "spriteId":16,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"???",
+            "sentenses":"You are crazy! > Look at your size! I am only…"
+        },
+        {
+            "spriteId":13,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"???",
+            "sentenses":"I am..."
+        },
+        {
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"A bird!"
+        },
+        {
+            "spriteId":13,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"???",
+            "sentenses":"I can't remember who I am."
+        },
+        {
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"This is weird, but don't worry you'll soon remember. > Listen! Have you seen a girl like me walking around?"
+        },
+        {
+            "spriteId":13,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"???",
+            "sentenses":"I don't know... I was sleeping and then I heard a noise, so... I attacked you for some reason but I can't remember."
+        },
+        {
+            "spriteId":1,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Wow, I'm so worried that I ended up not asking you what your name is..."
+        },
+        {
+            "spriteId":13,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"???",
+            "sentenses":"Name? I don't remember having a name..."
+        },
+        {
+            "spriteId":2,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Look, you look very confused, and I'm not really enjoying this fog around here, I have a bad feeling. > I'll keep looking for my sister, if you want you can accompany me so you won't be alone."
+        },
+        {
+            "spriteId":13,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"???",
+            "sentenses":"I think I'd better walk with you for now, I'm also getting a bad feeling in the air."
+        },
+        {
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Let's go this way Alma!"
+        },
+        {
+            "spriteId":14,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"Alma?"
+        },
+        {
+            "spriteId":2,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Yeah, I guess I'll call you that for now, just until you remember who you are."
+        },
+        {
+            "spriteId":12,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"All right, I think."
+        },
+        {
+            "spriteId":3,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"I'm Zia by the way"
+        }
+    ]
+}

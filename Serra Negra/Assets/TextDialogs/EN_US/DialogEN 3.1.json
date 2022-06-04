@@ -1,0 +1,12 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":1,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"I think I'll go back to the house and look around again. Everything was locked and not a sign of her here on the street."
+        }
+    ]
+}
