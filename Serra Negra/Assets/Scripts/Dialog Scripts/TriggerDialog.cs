@@ -40,6 +40,8 @@ public class TriggerDialog : MonoBehaviour
     protected UnityEvent runAfterClose;
     [SerializeField]
     protected UnityEvent runAfterCheck;
+    [SerializeField]
+    protected UnityEvent runAfterGiveItem;
 
     protected virtual void Start()
     {
@@ -92,8 +94,7 @@ public class TriggerDialog : MonoBehaviour
                     dialogCanvas.TextBox.text += sentenses[k][i];
                     yield return new WaitForSeconds(GameManager.TextSettings.Speed);
                 }
-                Debug.Log("Waiting for Interaction" + playerInput);
-                if(GameManager.TextSettings.Auto) yield return new WaitForSeconds(GameManager.TextSettings.Speed * 10f);
+                if(GameManager.TextSettings.Auto) yield return new WaitForSeconds(1 + GameManager.TextSettings.Speed * 10f);
                 else yield return new WaitUntil(()=>playerInput.GetInteraction());
             }
         }
@@ -120,6 +121,10 @@ public class TriggerDialog : MonoBehaviour
     {
         runAfterClose.Invoke();        
     }
+    private void RunItem()
+    {
+        runAfterGiveItem.Invoke();        
+    }
 
     public void CheckDialog(int _id)
     {
@@ -139,7 +144,7 @@ public class TriggerDialog : MonoBehaviour
             UpdateDisplay(false);
             if(GameManager.GameSettings.GameLanguage == GameLanguageType.PT_BR){DisplayDialog(dialogs_PT[_id+1].text);}
             if(GameManager.GameSettings.GameLanguage == GameLanguageType.EN_US){DisplayDialog(dialogs_EN[_id+1].text);}
-            GiveItem(itemKey,item);
+            //GiveItem(itemKey,item);
         }
         else if(InventoryManager.Inventory.GetInventory().items.ContainsKey(itemKey) && !item.isStorable)
             RunAfter();
@@ -148,6 +153,7 @@ public class TriggerDialog : MonoBehaviour
     protected void GiveItem(int key,Item _item)
     {
         InventoryManager.Inventory.AddItemtoInventory(key,_item.amount, _item.name_PT,_item.name_EN,_item.isStorable, _item.description_PT,_item.description_EN,_item.sprite);
+        RunItem();
         if(_item.isStorable)
             Destroy(this.gameObject); 
     }

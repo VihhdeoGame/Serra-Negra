@@ -29,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/3D Forest.unity
     guid: 7d91260c7022d0c4198bb213b7ff6a84
+  - enabled: 1
+    path: Assets/Scenes/2D EndGame.unity
+    guid: 73973eb4c44359c4e95de5a191048a7e
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: b2629a4fa0af09141b518b9971f0666d,
       type: 2}

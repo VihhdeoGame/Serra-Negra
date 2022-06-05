@@ -36,7 +36,7 @@ public class DisplayItem : MonoBehaviour
         if(GameManager.GameSettings.GameLanguage == GameLanguageType.EN_US)
         {
             nameText.text = item.name_EN;
-            descriptionText.text = item.description_PT;
+            descriptionText.text = item.description_EN;
         } 
     }
 

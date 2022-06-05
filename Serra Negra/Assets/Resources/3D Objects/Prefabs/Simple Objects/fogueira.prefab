@@ -33,8 +33,9 @@ Transform:
   - {fileID: 1455790004344044576}
   - {fileID: 6037741027441289031}
   - {fileID: 7765854302970932139}
+  - {fileID: 1436146697555154437}
   m_Father: {fileID: 7260339249433112778}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!198 &5779666844314158428
 ParticleSystem:
@@ -3815,9 +3816,9 @@ ParticleSystem:
       properties: 0
       emitProbability: 1
   LightsModule:
-    enabled: 0
+    enabled: 1
     ratio: 0
-    light: {fileID: 0}
+    light: {fileID: 4747987571161368778}
     randomDistribution: 1
     color: 1
     range: 1
@@ -14465,13 +14466,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7132383374349083310}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.092, y: 1.07, z: 0.373}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.78800005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7260339249433112778}
-  m_RootOrder: 1
+  m_Father: {fileID: 4539771938049906163}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &4747987571161368778
 Light:
@@ -14586,6 +14587,7 @@ GameObject:
   - component: {fileID: 7260339249433112778}
   - component: {fileID: -4815406334918722117}
   - component: {fileID: 8669212296125542124}
+  - component: {fileID: 6356834979535433232}
   m_Layer: 0
   m_Name: fogueira
   m_TagString: Wall
@@ -14606,7 +14608,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2634052325310327209}
-  - {fileID: 1436146697555154437}
   - {fileID: 4539771938049906163}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -14640,6 +14641,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3, y: 4, z: 3}
   m_Center: {x: 1, y: 2, z: 0}
+--- !u!114 &6356834979535433232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8037298848155642480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c45bb8a0e05af5040aeecc61b075d4c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles: {fileID: 3611988781744881450}
 --- !u!1 &8042012049130283871
 GameObject:
   m_ObjectHideFlags: 0
@@ -18452,9 +18466,9 @@ ParticleSystem:
       properties: 0
       emitProbability: 1
   LightsModule:
-    enabled: 0
+    enabled: 1
     ratio: 0
-    light: {fileID: 0}
+    light: {fileID: 4747987571161368778}
     randomDistribution: 1
     color: 1
     range: 1

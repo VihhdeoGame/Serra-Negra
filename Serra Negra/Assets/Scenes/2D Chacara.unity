@@ -6408,12 +6408,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 309540fd63bea334c8a2bc72606f8b96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemKey: 9
-  dialogs_PT:
-  - {fileID: 0}
-  dialogs_EN:
-  - {fileID: 0}
-  containsItem: 1
+  itemKey: 0
+  dialogs_PT: []
+  dialogs_EN: []
+  containsItem: 0
   item:
     name_PT: 
     name_EN: 

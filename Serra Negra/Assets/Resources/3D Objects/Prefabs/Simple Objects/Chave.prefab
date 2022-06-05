@@ -93,6 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3607272832751708931}
   - component: {fileID: 8050869973970743097}
+  - component: {fileID: 8803118232690076612}
   m_Layer: 0
   m_Name: Chave
   m_TagString: Untagged
@@ -129,3 +130,39 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 10, z: 10}
   m_Center: {x: 2.5, y: 0, z: 0}
+--- !u!114 &8803118232690076612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4126505810503496121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3c6db45db24f8641ba695843667239b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemKey: 17
+  dialogs_PT:
+  - {fileID: 4900000, guid: 1da5c3d7cb897c44a87acf433fe859e3, type: 3}
+  dialogs_EN:
+  - {fileID: 4900000, guid: bb1dcb37670cfe845920e7dd9ea9d153, type: 3}
+  containsItem: 1
+  item:
+    name_PT: "Chave da Galp\xE3o"
+    name_EN: Shed's Key
+    isStorable: 1
+    description_PT: "\xC9 a chave do galp\xE3o de ferramentas do seu Chico."
+    description_EN: It's the key to mr. Chico's toolshed.
+    sprite: {fileID: 21300000, guid: 72a949fdbd1ba5945aa083a439c894aa, type: 3}
+    amount: 1
+  requiredCheck: 0
+  requiredItemKey: 
+  requiredAmount: 
+  skipAnim: 0
+  runAfterClose:
+    m_PersistentCalls:
+      m_Calls: []
+  runAfterCheck:
+    m_PersistentCalls:
+      m_Calls: []

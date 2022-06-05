@@ -127,18 +127,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3c6db45db24f8641ba695843667239b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemKey: 0
-  dialogs_PT: []
-  dialogs_EN: []
-  containsItem: 0
+  itemKey: 19
+  dialogs_PT:
+  - {fileID: 4900000, guid: 6eacc389c0aa2864ca4b8e2ae2459dc1, type: 3}
+  dialogs_EN:
+  - {fileID: 4900000, guid: 56cb01d99a728f641b9b54ffb3402cf6, type: 3}
+  containsItem: 1
   item:
-    name_PT: 
-    name_EN: 
-    isStorable: 0
+    name_PT: Graveto
+    name_EN: Stick
+    isStorable: 1
     description_PT: 
     description_EN: 
-    sprite: {fileID: 0}
-    amount: 0
+    sprite: {fileID: 21300000, guid: c1c4ae151b67c6e418087367d9fe959d, type: 3}
+    amount: 1
   requiredCheck: 0
   requiredItemKey: 
   requiredAmount: 

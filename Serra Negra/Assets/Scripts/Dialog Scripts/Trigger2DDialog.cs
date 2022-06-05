@@ -86,9 +86,15 @@ public class Trigger2DDialog : TriggerDialog
         }
     }
 #endif
-    protected override void Start() 
+    private void OnEnable()
     {
-        base.Start();
+        musicPlayer = FindObjectOfType<MusicManager>().GetComponent<AudioSource>();
+        dialogCanvas = FindObjectOfType<DialogCanvas>(true);
+        animator = dialogCanvas.gameObject.GetComponent<Animator>();
+        playerInput = InputManager.PlayerInput;
+        speakers = Resources.LoadAll("Speakers", typeof(Sprite));
+        sfxs = Resources.LoadAll("Audio/SFX", typeof(AudioClip));
+        musics = Resources.LoadAll("Audio/Music", typeof(AudioClip));    
         sfxPlayer = GameObject.FindGameObjectWithTag("SFXPlayer").GetComponent<AudioSource>();
     }
     protected override void FinalInteraction()

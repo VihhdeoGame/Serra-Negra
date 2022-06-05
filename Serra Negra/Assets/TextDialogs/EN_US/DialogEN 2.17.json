@@ -2,39 +2,11 @@
     "dialogs": 
     [
         {
-            "spriteId":4,
-            "musicIds":[],
-            "sfxIds":[],
-            "name":"ZIA",
-            "sentenses":"This “T. Wasser” doesn't strike me as a very sane person, he's saying he met Iara and had an idea to bring her to life. But she's just a legend, I don't know if he was told that."
-        },
-        {
-            "spriteId":13,
-            "musicIds":[],
-            "sfxIds":[],
-            "name":"ALMA",
-            "sentenses":"He really doesn't look very good."
-        },
-        {
             "spriteId":0,
             "musicIds":[],
             "sfxIds":[],
             "name":"ZIA",
-            "sentenses":"Anyway, I have no idea what it's doing here, maybe it's someone who was writing a fantasy story and the wind brought these sheets here."
-        },
-        {
-            "spriteId":16,
-            "musicIds":[],
-            "sfxIds":[],
-            "name":"ALMA",
-            "sentenses":"Could it be that Mr. Chico or his sister wrote that?"
-        },
-        {
-            "spriteId":0,
-            "musicIds":[],
-            "sfxIds":[],
-            "name":"ZIA",
-            "sentenses":"No, Mr. Chico is a simple man, and my sister isn't creative and doesn't like to write either."
+            "sentenses":"Another letter from “T. Wasser”, let's see if I can find something."
         }
     ]
 }

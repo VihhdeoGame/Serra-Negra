@@ -1,0 +1,26 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":1,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"D'agua Mother? Does this letter talk about Iara?"
+        },
+        {
+            "spriteId":16,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"Iara?"
+        },
+        {
+            "spriteId":1,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"There is a legend that tells about a mermaid who seduces men and takes them to the bottom of the waters. But what is this paper doing here? And who is “T. wasser”?"
+        }
+    ]
+}

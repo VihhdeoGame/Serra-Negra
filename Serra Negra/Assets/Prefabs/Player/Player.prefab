@@ -128,6 +128,100 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eda87c3528e61604baf42f0cdcfb4292, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1025681519565637478
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2313209793628214566}
+  - component: {fileID: 2168554121851787904}
+  - component: {fileID: 6840949247669436269}
+  m_Layer: 0
+  m_Name: EnableTorch
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2313209793628214566
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025681519565637478}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1891081354113391263}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2168554121851787904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025681519565637478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3c6db45db24f8641ba695843667239b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemKey: 27
+  dialogs_PT:
+  - {fileID: 4900000, guid: 9b06e1c6e93f48e4aa1745c7ce767a8c, type: 3}
+  dialogs_EN:
+  - {fileID: 4900000, guid: e762140e674cb824d9c1c2b6d8116743, type: 3}
+  containsItem: 1
+  item:
+    name_PT: Tocha
+    name_EN: Torch
+    isStorable: 1
+    description_PT: 
+    description_EN: 
+    sprite: {fileID: 21300000, guid: d0735e3b86a6f0942b4cfc86695287ce, type: 3}
+    amount: 1
+  requiredCheck: 1
+  requiredItemKey: 1300000015000000
+  requiredAmount: 0100000001000000
+  skipAnim: 1
+  runAfterClose:
+    m_PersistentCalls:
+      m_Calls: []
+  runAfterCheck:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2168554121851787904}
+        m_TargetAssemblyTypeName: Trigger3DDialog, Assembly-CSharp
+        m_MethodName: OpenDoor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6840949247669436269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025681519565637478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0225e83a881921b4f9f19e8f6da0ab26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  torch: {fileID: 3228845821795179193}
 --- !u!1 &1891081354113391256
 GameObject:
   m_ObjectHideFlags: 0
@@ -160,6 +254,7 @@ Transform:
   - {fileID: 698170073}
   - {fileID: 4004906175970224576}
   - {fileID: 3531326439052185650}
+  - {fileID: 2313209793628214566}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -335,7 +430,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6016748079976613496}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -573,6 +668,12 @@ PrefabInstance:
 --- !u!4 &2847676319585222659 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2744385470509473840, guid: 5373c51b7695d95488bac3f4ff41f27a,
+    type: 3}
+  m_PrefabInstance: {fileID: 113432825945825331}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3228845821795179193 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3269002718580423306, guid: 5373c51b7695d95488bac3f4ff41f27a,
     type: 3}
   m_PrefabInstance: {fileID: 113432825945825331}
   m_PrefabAsset: {fileID: 0}
