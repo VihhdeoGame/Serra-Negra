@@ -1,0 +1,96 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":4,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Dr. Flávio, você tá maluco?>Por quê você tentou me atacar?"
+        },
+        {
+            "spriteId":18,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"DR. FLÁVIO",
+            "sentenses":"Droga era para você ter sido queimada com toda aquela floresta maldita!"
+        },
+        {
+            "spriteId":2,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Por quê? Você tem sido o médico desta cidade por anos, não só minha família mas todos aqui confiavam em você!"
+        },
+        {
+            "spriteId":22,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"DR. FLÁVIO",
+            "sentenses":"Porque eu queria despertá-la!"
+        },
+		{
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Despertá-la? Espera, quem é você?"
+        },
+		{
+            "spriteId":16,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"Você é o T. Wasser?"
+        },
+		{
+            "spriteId":22,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"DR. FLÁVIO",
+            "sentenses":"Já que vocês estão prestes a morrer quando eu terminar aqui, deixarei que saibam que meu nome verdadeiro é Tom Wasser."
+        },
+		{
+            "spriteId":22,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"TOM WASSER",
+            "sentenses":"Por anos tenho investigado a irrealidade e uma maneira de trazê-la à tona, de interagir com algum ser que seja das antigas histórias. Eu queria que algo fosse real, mas nunca tive sucesso."
+        },
+		{
+            "spriteId":20,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"TOM WASSER",
+            "sentenses":"Até que vim parar nesse fim de mundo, e a minha maior desgraça se tornou minha maior sorte."
+        },
+		{
+            "spriteId":21,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"TOM WASSER",
+            "sentenses":"Atendendo os pacientes daqui percebi que eles sempre tinham sonhos bons e cheios de riquezas.> E percebi posteriormente que as águas deste lugar eram diferentes e as estudei."
+        },
+		{
+            "spriteId":22,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"TOM WASSER",
+            "sentenses":"E depois de muita experimentação descobri como ativá-las com os cristais naturais deste lugar e pude vê-la em meus próprios sonhos."
+        },
+		{
+            "spriteId":20,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"TOM WASSER",
+            "sentenses":"E agora eu quero vê-la com meus próprios olhos e para isso vocês precisam se sacrificar. Para que meu sonho, o sonho de toda a humanidade se torne real."
+        },
+		{
+            "spriteId":4,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Seu maluco doente! O único que vai morrer aqui é você!"
+        }
+    ]
+}

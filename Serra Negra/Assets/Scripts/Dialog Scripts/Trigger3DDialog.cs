@@ -9,6 +9,8 @@ using UnityEditor;
 
 public class Trigger3DDialog : TriggerDialog
 {
+    private GenericCanvas shackCanvas;
+/*
 #if UNITY_EDITOR
     [CustomEditor(typeof(Trigger3DDialog))]
     public class Trigger3DDialogEditor : Editor
@@ -25,8 +27,8 @@ public class Trigger3DDialog : TriggerDialog
                 triggerDialog.item.name_PT = EditorGUILayout.TextField("Name PT", triggerDialog.item.name_PT);
                 triggerDialog.item.name_EN = EditorGUILayout.TextField("Name EN", triggerDialog.item.name_EN);
                 triggerDialog.item.amount = EditorGUILayout.IntField("Amount", triggerDialog.item.amount);
-                triggerDialog.item.description_PT = EditorGUILayout.TextField("Description PT", triggerDialog.item.description_PT);
-                triggerDialog.item.description_EN = EditorGUILayout.TextField("Description EN", triggerDialog.item.description_EN);
+                triggerDialog.item.description_PT = EditorGUILayout.TextArea("Description PT");
+                triggerDialog.item.description_EN = EditorGUILayout.TextArea("Description EN");
                 EditorGUILayout.BeginHorizontal();
                 EditorGUILayout.PrefixLabel("Sprite");
                 triggerDialog.item.sprite = (Sprite)EditorGUILayout.ObjectField(triggerDialog.item.sprite, typeof(Sprite), true);
@@ -85,12 +87,14 @@ public class Trigger3DDialog : TriggerDialog
         }
     }
 #endif
+*/
     private GameObject crosshair;
-    protected override void OnEnable() 
+    protected override void Start() 
     {
-        base.OnEnable();
+        base.Start();
         crosshair = GameObject.FindGameObjectWithTag("Crosshair");
         sfxPlayer = FindObjectOfType<PlayerController>().SfxPlayer;
+        shackCanvas = FindObjectOfType<GenericCanvas>(true);
     }
     protected override void UpdateDisplay(bool active)
     {
@@ -98,7 +102,7 @@ public class Trigger3DDialog : TriggerDialog
     }
     protected override void FinalInteraction()
     {
-        OpenDoor();
+        base.FinalInteraction();
     }
     public void OpenDoor()
     {
@@ -107,6 +111,23 @@ public class Trigger3DDialog : TriggerDialog
             Item _item = InventoryManager.Inventory.GetInventory().items[requiredItemKey[i]];
             _item.amount -= requiredAmount[i];
         }
+    }
+    public void DeleteObject()
+    {
         Destroy(this.gameObject);
+    }
+    public void OpenShack()
+    {
+        StopAllCoroutines();
+        StartCoroutine(OShack());   
+        IEnumerator OShack()
+        {
+            FadeManager.Fade.FadeIn();
+            yield return new WaitForSeconds(FadeManager.Fade.WaitTime);
+            FindObjectOfType<CursorController>().is2D = true;
+            FindObjectOfType<CursorController>().EnableCursor();
+            shackCanvas.Show();
+            FadeManager.Fade.FadeOut();
+        }   
     }
 }

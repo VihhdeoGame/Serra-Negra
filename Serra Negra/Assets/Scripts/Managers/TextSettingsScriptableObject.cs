@@ -11,14 +11,9 @@ public class TextSettingsScriptableObject : ScriptableObject
     [SerializeField]
     private float[] speed;
     public float Speed{get{return speed[(int)textSpeed];}}
-
     [SerializeField]
-    private FontSize fontSize;
-    public FontSize FontSize{get{return fontSize;} set{this.fontSize = value;}}
+    private bool auto;
+    public bool Auto{get{return auto;} set{this.auto = value;}}
 
-    [SerializeField]
-    private float[] size;
-    public float Size{get{return size[(int)fontSize];}}
 }
     public enum TextSpeed{Slow = 0, Normal = 1, Fast = 2}
-    public enum FontSize{Small = 0, Medium = 1, Large = 2}

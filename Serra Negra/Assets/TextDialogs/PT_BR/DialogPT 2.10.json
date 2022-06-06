@@ -2,18 +2,18 @@
     "dialogs": 
     [
         {
-            "spriteId":99,
+            "spriteId":5,
             "musicIds":[],
             "sfxIds":[],
-            "name":"ALMA",
-            "sentenses":"O que é isso?"
+            "name":"ZIA",
+            "sentenses":"Manual de sobrevivência da Zia... Prontinho! Só juntar o pano e o graveto."
         },
         {
             "spriteId":0,
             "musicIds":[],
             "sfxIds":[],
             "name":"ZIA",
-            "sentenses":"Uma folha escrita."
+            "sentenses":"Agora temos fogo para nos proteger."
         }
     ]
 }

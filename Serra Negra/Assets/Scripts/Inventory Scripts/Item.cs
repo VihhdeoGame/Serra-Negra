@@ -8,7 +8,9 @@ public class Item
     public string name_PT;
     public string name_EN;
     public bool isStorable;
+    [TextArea(10,50)]
     public string description_PT;
+    [TextArea(10,50)]
     public string description_EN;
     public Sprite sprite;
     public int amount;

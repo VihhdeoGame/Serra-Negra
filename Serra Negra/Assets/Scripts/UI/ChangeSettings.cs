@@ -17,15 +17,19 @@ public class ChangeSettings : MonoBehaviour
     [SerializeField]
     TMP_Dropdown textSpeedDropdown;
     [SerializeField]
-    TMP_Dropdown fontSizeDropdown;
+    Toggle autoToggle;
     private void Start()
     {
-        masterVolume.value = GameManager.AudioSettings.MasterVolume;
-        musicVolume.value = GameManager.AudioSettings.MusicVolume;
-        sfxVolume.value = GameManager.AudioSettings.SfxVolume;
+        masterVolume.SetValueWithoutNotify(GameManager.AudioSettings.MasterVolume);
+        musicVolume.SetValueWithoutNotify(GameManager.AudioSettings.MusicVolume);
+        sfxVolume.SetValueWithoutNotify(GameManager.AudioSettings.SfxVolume);
         languageDropdown.value = (int)GameManager.GameSettings.GameLanguage;
         textSpeedDropdown.value = (int)GameManager.TextSettings.TextSpeed;
-        fontSizeDropdown.value = (int)GameManager.TextSettings.FontSize;
+        autoToggle.isOn = GameManager.TextSettings.Auto;
+    }
+    public void Auto(bool _value)
+    {
+        GameManager.TextSettings.Auto = _value;
     }
 
     public void ChangeMasterVolume(float _value)
@@ -78,25 +82,33 @@ public class ChangeSettings : MonoBehaviour
             break;
         }
     }
-    public void ChangeFontSize(int _value)
+    /*public void SetQuality(int _value)
     {
         switch (_value)
         {
             case 0:
-                GameManager.TextSettings.FontSize = FontSize.Small;
+                GameManager.GameSettings.GameQuality = QualityType.Low;
             break;
 
             case 1:
-                GameManager.TextSettings.FontSize = FontSize.Medium;
+                GameManager.GameSettings.GameQuality = QualityType.Medium;
             break;
-
+            
             case 2:
-                GameManager.TextSettings.FontSize = FontSize.Large;
+                GameManager.GameSettings.GameQuality = QualityType.High;
+            break;
+            
+            case 3:
+                GameManager.GameSettings.GameQuality = QualityType.Very_High;
+            break;
+            
+            case 4:
+                GameManager.GameSettings.GameQuality = QualityType.Ultra;
             break;
 
             default:
-                GameManager.TextSettings.FontSize = FontSize.Medium;
+                GameManager.GameSettings.GameQuality = QualityType.Medium;
             break;
         }
-    }
+    }*/
 }

@@ -6,14 +6,7 @@
             "musicIds":[],
             "sfxIds":[],
             "name":"ZIA",
-            "sentenses":"A porta do quarto da Lilia está aberta. Será que ela não fechou direito ou ainda está acordada?"
-        },
-        {
-            "spriteId":1,
-            "musicIds":[],
-            "sfxIds":[],
-            "name":"ZIA",
-            "sentenses":"Lilia? Você está acordada?>Ela não está aqui, será que está com insônia? Talvez ela precise de um chá também."
+            "sentenses":"A porta do quarto da Lilia parece aberta. Será que ela ainda está acordada?"
         }
     ]
 }

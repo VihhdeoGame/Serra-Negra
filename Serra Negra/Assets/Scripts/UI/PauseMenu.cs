@@ -7,13 +7,12 @@ public class PauseMenu : MonoBehaviour
     InputManager playerInput;
     bool paused = false;
     GameObject crosshair;
+    [SerializeField]
     GameObject pauseCanvas;
     CursorController cursorController;
     private void Start()
     {
         crosshair = GameObject.FindGameObjectWithTag("Crosshair");
-        pauseCanvas = GameObject.FindGameObjectWithTag("PauseCanvas");
-        pauseCanvas.SetActive(false);
         cursorController = FindObjectOfType<CursorController>();
         playerInput = InputManager.PlayerInput;
     }

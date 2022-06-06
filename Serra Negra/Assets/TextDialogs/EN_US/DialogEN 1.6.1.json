@@ -1,0 +1,33 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":4,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Damn! Now I can't see anything."
+        },
+        {
+            "spriteId":5,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Lilia show up! What are you doing out here, this is no time for jokes."
+        },
+        {
+            "spriteId":2,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"I'm already getting cold and irritated.> Uuhhh! LILIAAAAAA! LILIAAAA!"
+        },
+        {
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Wow, there's so much fog that it's impossible to see anything! She sure wasn't here!>Better I go back and search for her in another place."
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":2,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"I thought she wasn't here, but I had hope."
+        },
+        {
+            "spriteId":12,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"Well, but here at least there are more of those shiny things."
+        },
+        {
+            "spriteId":3,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Yes, I think it's the key to the back gate. That's good because I forgot the keys in the house so I'd have to jump through the gate."
+        }
+    ]
+}

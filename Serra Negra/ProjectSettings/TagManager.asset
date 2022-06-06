@@ -14,6 +14,7 @@ TagManager:
   - INDisplay
   - IDDisplay
   - PauseCanvas
+  - MManager
   layers:
   - Default
   - TransparentFX

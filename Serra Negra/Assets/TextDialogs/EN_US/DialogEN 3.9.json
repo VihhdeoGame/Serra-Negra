@@ -1,0 +1,12 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":2,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"LILIA!! LILIA!!>I... am lost...>Where are you...>Lilia?"
+        }
+    ]
+}

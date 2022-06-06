@@ -1,0 +1,96 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":4,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Dr. Flavio, are you crazy?>Why did you try to attack me?"
+        },
+        {
+            "spriteId":18,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"DR. FLÁVIO",
+            "sentenses":"Dammit! You were supposed to be burned with all that damn forest!"
+        },
+        {
+            "spriteId":2,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Why? You've been this town's doctor for years, not only my family but everyone here trusted you!"
+        },
+        {
+            "spriteId":22,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"DR. FLÁVIO",
+            "sentenses":"Because I wanted to wake her up!"
+        },
+		{
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Wake her up? Wait, who are you?"
+        },
+		{
+            "spriteId":16,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"Are you T. Wasser?"
+        },
+		{
+            "spriteId":22,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"DR. FLÁVIO",
+            "sentenses":"Since you're about to die when I'm done here, I'll let you know my real name is Tom Wasser."
+        },
+		{
+            "spriteId":22,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"TOM WASSER",
+            "sentenses":"For years I have been investigating unreality and a way to bring it out, to interact with some being that is from the old stories. I wanted something to be real, but I was never successful."
+        },
+		{
+            "spriteId":20,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"TOM WASSER",
+            "sentenses":"Until I ended up in this end of the world, and my greatest misfortune became my greatest luck."
+        },
+		{
+            "spriteId":21,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"TOM WASSER",
+            "sentenses":"Taking care of patients here, I noticed that they always had good dreams and full of riches.> And I realized later that the waters of this place were different and I studied them."
+        },
+		{
+            "spriteId":22,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"TOM WASSER",
+            "sentenses":"And after a lot of experimentation I discovered how to activate them with the natural crystals of this place and I was able to see it in my own dreams."
+        },
+		{
+            "spriteId":20,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"TOM WASSER",
+            "sentenses":"And now I want to see it with my own eyes and for that you have to sacrifice yourself. So that my dream, the dream of all humanity, becomes real."
+        },
+		{
+            "spriteId":4,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"You sick freak! The only one who will die here is you!"
+        }
+    ]
+}

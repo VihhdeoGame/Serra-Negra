@@ -2,7 +2,7 @@
     "dialogs": 
     [
         {
-            "spriteId":99,
+            "spriteId":14,
             "musicIds":[],
             "sfxIds":[],
             "name":"???",
@@ -16,7 +16,7 @@
             "sentenses":"Espera, você sabe falar?"
         },
         {
-            "spriteId":99,
+            "spriteId":16,
             "musicIds":[],
             "sfxIds":[],
             "name":"???",
@@ -30,7 +30,7 @@
             "sentenses":"Mas os pássaros não sabem falar, o máximo são papagaios e corvos que falam algumas palavras ou frases, agora conversar mesmo isso não é possível."
         },
         {
-            "spriteId":99,
+            "spriteId":15,
             "musicIds":[],
             "sfxIds":[],
             "name":"???",
@@ -44,14 +44,14 @@
             "sentenses":"Ah isso? Bem você me atacou primeiro então só revidei."
         },
         {
-            "spriteId":99,
+            "spriteId":16,
             "musicIds":[],
             "sfxIds":[],
             "name":"???",
             "sentenses":"Você é maluca! > Olha só o seu tamanho! Eu sou apenas…"
         },
         {
-            "spriteId":99,
+            "spriteId":13,
             "musicIds":[],
             "sfxIds":[],
             "name":"???",
@@ -65,7 +65,7 @@
             "sentenses":"Um pássaro!"
         },
         {
-            "spriteId":99,
+            "spriteId":13,
             "musicIds":[],
             "sfxIds":[],
             "name":"???",
@@ -79,7 +79,7 @@
             "sentenses":"Estranho, mas não se preocupe você logo lembrará. > Escuta! Você viu uma garota parecida comigo, andando por aí? "
         },
         {
-            "spriteId":99,
+            "spriteId":13,
             "musicIds":[],
             "sfxIds":[],
             "name":"???",
@@ -93,7 +93,7 @@
             "sentenses":"Nossa, estou tão preocupada que acabei não te perguntando qual seu nome?"
         },
         {
-            "spriteId":99,
+            "spriteId":13,
             "musicIds":[],
             "sfxIds":[],
             "name":"???",
@@ -121,7 +121,7 @@
             "sentenses":"Vamos por aqui Alma!"
         },
         {
-            "spriteId":99,
+            "spriteId":14,
             "musicIds":[],
             "sfxIds":[],
             "name":"ALMA",

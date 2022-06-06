@@ -1,0 +1,19 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":4,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Ahhh man what time is it?> It's 02:00 in the morning and I still haven't slept, I think these new medicines that the doctor prescribed me are not working"
+        },
+        {
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Well I think I'll have some tea to see if I calm down and the anxiety goes away."
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":2,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Lilia's bedroom door seems open. Did she not close properly or is she still awake?"
+        }
+    ]
+}

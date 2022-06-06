@@ -1,0 +1,12 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"I didn't remember the door being locked before, I'm glad I got the key from Mr. Chico."
+        }
+    ]
+}

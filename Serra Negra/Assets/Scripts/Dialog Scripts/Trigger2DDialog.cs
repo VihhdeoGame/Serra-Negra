@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -8,7 +9,7 @@ using UnityEditor;
 
 public class Trigger2DDialog : TriggerDialog
 {
-    
+/*
 #if UNITY_EDITOR
     [CustomEditor(typeof(Trigger2DDialog))]
     public class Trigger2DDialogEditor : Editor
@@ -25,8 +26,8 @@ public class Trigger2DDialog : TriggerDialog
                 triggerDialog.item.name_PT = EditorGUILayout.TextField("Name PT", triggerDialog.item.name_PT);
                 triggerDialog.item.name_EN = EditorGUILayout.TextField("Name EN", triggerDialog.item.name_EN);
                 triggerDialog.item.amount = EditorGUILayout.IntField("Amount", triggerDialog.item.amount);
-                triggerDialog.item.description_PT = EditorGUILayout.TextField("Description PT", triggerDialog.item.description_PT);
-                triggerDialog.item.description_EN = EditorGUILayout.TextField("Description EN", triggerDialog.item.description_EN);
+                triggerDialog.item.description_PT = EditorGUILayout.TextArea("Description PT");
+                triggerDialog.item.description_EN = EditorGUILayout.TextArea("Description EN");
                 EditorGUILayout.BeginHorizontal();
                 EditorGUILayout.PrefixLabel("Sprite");
                 triggerDialog.item.sprite = (Sprite)EditorGUILayout.ObjectField(triggerDialog.item.sprite, typeof(Sprite), true);
@@ -85,28 +86,34 @@ public class Trigger2DDialog : TriggerDialog
         }
     }
 #endif
-/* 
-    [SerializeField]
-    int nextBackground;
-    SpriteRenderer backgoundSprite;
-    Object[] backgrounds; */
-    protected override void OnEnable() 
+*/
+    private void OnEnable()
     {
-        base.OnEnable();
-        /* backgrounds = Resources.LoadAll("Backgrounds", typeof(Sprite)); */
+        musicPlayer = FindObjectOfType<MusicManager>().GetComponent<AudioSource>();
+        dialogCanvas = FindObjectOfType<DialogCanvas>(true);
+        animator = dialogCanvas.gameObject.GetComponent<Animator>();
+        playerInput = InputManager.PlayerInput;
+        speakers = Resources.LoadAll("Speakers", typeof(Sprite));
+        sfxs = Resources.LoadAll("Audio/SFX", typeof(AudioClip));
+        musics = Resources.LoadAll("Audio/Music", typeof(AudioClip));    
         sfxPlayer = GameObject.FindGameObjectWithTag("SFXPlayer").GetComponent<AudioSource>();
-       /*  backgoundSprite = GameObject.FindGameObjectWithTag("Background").GetComponent<SpriteRenderer>(); */
     }
     protected override void FinalInteraction()
     {
-        /* StopAllCoroutines();
-        StartCoroutine(ChangeBackgound()); */      
+        base.FinalInteraction();            
     }
-    /* IEnumerator ChangeBackgound()
+    public void Check()
     {
-        FadeManager.Fade.FadeIn();
-        yield return new WaitForSeconds(FadeManager.Fade.WaitTime);
-        backgoundSprite.sprite = (Sprite)backgrounds[nextBackground];
-        FadeManager.Fade.FadeOut();
-    } */
+        if(requiredCheck)
+        {
+            if(CheckFlag())
+            {
+                CheckDialog(1);
+            }
+            else
+            {
+                CheckDialog(0);
+            }
+        }
+    }
 }

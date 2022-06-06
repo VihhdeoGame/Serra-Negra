@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 public class TriggerDialog : MonoBehaviour
@@ -11,15 +12,15 @@ public class TriggerDialog : MonoBehaviour
     protected TextAsset[] dialogs_PT;
     [SerializeField]
     protected TextAsset[] dialogs_EN;
-    [SerializeField,HideInInspector]
+    [SerializeField]
     protected bool containsItem;
-    [SerializeField,HideInInspector]
+    [SerializeField]
     protected Item item;
     [HideInInspector]
     public bool requiredCheck;
-    [SerializeField,HideInInspector]
+    [SerializeField]
     protected int[] requiredItemKey;
-    [SerializeField,HideInInspector]
+    [SerializeField]
     protected int[] requiredAmount;
     protected int arrayCount = 0;
     protected int[] dummy;
@@ -31,11 +32,22 @@ public class TriggerDialog : MonoBehaviour
     protected AudioSource sfxPlayer;
     protected InputManager playerInput;
     protected DialogCanvas dialogCanvas;
-
-    protected virtual void OnEnable()
+    protected Animator animator;
+    [SerializeField]
+    protected bool skipAnim;
+    
+    [SerializeField]
+    protected UnityEvent runAfterClose;
+    public UnityEvent RunAfterClose{get{return runAfterCheck;} set{runAfterClose = value;}}
+    [SerializeField]
+    protected UnityEvent runAfterCheck;
+    [SerializeField]
+    protected UnityEvent runAfterGiveItem;
+    protected virtual void Start()
     {
         musicPlayer = FindObjectOfType<MusicManager>().GetComponent<AudioSource>();
         dialogCanvas = FindObjectOfType<DialogCanvas>(true);
+        animator = dialogCanvas.gameObject.GetComponent<Animator>();
         playerInput = InputManager.PlayerInput;
         speakers = Resources.LoadAll("Speakers", typeof(Sprite));
         sfxs = Resources.LoadAll("Audio/SFX", typeof(AudioClip));
@@ -56,6 +68,8 @@ public class TriggerDialog : MonoBehaviour
             string[]sentenses = _dialog[j].sentenses.Split('>');
             dialogCanvas.SpeakerSprite.sprite = (Sprite)speakers[_dialog[j].spriteId];
             dialogCanvas.NameBox.text = _dialog[j].name;
+            dialogCanvas.TextBox.text = "";
+            if(j == 0) yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
             int musicIndex = 0;
             int sfxIndex = 0;
             for (int k = 0; k < sentenses.Length; k++)
@@ -80,10 +94,14 @@ public class TriggerDialog : MonoBehaviour
                     dialogCanvas.TextBox.text += sentenses[k][i];
                     yield return new WaitForSeconds(GameManager.TextSettings.Speed);
                 }
-                yield return new WaitUntil(()=>playerInput.GetInteraction());
+                if(GameManager.TextSettings.Auto) yield return new WaitForSeconds(1 + GameManager.TextSettings.Speed * 10f);
+                else yield return new WaitUntil(()=>playerInput.GetInteraction());
             }
         }
+        animator.SetTrigger("Exit");
+        if(!skipAnim)yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
         dialogCanvas.Canvas.SetActive(false);
+        RunAfter();
         UpdateDisplay(true);
         if(containsItem && !requiredCheck)
         {
@@ -98,6 +116,16 @@ public class TriggerDialog : MonoBehaviour
             FinalInteraction();            
         }
     }
+
+    private void RunAfter()
+    {
+        if(runAfterClose != null)runAfterClose.Invoke();        
+    }
+    private void RunItem()
+    {
+        runAfterGiveItem.Invoke();        
+    }
+
     public void CheckDialog(int _id)
     {
         if(!InventoryManager.Inventory.GetInventory().items.ContainsKey(itemKey))
@@ -111,11 +139,21 @@ public class TriggerDialog : MonoBehaviour
             }
         }
         else if(InventoryManager.Inventory.GetInventory().items.ContainsKey(itemKey) && item.isStorable)
-            GiveItem(itemKey,item);
+        {
+            dialogCanvas.Canvas.SetActive(true);
+            UpdateDisplay(false);
+            if(GameManager.GameSettings.GameLanguage == GameLanguageType.PT_BR){DisplayDialog(dialogs_PT[_id+1].text);}
+            if(GameManager.GameSettings.GameLanguage == GameLanguageType.EN_US){DisplayDialog(dialogs_EN[_id+1].text);}
+            //GiveItem(itemKey,item);
+        }
+        else if(InventoryManager.Inventory.GetInventory().items.ContainsKey(itemKey) && !item.isStorable)
+            RunAfter();
+
     }
     protected void GiveItem(int key,Item _item)
     {
         InventoryManager.Inventory.AddItemtoInventory(key,_item.amount, _item.name_PT,_item.name_EN,_item.isStorable, _item.description_PT,_item.description_EN,_item.sprite);
+        RunItem();
         if(_item.isStorable)
             Destroy(this.gameObject); 
     }
@@ -145,7 +183,7 @@ public class TriggerDialog : MonoBehaviour
     }
     protected virtual void FinalInteraction()
     {
-        
+        runAfterCheck.Invoke();        
     }
 }
 

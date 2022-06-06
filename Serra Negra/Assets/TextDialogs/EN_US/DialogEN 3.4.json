@@ -1,0 +1,61 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":2,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Lilia wake up! Lilia let's wake up!"
+        },
+        {
+            "spriteId":16,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"She is alive?"
+        },
+        {
+            "spriteId":1,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Yes, it is, but your breathing is weak."
+        },
+        {
+            "spriteId":17,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"???",
+            "sentenses":"Zia? Are you okay?"
+        },
+        {
+            "spriteId":2,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Dr. Flavio? What's going on here?"
+        },
+		{
+            "spriteId":19,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"DR. FLÁVIO",
+            "sentenses":"I don't know… I just woke up outside and was disoriented."
+        },
+		{
+            "spriteId":21,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"DR. FLÁVIO",
+            "sentenses":"I ended up walking in here and found her like this, and then I went to the kitchen to get some water to help her wake up."
+        },
+		{
+            "spriteId":3,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Come doctor, help me wake her up."
+        }
+    ]
+}

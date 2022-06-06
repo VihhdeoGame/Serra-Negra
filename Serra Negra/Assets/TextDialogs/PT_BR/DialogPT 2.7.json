@@ -2,11 +2,11 @@
     "dialogs": 
     [
         {
-            "spriteId":1,
+            "spriteId":4,
             "musicIds":[],
             "sfxIds":[],
             "name":"ZIA",
-            "sentenses":"Preciso achar algo para apagar esse fogo"
+            "sentenses":"Olha só! Parece que seu Chico esqueceu o balde de pesca aqui."
         }
     ]
 }

@@ -19,14 +19,13 @@ public class PlayerController : MonoBehaviour
     Vector3 targetGridPos;
     Vector3 prevTargetGridPos;
     Vector3 targetRotation;
-    Vector2 playerMove;
     Vector2 cameraMove;
     Vector2 mouseMove;
     Vector2 offCenterPosition;
     [SerializeField]
     Transform povCam;
     DialogCanvas dialogCanvas;
-
+    CursorController cursorController;
     public AudioSource SfxPlayer{get{return sfxPlayer;}}
     bool AtRest
     {
@@ -34,15 +33,14 @@ public class PlayerController : MonoBehaviour
         {
             if((Vector3.Distance(transform.position, targetGridPos) < 0.05f) &&
                (Vector3.Distance(transform.eulerAngles,targetRotation) < 0.05f))
-                
                 return true;
             else
-
                 return false;
         }
     }
         private void Start()
     {
+        cursorController = FindObjectOfType<CursorController>();
         dialogCanvas = FindObjectOfType<DialogCanvas>(true);
         playerInput = InputManager.PlayerInput;
         targetGridPos = transform.position;
@@ -52,22 +50,21 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if(!dialogCanvas.Canvas.activeSelf)
+        if(!dialogCanvas.Canvas.activeSelf && !cursorController.is2D)
         {
-            playerMove = playerInput.GetPlayerMovement();
             cameraMove = playerInput.MouseDelta();
-            if(playerMove.y > 0.1f){MoveFoward();}
-            if(playerMove.y < -0.1f){MoveBackward();}
-            if(playerMove.x > 0.1f){RotateRight();}
-            if(playerMove.x < -0.1f){RotateLeft();}
+            if(playerInput.GetPlayerUp()){MoveFoward();}
+            if(playerInput.GetPlayerDown()){MoveBackward();}
             if(playerInput.GetPlayerRight()){MoveRight();}
             if(playerInput.GetPlayerLeft()){MoveLeft();}
+            if(playerInput.GetPlayerRotateRight()){RotateRight();}
+            if(playerInput.GetPlayerRotateLeft()){RotateLeft();}
             if(Mathf.Abs(cameraMove.x)>0.1 || Mathf.Abs(cameraMove.y)>0.1){RotateCamera();}
 
             if(playerInput.GetInteraction())
             {
                 RaycastHit hit;
-                if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, gridSize))
+                if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, gridSize) && !cursorController.is2D)
                 {
                     Trigger3DDialog dialogCheck = hit.collider.gameObject.GetComponent<Trigger3DDialog>(); 
                     if(dialogCheck != null)

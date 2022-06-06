@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 8081995213713020799}
   - component: {fileID: 8081995213713020798}
   - component: {fileID: 8081995213713020784}
+  - component: {fileID: 2623984524820095759}
   m_Layer: 0
   m_Name: Music Manager
-  m_TagString: Untagged
+  m_TagString: MManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,6 +29,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.1967508, y: -0.8201909, z: 4.135806}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -142,3 +144,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mixer: {fileID: 24100000, guid: b26f92a00344efc49875e566b5985251, type: 2}
+--- !u!114 &2623984524820095759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8081995213713020797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc5163ff91d43f04f9b7a3a262f96280, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameTag: MManager

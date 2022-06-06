@@ -2,11 +2,25 @@
     "dialogs": 
     [
         {
-            "spriteId":0,
+            "spriteId":5,
             "musicIds":[],
             "sfxIds":[],
             "name":"ZIA",
-            "sentenses":"Mais um pedaço de madeira abandonada."
+            "sentenses":"Pronto."
+        },
+        {
+            "spriteId":12,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"Ah! Faz sentido. Por isso que quando chove o fogo some não é?"
+        },
+        {
+            "spriteId":4,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"É. vamos!"
         }
     ]
 }
