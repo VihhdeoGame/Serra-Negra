@@ -16,13 +16,20 @@ public class ChangeSettings : MonoBehaviour
     TMP_Dropdown languageDropdown;
     [SerializeField]
     TMP_Dropdown textSpeedDropdown;
+    [SerializeField]
+    Toggle autoToggle;
     private void Start()
     {
-        masterVolume.value = GameManager.AudioSettings.MasterVolume;
-        musicVolume.value = GameManager.AudioSettings.MusicVolume;
-        sfxVolume.value = GameManager.AudioSettings.SfxVolume;
+        masterVolume.SetValueWithoutNotify(GameManager.AudioSettings.MasterVolume);
+        musicVolume.SetValueWithoutNotify(GameManager.AudioSettings.MusicVolume);
+        sfxVolume.SetValueWithoutNotify(GameManager.AudioSettings.SfxVolume);
         languageDropdown.value = (int)GameManager.GameSettings.GameLanguage;
         textSpeedDropdown.value = (int)GameManager.TextSettings.TextSpeed;
+        autoToggle.isOn = GameManager.TextSettings.Auto;
+    }
+    public void Auto(bool _value)
+    {
+        GameManager.TextSettings.Auto = _value;
     }
 
     public void ChangeMasterVolume(float _value)

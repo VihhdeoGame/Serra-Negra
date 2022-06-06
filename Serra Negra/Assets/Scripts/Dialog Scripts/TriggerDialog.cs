@@ -12,15 +12,15 @@ public class TriggerDialog : MonoBehaviour
     protected TextAsset[] dialogs_PT;
     [SerializeField]
     protected TextAsset[] dialogs_EN;
-    [SerializeField,HideInInspector]
+    [SerializeField]
     protected bool containsItem;
-    [SerializeField,HideInInspector]
+    [SerializeField]
     protected Item item;
     [HideInInspector]
     public bool requiredCheck;
-    [SerializeField,HideInInspector]
+    [SerializeField]
     protected int[] requiredItemKey;
-    [SerializeField,HideInInspector]
+    [SerializeField]
     protected int[] requiredAmount;
     protected int arrayCount = 0;
     protected int[] dummy;
@@ -38,11 +38,11 @@ public class TriggerDialog : MonoBehaviour
     
     [SerializeField]
     protected UnityEvent runAfterClose;
+    public UnityEvent RunAfterClose{get{return runAfterCheck;} set{runAfterClose = value;}}
     [SerializeField]
     protected UnityEvent runAfterCheck;
     [SerializeField]
     protected UnityEvent runAfterGiveItem;
-
     protected virtual void Start()
     {
         musicPlayer = FindObjectOfType<MusicManager>().GetComponent<AudioSource>();
@@ -119,7 +119,7 @@ public class TriggerDialog : MonoBehaviour
 
     private void RunAfter()
     {
-        runAfterClose.Invoke();        
+        if(runAfterClose != null)runAfterClose.Invoke();        
     }
     private void RunItem()
     {

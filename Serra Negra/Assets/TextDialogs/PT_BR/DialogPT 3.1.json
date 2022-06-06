@@ -2,11 +2,11 @@
     "dialogs": 
     [
         {
-            "spriteId":1,
+            "spriteId":2,
             "musicIds":[],
             "sfxIds":[],
             "name":"ZIA",
-            "sentenses":"Acho que vou voltar para a casa e dar uma olhada novamente por lá. Estava tudo trancado e nem um sinal dela por aqui na rua."
+            "sentenses":"Que estranho... parece que estou andando em círculos."
         }
     ]
 }

@@ -4,9 +4,9 @@
         {
             "spriteId":3,
             "musicIds":[],
-            "sfxIds":[],
+            "sfxIds":[1],
             "name":"ZIA",
-            "sentenses":"Now that we have all the wood, we are able to create a bridge to cross!"
+            "sentenses":"Now that we have all the wood, we are able to create a bridge to cross!*"
         }
     ]
 }

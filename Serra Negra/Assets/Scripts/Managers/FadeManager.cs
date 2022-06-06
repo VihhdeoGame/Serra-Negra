@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class FadeManager : MonoBehaviour
@@ -47,5 +48,16 @@ public class FadeManager : MonoBehaviour
         FadeIn(0.0001f);
         yield return new WaitForSeconds(waitTime);
         FadeOut();
-    } 
+    }
+    public void GameOver()
+    {
+        StopAllCoroutines();
+        StartCoroutine(MovetoGameOver());
+        IEnumerator MovetoGameOver()
+        {
+            FadeIn(5);
+            yield return new WaitForSeconds(5);
+        }
+
+    }
 }

@@ -209,6 +209,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  runAfterGiveItem:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &6840949247669436269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,6 +277,7 @@ MonoBehaviour:
   smoothTransition: 1
   transitionSpeed: 10
   povCam: {fileID: 3531326439052185650}
+  walkingAudioClip: {fileID: 8300000, guid: 96b361200181a1b4a8fca2f72710b186, type: 3}
 --- !u!1 &4799385817112906696
 GameObject:
   m_ObjectHideFlags: 0

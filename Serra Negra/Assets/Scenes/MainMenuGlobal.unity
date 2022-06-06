@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731713, g: 0.13414736, b: 0.12107852, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731715, g: 0.13414735, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -801,6 +801,7 @@ GameObject:
   - component: {fileID: 641848382}
   - component: {fileID: 641848381}
   - component: {fileID: 641848385}
+  - component: {fileID: 641848386}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -905,6 +906,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 641848386}
+        m_TargetAssemblyTypeName: DeleteMusic, Assembly-CSharp
+        m_MethodName: Destroy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &641848383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -992,55 +1005,19 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &822202004
+--- !u!114 &641848386
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1469400966}
+  m_GameObject: {fileID: 641848379}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Script: {fileID: 11500000, guid: 302bb2d77735184439f0ac186b1545ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 8596412883465278967, guid: 60ff99eea52cfee459a53047e599203b,
-            type: 3}
-          m_TargetAssemblyTypeName: CursorController, Assembly-CSharp
-          m_MethodName: ChangeCursor
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 2800000, guid: 42f35ceed050f684994ab2c4d0a0278a,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 8596412883465278967, guid: 60ff99eea52cfee459a53047e599203b,
-            type: 3}
-          m_TargetAssemblyTypeName: CursorController, Assembly-CSharp
-          m_MethodName: ChangeCursor
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 2800000, guid: 1ff97974d42e8fb47ba6c2b21ac9c50c,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+  nameTag: MManager
 --- !u!1 &823509441
 GameObject:
   m_ObjectHideFlags: 0
@@ -2736,6 +2713,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Music Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 8081995213713020798, guid: 5627871abeb760c46b8d0e410a919945,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6c9cbcbbd51ea524cb7b9c8faa18f833, type: 3}
     - target: {fileID: 8081995213713020799, guid: 5627871abeb760c46b8d0e410a919945,
         type: 3}
       propertyPath: m_RootOrder
@@ -3154,287 +3136,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1415011408}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1469400966 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1428016034954843954, guid: f82576c5b38fa85478a0697627f90317,
-    type: 3}
-  m_PrefabInstance: {fileID: 1089425510}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1469400967 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3242409509426671982, guid: f82576c5b38fa85478a0697627f90317,
-    type: 3}
-  m_PrefabInstance: {fileID: 1089425510}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1469400968 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3206025826025533348, guid: f82576c5b38fa85478a0697627f90317,
-    type: 3}
-  m_PrefabInstance: {fileID: 1089425510}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1469400969 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8740659489671701328, guid: f82576c5b38fa85478a0697627f90317,
-    type: 3}
-  m_PrefabInstance: {fileID: 1089425510}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1469400970 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6361328434265844256, guid: f82576c5b38fa85478a0697627f90317,
-    type: 3}
-  m_PrefabInstance: {fileID: 1089425510}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1469400971 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1463605562889505654, guid: f82576c5b38fa85478a0697627f90317,
-    type: 3}
-  m_PrefabInstance: {fileID: 1089425510}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1469400972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1469400967}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 8596412883465278967, guid: 60ff99eea52cfee459a53047e599203b,
-            type: 3}
-          m_TargetAssemblyTypeName: CursorController, Assembly-CSharp
-          m_MethodName: ChangeCursor
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 2800000, guid: 42f35ceed050f684994ab2c4d0a0278a,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 8596412883465278967, guid: 60ff99eea52cfee459a53047e599203b,
-            type: 3}
-          m_TargetAssemblyTypeName: CursorController, Assembly-CSharp
-          m_MethodName: ChangeCursor
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 2800000, guid: 1ff97974d42e8fb47ba6c2b21ac9c50c,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &1469400973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1469400968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 8596412883465278967, guid: 60ff99eea52cfee459a53047e599203b,
-            type: 3}
-          m_TargetAssemblyTypeName: CursorController, Assembly-CSharp
-          m_MethodName: ChangeCursor
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 2800000, guid: 42f35ceed050f684994ab2c4d0a0278a,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 8596412883465278967, guid: 60ff99eea52cfee459a53047e599203b,
-            type: 3}
-          m_TargetAssemblyTypeName: CursorController, Assembly-CSharp
-          m_MethodName: ChangeCursor
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 2800000, guid: 1ff97974d42e8fb47ba6c2b21ac9c50c,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &1469400974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1469400969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 8596412883465278967, guid: 60ff99eea52cfee459a53047e599203b,
-            type: 3}
-          m_TargetAssemblyTypeName: CursorController, Assembly-CSharp
-          m_MethodName: ChangeCursor
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 2800000, guid: 42f35ceed050f684994ab2c4d0a0278a,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 8596412883465278967, guid: 60ff99eea52cfee459a53047e599203b,
-            type: 3}
-          m_TargetAssemblyTypeName: CursorController, Assembly-CSharp
-          m_MethodName: ChangeCursor
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 2800000, guid: 1ff97974d42e8fb47ba6c2b21ac9c50c,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &1469400975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1469400970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 8596412883465278967, guid: 60ff99eea52cfee459a53047e599203b,
-            type: 3}
-          m_TargetAssemblyTypeName: CursorController, Assembly-CSharp
-          m_MethodName: ChangeCursor
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 2800000, guid: 42f35ceed050f684994ab2c4d0a0278a,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 8596412883465278967, guid: 60ff99eea52cfee459a53047e599203b,
-            type: 3}
-          m_TargetAssemblyTypeName: CursorController, Assembly-CSharp
-          m_MethodName: ChangeCursor
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 2800000, guid: 1ff97974d42e8fb47ba6c2b21ac9c50c,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &1469400976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1469400971}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 8596412883465278967, guid: 60ff99eea52cfee459a53047e599203b,
-            type: 3}
-          m_TargetAssemblyTypeName: CursorController, Assembly-CSharp
-          m_MethodName: ChangeCursor
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 2800000, guid: 42f35ceed050f684994ab2c4d0a0278a,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 8596412883465278967, guid: 60ff99eea52cfee459a53047e599203b,
-            type: 3}
-          m_TargetAssemblyTypeName: CursorController, Assembly-CSharp
-          m_MethodName: ChangeCursor
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 2800000, guid: 1ff97974d42e8fb47ba6c2b21ac9c50c,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &1520289990
 GameObject:
   m_ObjectHideFlags: 0
@@ -4168,113 +3869,3 @@ MonoBehaviour:
     type: 3}
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
---- !u!1 &2095214554 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3459552024032711096, guid: f82576c5b38fa85478a0697627f90317,
-    type: 3}
-  m_PrefabInstance: {fileID: 1089425510}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2095214555 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1106633612429808188, guid: f82576c5b38fa85478a0697627f90317,
-    type: 3}
-  m_PrefabInstance: {fileID: 1089425510}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2095214556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2095214554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 8596412883465278967, guid: 60ff99eea52cfee459a53047e599203b,
-            type: 3}
-          m_TargetAssemblyTypeName: CursorController, Assembly-CSharp
-          m_MethodName: ChangeCursor
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 2800000, guid: 42f35ceed050f684994ab2c4d0a0278a,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 8596412883465278967, guid: 60ff99eea52cfee459a53047e599203b,
-            type: 3}
-          m_TargetAssemblyTypeName: CursorController, Assembly-CSharp
-          m_MethodName: ChangeCursor
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 2800000, guid: 1ff97974d42e8fb47ba6c2b21ac9c50c,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &2095214557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2095214555}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 8596412883465278967, guid: 60ff99eea52cfee459a53047e599203b,
-            type: 3}
-          m_TargetAssemblyTypeName: CursorController, Assembly-CSharp
-          m_MethodName: ChangeCursor
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 2800000, guid: 42f35ceed050f684994ab2c4d0a0278a,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 8596412883465278967, guid: 60ff99eea52cfee459a53047e599203b,
-            type: 3}
-          m_TargetAssemblyTypeName: CursorController, Assembly-CSharp
-          m_MethodName: ChangeCursor
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 2800000, guid: 1ff97974d42e8fb47ba6c2b21ac9c50c,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2

@@ -33,10 +33,8 @@ public class PlayerController : MonoBehaviour
         {
             if((Vector3.Distance(transform.position, targetGridPos) < 0.05f) &&
                (Vector3.Distance(transform.eulerAngles,targetRotation) < 0.05f))
-                
                 return true;
             else
-
                 return false;
         }
     }

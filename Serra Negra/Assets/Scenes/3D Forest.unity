@@ -1091,15 +1091,15 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 29588033}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: -1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2093298152}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.75, y: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_AnchorMin: {x: 0.85, y: 0}
   m_AnchorMax: {x: 1, y: 0.25}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
@@ -1173,16 +1173,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.34901962}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
+  m_Sprite: {fileID: 21300000, guid: 12ed5749e0afcc44db1cff430cc08c86, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -1210,6 +1210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e43a51bca1776514697928e91a5fb43b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitionAudio: {fileID: 8300000, guid: 07af18367461c89468b93be41d9dd839, type: 3}
 --- !u!4 &32823051 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8546501699287776424, guid: a5a9331ce0433f240a6db86523c183c5,
@@ -3021,12 +3022,31 @@ MonoBehaviour:
   - {fileID: 4900000, guid: 331d778de783e2e40b839944e8958117, type: 3}
   containsItem: 1
   item:
-    name_PT: Carta 2
-    name_EN: Letter 2
+    name_PT: Carta Rasgada
+    name_EN: Torn up Letter
     isStorable: 1
-    description_PT: 
-    description_EN: 
-    sprite: {fileID: 0}
+    description_PT: "Carne e Osso\n\n\"03 de maio de 2022\nHoje eu consegui ver em
+      meus sonhos a sua forma atual, eu sempre li que ela era linda e usava sua beleza
+      e riqueza para nos seduzir e ludibriar, mas nunca iria imaginar que algo como
+      ela poderia existir e neste momento tenho certeza que eu nunca soube o que
+      era beleza e poder. Agora mais do que nunca eu preciso despert\xE1-la e poder
+      contempl\xE1-la em carne e osso. Carne e osso? Talvez essa seja a resposta
+      que eu procuro.\nT. Wasser.\""
+    description_EN: 'In the Flesh
+
+
+      "May 3, 2022
+
+      Today I managed to
+      see in my dreams its current form. I always read that she was beautiful and
+      used her beauty and wealth to seduce and deceive us, but I would never have
+      imagined that something like her could exist and at this point I''m sure I
+      never knew what beauty and power was. Now more than ever I need to wake her
+      up and be able to contemplate her in the flesh. Flesh? Maybe this is the answer
+      I''m looking for.
+
+      T. Wasser."'
+    sprite: {fileID: 21300000, guid: 75ae006082a27664b86beede2dba79ad, type: 3}
     amount: 1
   requiredCheck: 0
   requiredItemKey: 
@@ -3084,12 +3104,31 @@ MonoBehaviour:
   - {fileID: 4900000, guid: 6e28835fe2da04942a05855c8423815d, type: 3}
   containsItem: 1
   item:
-    name_PT: Carta 2
-    name_EN: Letter 2
+    name_PT: Carta Rasgada
+    name_EN: Torn up Letter
     isStorable: 1
-    description_PT: 
-    description_EN: 
-    sprite: {fileID: 0}
+    description_PT: "Carne e Osso\n\n\"03 de maio de 2022\nHoje eu consegui ver em
+      meus sonhos a sua forma atual, eu sempre li que ela era linda e usava sua beleza
+      e riqueza para nos seduzir e ludibriar, mas nunca iria imaginar que algo como
+      ela poderia existir e neste momento tenho certeza que eu nunca soube o que
+      era beleza e poder. Agora mais do que nunca eu preciso despert\xE1-la e poder
+      contempl\xE1-la em carne e osso. Carne e osso? Talvez essa seja a resposta
+      que eu procuro.\nT. Wasser.\""
+    description_EN: 'In the Flesh
+
+
+      "May 3, 2022
+
+      Today I managed to
+      see in my dreams its current form. I always read that she was beautiful and
+      used her beauty and wealth to seduce and deceive us, but I would never have
+      imagined that something like her could exist and at this point I''m sure I
+      never knew what beauty and power was. Now more than ever I need to wake her
+      up and be able to contemplate her in the flesh. Flesh? Maybe this is the answer
+      I''m looking for.
+
+      T. Wasser."'
+    sprite: {fileID: 21300000, guid: 75ae006082a27664b86beede2dba79ad, type: 3}
     amount: 1
   requiredCheck: 0
   requiredItemKey: 
@@ -4661,116 +4700,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 693696976}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &128533717 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3459552024032711096, guid: f82576c5b38fa85478a0697627f90317,
-    type: 3}
-  m_PrefabInstance: {fileID: 1450371906}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &128533718 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1106633612429808188, guid: f82576c5b38fa85478a0697627f90317,
-    type: 3}
-  m_PrefabInstance: {fileID: 1450371906}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &128533719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 128533717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 8596412883465278967, guid: 60ff99eea52cfee459a53047e599203b,
-            type: 3}
-          m_TargetAssemblyTypeName: CursorController, Assembly-CSharp
-          m_MethodName: ChangeCursor
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 2800000, guid: 42f35ceed050f684994ab2c4d0a0278a,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 8596412883465278967, guid: 60ff99eea52cfee459a53047e599203b,
-            type: 3}
-          m_TargetAssemblyTypeName: CursorController, Assembly-CSharp
-          m_MethodName: ChangeCursor
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 2800000, guid: 1ff97974d42e8fb47ba6c2b21ac9c50c,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &128533720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 128533718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 8596412883465278967, guid: 60ff99eea52cfee459a53047e599203b,
-            type: 3}
-          m_TargetAssemblyTypeName: CursorController, Assembly-CSharp
-          m_MethodName: ChangeCursor
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 2800000, guid: 42f35ceed050f684994ab2c4d0a0278a,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 8596412883465278967, guid: 60ff99eea52cfee459a53047e599203b,
-            type: 3}
-          m_TargetAssemblyTypeName: CursorController, Assembly-CSharp
-          m_MethodName: ChangeCursor
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 2800000, guid: 1ff97974d42e8fb47ba6c2b21ac9c50c,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1001 &129860472
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16527,6 +16456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   check: 0
   canvas: {fileID: 1383702165}
+  transitionAudio: {fileID: 8300000, guid: ff53c16a354a00842844356fd5ea6dcf, type: 3}
 --- !u!114 &403252509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16539,11 +16469,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3c6db45db24f8641ba695843667239b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemKey: 31
+  itemKey: 30
   dialogs_PT:
-  - {fileID: 4900000, guid: e338d2e935e13fb4fb875b8c08ae772c, type: 3}
+  - {fileID: 0}
   dialogs_EN:
-  - {fileID: 4900000, guid: 6e33e5105c37411438be32df98f8dd70, type: 3}
+  - {fileID: 0}
   containsItem: 1
   item:
     name_PT: 
@@ -21065,6 +20995,135 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 545d2cc7f4b8c24458b6ff3e03efc9aa, type: 3}
+--- !u!1 &544520035
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 544520036}
+  - component: {fileID: 544520037}
+  m_Layer: 0
+  m_Name: WildLife
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &544520036
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 544520035}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1654506261}
+  m_RootOrder: 444
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &544520037
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 544520035}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -6522988612183667917, guid: b26f92a00344efc49875e566b5985251,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: eb4a20dc74ac4794c84ed52e97f4d050, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 2
+  MinDistance: 1
+  MaxDistance: 50
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &546513238 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7543975983807326333, guid: ddc7c2c6321e9cc4a9027b61c5187965,
@@ -25074,55 +25133,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1339171513}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &633841613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2052577444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 8596412883465278967, guid: 60ff99eea52cfee459a53047e599203b,
-            type: 3}
-          m_TargetAssemblyTypeName: CursorController, Assembly-CSharp
-          m_MethodName: ChangeCursor
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 2800000, guid: 42f35ceed050f684994ab2c4d0a0278a,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 8596412883465278967, guid: 60ff99eea52cfee459a53047e599203b,
-            type: 3}
-          m_TargetAssemblyTypeName: CursorController, Assembly-CSharp
-          m_MethodName: ChangeCursor
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 2800000, guid: 1ff97974d42e8fb47ba6c2b21ac9c50c,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1001 &633998718
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31523,10 +31533,15 @@ MonoBehaviour:
   containsItem: 1
   item:
     name_PT: Tabuas
-    name_EN: Tabuas
+    name_EN: Planks
     isStorable: 1
-    description_PT: 
-    description_EN: 
+    description_PT: "Tabuas de madeira s\xF3lida.\r\n\r\n\"Nossa! Essa madeira parece
+      bem resistente.\""
+    description_EN: 'Solid wood planks.
+
+
+
+      "Wow! This wood looks pretty sturdy."'
     sprite: {fileID: 21300000, guid: c5649cfdf63a98347a06e94a439b6f61, type: 3}
     amount: 2
   requiredCheck: 0
@@ -36154,10 +36169,15 @@ MonoBehaviour:
   containsItem: 1
   item:
     name_PT: Tabuas
-    name_EN: Tabuas
+    name_EN: Planks
     isStorable: 1
-    description_PT: 
-    description_EN: 
+    description_PT: "Tabuas de madeira s\xF3lida.\r\n\r\n\"Nossa! Essa madeira parece
+      bem resistente.\""
+    description_EN: 'Solid wood planks.
+
+
+
+      "Wow! This wood looks pretty sturdy."'
     sprite: {fileID: 21300000, guid: c5649cfdf63a98347a06e94a439b6f61, type: 3}
     amount: 2
   requiredCheck: 0
@@ -45839,6 +45859,127 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5a9331ce0433f240a6db86523c183c5, type: 3}
+--- !u!1 &1218134340 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1803258501, guid: 7b70332abb526ba4783cc10a3f87413e,
+    type: 3}
+  m_PrefabInstance: {fileID: 4715346082951936077}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1218134342
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218134340}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -6522988612183667917, guid: b26f92a00344efc49875e566b5985251,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 77fdd30b79df3b344baf1295b271cd3a, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 2
+  MinDistance: 2
+  MaxDistance: 15
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.32202995
+      value: 1.0054321
+      inSlope: -4.5017996
+      outSlope: -4.5017996
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.48507857
+      value: 0.47827148
+      inSlope: -2.2777522
+      outSlope: -2.2777522
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.14415532
+    - serializedVersion: 3
+      time: 0.7299076
+      value: 0.14407349
+      inSlope: -0.830086
+      outSlope: -0.830086
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.3516604
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -0.02938766
+      outSlope: -0.02938766
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.38137606
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.027777778
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1219348652
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49391,12 +49532,16 @@ MonoBehaviour:
   - {fileID: 4900000, guid: bf57ed194c5d68e4499a9ccdcb551c0e, type: 3}
   containsItem: 1
   item:
-    name_PT: Balde com agua
-    name_EN: Water bucket
+    name_PT: "Balde com \xE1gua"
+    name_EN: Water Bucket
     isStorable: 1
-    description_PT: 
-    description_EN: 
-    sprite: {fileID: 21300000, guid: 19c241042b3a30a4cbbd6449359375e8, type: 3}
+    description_PT: "Um balde cheio de \xE1gua.\n\n\"Era tudo que eu precisava.\""
+    description_EN: 'A bucket full of water.
+
+
+
+      "It was all I needed."'
+    sprite: {fileID: 21300000, guid: 634b1b6427d65fb43aa10c9d68683d9d, type: 3}
     amount: 1
   requiredCheck: 1
   requiredItemKey: 12000000
@@ -51184,6 +51329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   check: 0
   canvas: {fileID: 1383702165}
+  transitionAudio: {fileID: 8300000, guid: 07af18367461c89468b93be41d9dd839, type: 3}
 --- !u!224 &1384754755
 RectTransform:
   m_ObjectHideFlags: 0
@@ -51229,12 +51375,27 @@ MonoBehaviour:
   - {fileID: 4900000, guid: 6e28835fe2da04942a05855c8423815d, type: 3}
   containsItem: 1
   item:
-    name_PT: Carta 1
-    name_EN: Letter 1
+    name_PT: Carta Rasgada
+    name_EN: Torn up Letter
     isStorable: 1
-    description_PT: 
-    description_EN: 
-    sprite: {fileID: 0}
+    description_PT: "Ind\xEDcios\n\n\"28 de mar\xE7o de 2022\nEm minha busca entre
+      v\xE1rias tentativas e experimentos para despertar a verdadeira forma da M\xE3e
+      D\u2019\xE1gua, descobri uma maneira de interagir com sua natureza primitiva.
+      Ao utilizar os cristais encontrados nas antigas minas desta regi\xE3o, combinado
+      com as \xE1guas da fonte da cidade pude fazer com que sua energia vital que
+      antes enfraquecida agora come\xE7asse a estremecer as bases da realidade e
+      se manifestasse em sonhos. Agora \xE9 uma quest\xE3o de tempo para descobrir
+      uma maneira de despert\xE1-la e assim eu irei descobrir o verdadeiro conhecimento.\nT.
+      Wasser.\""
+    description_EN: "Evidences\n\n\"March 28, 2022\nIn my quest through various attempts
+      and experiments to awaken the true form of the Mother D'\xE1gua, I discovered
+      a way to interact with her primal nature. By using the crystals found in the
+      ancient mines of this region, combined with the waters of the city's fountain,
+      I was able to make its vital energy, which before weakened, now begin to shake
+      the foundations of reality and manifest itself in dreams. It is now a matter
+      of time to find a way to awaken it and then I will discover true knowledge.\nT.
+      Wasser.\""
+    sprite: {fileID: 21300000, guid: 75ae006082a27664b86beede2dba79ad, type: 3}
     amount: 1
   requiredCheck: 0
   requiredItemKey: 
@@ -52642,6 +52803,7 @@ GameObject:
   - component: {fileID: 1414568516}
   - component: {fileID: 1414568515}
   - component: {fileID: 1414568514}
+  - component: {fileID: 1414568517}
   m_Layer: 0
   m_Name: Water
   m_TagString: Untagged
@@ -52715,6 +52877,121 @@ Transform:
   m_Father: {fileID: 708836951}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1414568517
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414568512}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -6522988612183667917, guid: b26f92a00344efc49875e566b5985251,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 2bd43c6863e48364f8162fae689f3c96, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 2
+  MinDistance: 10
+  MaxDistance: 40
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.33333334
+      value: 1
+      inSlope: 0.022401238
+      outSlope: 0.022401238
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.235042
+    - serializedVersion: 3
+      time: 0.6703593
+      value: 0.99975586
+      inSlope: 0.0025656647
+      outSlope: 0.0025656647
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.23063883
+      outWeight: 0.23147924
+    - serializedVersion: 3
+      time: 0.67325014
+      value: 0.9967683
+      inSlope: -9.951289
+      outSlope: -9.951289
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.07195867
+    - serializedVersion: 3
+      time: 1
+      value: 0.023701996
+      inSlope: -0.11628224
+      outSlope: -0.11628224
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.36053395
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.027777778
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1414690592
 GameObject:
   m_ObjectHideFlags: 0
@@ -64067,6 +64344,7 @@ Transform:
   - {fileID: 1483011454}
   - {fileID: 224700752}
   - {fileID: 461114975}
+  - {fileID: 544520036}
   m_Father: {fileID: 708836951}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -67745,7 +68023,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 309540fd63bea334c8a2bc72606f8b96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemKey: 32
+  itemKey: 31
   dialogs_PT:
   - {fileID: 4900000, guid: 4ed25e7f98ca26c41a8090cd825aa506, type: 3}
   dialogs_EN:
@@ -67755,8 +68033,13 @@ MonoBehaviour:
     name_PT: Chave de casa
     name_EN: Key
     isStorable: 1
-    description_PT: 
-    description_EN: 
+    description_PT: "Outra chave de metal.\n\n\"Por que o Seu Chico esqueceu ela
+      dentro do galp\xE3o?\""
+    description_EN: 'Another metal key.
+
+
+      "Why did Mr Chico leave it inside
+      the shed?'
     sprite: {fileID: 21300000, guid: 72a949fdbd1ba5945aa083a439c894aa, type: 3}
     amount: 1
   requiredCheck: 0
@@ -70010,22 +70293,22 @@ PrefabInstance:
     - target: {fileID: 4747987571161368778, guid: c4c25d374ae57834db4c5bb68c88055a,
         type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 2.963397e-29
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4747987571161368778, guid: c4c25d374ae57834db4c5bb68c88055a,
         type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 6.42e-43
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4747987571161368778, guid: c4c25d374ae57834db4c5bb68c88055a,
         type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: NaN
+      value: 4.6546e-41
       objectReference: {fileID: 0}
     - target: {fileID: 4747987571161368778, guid: c4c25d374ae57834db4c5bb68c88055a,
         type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 6.42e-43
+      value: 1.02e-43
       objectReference: {fileID: 0}
     - target: {fileID: 7260339249433112778, guid: c4c25d374ae57834db4c5bb68c88055a,
         type: 3}
@@ -77971,287 +78254,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1450371906}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2052577444 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1428016034954843954, guid: f82576c5b38fa85478a0697627f90317,
-    type: 3}
-  m_PrefabInstance: {fileID: 1450371906}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2052577445 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3242409509426671982, guid: f82576c5b38fa85478a0697627f90317,
-    type: 3}
-  m_PrefabInstance: {fileID: 1450371906}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2052577446 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3206025826025533348, guid: f82576c5b38fa85478a0697627f90317,
-    type: 3}
-  m_PrefabInstance: {fileID: 1450371906}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2052577447 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8740659489671701328, guid: f82576c5b38fa85478a0697627f90317,
-    type: 3}
-  m_PrefabInstance: {fileID: 1450371906}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2052577448 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6361328434265844256, guid: f82576c5b38fa85478a0697627f90317,
-    type: 3}
-  m_PrefabInstance: {fileID: 1450371906}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2052577449 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1463605562889505654, guid: f82576c5b38fa85478a0697627f90317,
-    type: 3}
-  m_PrefabInstance: {fileID: 1450371906}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2052577450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2052577445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 8596412883465278967, guid: 60ff99eea52cfee459a53047e599203b,
-            type: 3}
-          m_TargetAssemblyTypeName: CursorController, Assembly-CSharp
-          m_MethodName: ChangeCursor
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 2800000, guid: 42f35ceed050f684994ab2c4d0a0278a,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 8596412883465278967, guid: 60ff99eea52cfee459a53047e599203b,
-            type: 3}
-          m_TargetAssemblyTypeName: CursorController, Assembly-CSharp
-          m_MethodName: ChangeCursor
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 2800000, guid: 1ff97974d42e8fb47ba6c2b21ac9c50c,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &2052577451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2052577446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 8596412883465278967, guid: 60ff99eea52cfee459a53047e599203b,
-            type: 3}
-          m_TargetAssemblyTypeName: CursorController, Assembly-CSharp
-          m_MethodName: ChangeCursor
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 2800000, guid: 42f35ceed050f684994ab2c4d0a0278a,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 8596412883465278967, guid: 60ff99eea52cfee459a53047e599203b,
-            type: 3}
-          m_TargetAssemblyTypeName: CursorController, Assembly-CSharp
-          m_MethodName: ChangeCursor
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 2800000, guid: 1ff97974d42e8fb47ba6c2b21ac9c50c,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &2052577452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2052577447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 8596412883465278967, guid: 60ff99eea52cfee459a53047e599203b,
-            type: 3}
-          m_TargetAssemblyTypeName: CursorController, Assembly-CSharp
-          m_MethodName: ChangeCursor
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 2800000, guid: 42f35ceed050f684994ab2c4d0a0278a,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 8596412883465278967, guid: 60ff99eea52cfee459a53047e599203b,
-            type: 3}
-          m_TargetAssemblyTypeName: CursorController, Assembly-CSharp
-          m_MethodName: ChangeCursor
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 2800000, guid: 1ff97974d42e8fb47ba6c2b21ac9c50c,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &2052577453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2052577448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 8596412883465278967, guid: 60ff99eea52cfee459a53047e599203b,
-            type: 3}
-          m_TargetAssemblyTypeName: CursorController, Assembly-CSharp
-          m_MethodName: ChangeCursor
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 2800000, guid: 42f35ceed050f684994ab2c4d0a0278a,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 8596412883465278967, guid: 60ff99eea52cfee459a53047e599203b,
-            type: 3}
-          m_TargetAssemblyTypeName: CursorController, Assembly-CSharp
-          m_MethodName: ChangeCursor
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 2800000, guid: 1ff97974d42e8fb47ba6c2b21ac9c50c,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &2052577454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2052577449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 8596412883465278967, guid: 60ff99eea52cfee459a53047e599203b,
-            type: 3}
-          m_TargetAssemblyTypeName: CursorController, Assembly-CSharp
-          m_MethodName: ChangeCursor
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 2800000, guid: 42f35ceed050f684994ab2c4d0a0278a,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 8596412883465278967, guid: 60ff99eea52cfee459a53047e599203b,
-            type: 3}
-          m_TargetAssemblyTypeName: CursorController, Assembly-CSharp
-          m_MethodName: ChangeCursor
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 2800000, guid: 1ff97974d42e8fb47ba6c2b21ac9c50c,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!4 &2052820795 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4786900107517580259, guid: 545d2cc7f4b8c24458b6ff3e03efc9aa,
@@ -81787,6 +81789,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 207509606}
     m_Modifications:
+    - target: {fileID: 202981616478159245, guid: c71357e4dca9f724ea7387b5edbcfd0e,
+        type: 3}
+      propertyPath: item.name_EN
+      value: Bucket
+      objectReference: {fileID: 0}
+    - target: {fileID: 202981616478159245, guid: c71357e4dca9f724ea7387b5edbcfd0e,
+        type: 3}
+      propertyPath: item.name_PT
+      value: Balde
+      objectReference: {fileID: 0}
+    - target: {fileID: 202981616478159245, guid: c71357e4dca9f724ea7387b5edbcfd0e,
+        type: 3}
+      propertyPath: item.description_EN
+      value: 'An empty bucket, Mr Chico uses it for fishing.
+
+
+        "Eww! This
+        bucket is grose."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 202981616478159245, guid: c71357e4dca9f724ea7387b5edbcfd0e,
+        type: 3}
+      propertyPath: item.description_PT
+      value: "Um balde vazio, o Seu Chico usa para pescar.\n\n\"Nossa! Esse balde
+        t\xE1 sujo.\""
+      objectReference: {fileID: 0}
     - target: {fileID: 532659465256838275, guid: c71357e4dca9f724ea7387b5edbcfd0e,
         type: 3}
       propertyPath: m_RootOrder
@@ -81952,6 +81979,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2168554121851787904, guid: 60f3472f199cb3846be3b91262d19e58,
         type: 3}
+      propertyPath: item.sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c936e48b886b1e04781dbd5de06eba87,
+        type: 3}
+    - target: {fileID: 2168554121851787904, guid: 60f3472f199cb3846be3b91262d19e58,
+        type: 3}
+      propertyPath: item.description_EN
+      value: 'An improvised torch.
+
+
+        "I managed to make a torch. Now I can
+        protect myself if I need to."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168554121851787904, guid: 60f3472f199cb3846be3b91262d19e58,
+        type: 3}
+      propertyPath: item.description_PT
+      value: 'Uma tocha improvisada.
+
+
+        "Consegui fazer uma tocha. Agora consigo
+        me proteger caso precise."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168554121851787904, guid: 60f3472f199cb3846be3b91262d19e58,
+        type: 3}
       propertyPath: runAfterCheck.m_PersistentCalls.m_Calls.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -82012,12 +82063,27 @@ MonoBehaviour:
   - {fileID: 4900000, guid: 331d778de783e2e40b839944e8958117, type: 3}
   containsItem: 1
   item:
-    name_PT: Carta 1
-    name_EN: Letter 1
+    name_PT: Carta Rasgada
+    name_EN: Torn up Letter
     isStorable: 1
-    description_PT: 
-    description_EN: 
-    sprite: {fileID: 0}
+    description_PT: "Ind\xEDcios\n\n\"28 de mar\xE7o de 2022\nEm minha busca entre
+      v\xE1rias tentativas e experimentos para despertar a verdadeira forma da M\xE3e
+      D\u2019\xE1gua, descobri uma maneira de interagir com sua natureza primitiva.
+      Ao utilizar os cristais encontrados nas antigas minas desta regi\xE3o, combinado
+      com as \xE1guas da fonte da cidade pude fazer com que sua energia vital que
+      antes enfraquecida agora come\xE7asse a estremecer as bases da realidade e
+      se manifestasse em sonhos. Agora \xE9 uma quest\xE3o de tempo para descobrir
+      uma maneira de despert\xE1-la e assim eu irei descobrir o verdadeiro conhecimento.\nT.
+      Wasser.\""
+    description_EN: "Evidences\n\n\"March 28, 2022\nIn my quest through various attempts
+      and experiments to awaken the true form of the Mother D'\xE1gua, I discovered
+      a way to interact with her primal nature. By using the crystals found in the
+      ancient mines of this region, combined with the waters of the city's fountain,
+      I was able to make its vital energy, which before weakened, now begin to shake
+      the foundations of reality and manifest itself in dreams. It is now a matter
+      of time to find a way to awaken it and then I will discover true knowledge.\nT.
+      Wasser.\""
+    sprite: {fileID: 21300000, guid: 75ae006082a27664b86beede2dba79ad, type: 3}
     amount: 1
   requiredCheck: 0
   requiredItemKey: 
@@ -82697,6 +82763,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8803118232690076612, guid: 96e96af21bf8b474092a56a5edfbfd48,
         type: 3}
+      propertyPath: item.name_PT
+      value: "Chave do Galp\xE3o"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8803118232690076612, guid: 96e96af21bf8b474092a56a5edfbfd48,
+        type: 3}
+      propertyPath: item.description_EN
+      value: 'An old metal key.
+
+
+        "It must belongs to Mr. Chico."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8803118232690076612, guid: 96e96af21bf8b474092a56a5edfbfd48,
+        type: 3}
+      propertyPath: item.description_PT
+      value: 'Uma velha chave de metal.
+
+
+        "Deve ser do Seu Chico."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8803118232690076612, guid: 96e96af21bf8b474092a56a5edfbfd48,
+        type: 3}
       propertyPath: runAfterClose.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -82766,10 +82853,15 @@ MonoBehaviour:
   containsItem: 1
   item:
     name_PT: Tabuas
-    name_EN: Tabuas
+    name_EN: Planks
     isStorable: 1
-    description_PT: 
-    description_EN: 
+    description_PT: "Tabuas de madeira s\xF3lida.\r\n\r\n\"Nossa! Essa madeira parece
+      bem resistente.\""
+    description_EN: 'Solid wood planks.
+
+
+
+      "Wow! This wood looks pretty sturdy."'
     sprite: {fileID: 21300000, guid: c5649cfdf63a98347a06e94a439b6f61, type: 3}
     amount: 3
   requiredCheck: 0
@@ -83121,6 +83213,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2708583831354721433, guid: e134aad99baf70b42999959b5dc0d120,
         type: 3}
+      propertyPath: item.sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9ead9272f2a039e419222e21d1378020,
+        type: 3}
+    - target: {fileID: 2708583831354721433, guid: e134aad99baf70b42999959b5dc0d120,
+        type: 3}
+      propertyPath: item.description_EN
+      value: 'An old rag
+
+
+
+        "This old rag looks like it''s been here a long
+        time."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708583831354721433, guid: e134aad99baf70b42999959b5dc0d120,
+        type: 3}
+      propertyPath: item.description_PT
+      value: "Um pano velho.\n\n\"Esse pano velho parece estar aqui h\xE1 muito tempo.\""
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708583831354721433, guid: e134aad99baf70b42999959b5dc0d120,
+        type: 3}
       propertyPath: dialogs_EN.Array.data[0]
       value: 
       objectReference: {fileID: 4900000, guid: eaf306cb46c192b4489d2e40f1bb6b26, type: 3}
@@ -83417,6 +83530,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1945553581722281120, guid: 58809b3b12e7b914e93eb0cbf5c7cbf3,
+        type: 3}
+      propertyPath: item.sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 520276bf61fc73b4bb9ca14b8aa568be,
+        type: 3}
+    - target: {fileID: 1945553581722281120, guid: 58809b3b12e7b914e93eb0cbf5c7cbf3,
+        type: 3}
+      propertyPath: item.description_EN
+      value: 'Lilia''s glasses, it looks odd for some reason.
+
+
+
+        "Finding
+        those glasses only increased my worries."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1945553581722281120, guid: 58809b3b12e7b914e93eb0cbf5c7cbf3,
+        type: 3}
+      propertyPath: item.description_PT
+      value: "\xD3culos da Lilia, ele parece diferente por algum motivo.\n\n\"Ver
+        esses \xF3culos s\xF3 aumenta minha preocupa\xE7\xE3o.\""
+      objectReference: {fileID: 0}
     - target: {fileID: 1979944512838336850, guid: 58809b3b12e7b914e93eb0cbf5c7cbf3,
         type: 3}
       propertyPath: m_Name
@@ -83661,6 +83796,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 207509606}
     m_Modifications:
+    - target: {fileID: 2753694880983203153, guid: 657451aa9b8484a488349e3458e42c83,
+        type: 3}
+      propertyPath: item.description_EN
+      value: 'A stick.
+
+
+
+        "This dry stick reminds me of bonfire times."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2753694880983203153, guid: 657451aa9b8484a488349e3458e42c83,
+        type: 3}
+      propertyPath: item.description_PT
+      value: "Um galho seco.\n\n\"Esse graveto seco me lembra \xE9poca de fogueira.\""
+      objectReference: {fileID: 0}
     - target: {fileID: 7271293184547874845, guid: 657451aa9b8484a488349e3458e42c83,
         type: 3}
       propertyPath: m_RootOrder
@@ -83765,6 +83914,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Music Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 8081995213713020798, guid: 5627871abeb760c46b8d0e410a919945,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d1bfe853ab88f5447b1a41485641a88b, type: 3}
     - target: {fileID: 8081995213713020799, guid: 5627871abeb760c46b8d0e410a919945,
         type: 3}
       propertyPath: m_RootOrder
@@ -83820,7 +83974,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2623984524820095759, guid: 5627871abeb760c46b8d0e410a919945, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5627871abeb760c46b8d0e410a919945, type: 3}
 --- !u!4 &8155287656131129823 stripped
 Transform:

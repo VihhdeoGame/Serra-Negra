@@ -25,16 +25,16 @@
         {
             "spriteId":13,
             "musicIds":[],
-            "sfxIds":[],
+            "sfxIds":[4],
             "name":"???",
-            "sentenses":"Graaahhh! Graaahhh!"
+            "sentenses":"*Graaahhh! Graaahhh!"
         },
         {
             "spriteId":1,
             "musicIds":[],
-            "sfxIds":[],
+            "sfxIds":[20],
             "name":"ZIA",
-            "sentenses":"Aaahhh!"
+            "sentenses":"*Aaahhh!"
         }
     ]
 }

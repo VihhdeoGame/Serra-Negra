@@ -27,7 +27,8 @@ public class DisplayItem : MonoBehaviour
     }
     public void ShowItem()
     {
-        amoutText.text = item.amount.ToString();
+        if(item.amount > 1)amoutText.text = item.amount.ToString();
+        else amoutText.text = "";
         if(GameManager.GameSettings.GameLanguage == GameLanguageType.PT_BR)
         {
             nameText.text = item.name_PT;

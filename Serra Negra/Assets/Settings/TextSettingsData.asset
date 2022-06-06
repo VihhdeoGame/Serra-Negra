@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f6856e13ebb8c44a93c778a0085fbfe, type: 3}
   m_Name: TextSettingsData
   m_EditorClassIdentifier: Assembly-CSharp::TextSettings
-  textSpeed: 2
+  textSpeed: 1
   speed:
   - 0.09
   - 0.05
-  - 0.02
+  - 0.015
   auto: 0

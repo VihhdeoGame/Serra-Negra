@@ -6,9 +6,9 @@ using TMPro;
 public class UpdateStaticText : MonoBehaviour
 {
     TMP_Text textField;
-    [SerializeField]
+    [SerializeField,TextArea(5,10)]
     string textPt;
-    [SerializeField]
+    [SerializeField,TextArea(5,10)]
     string textEn;
     GameLanguageType currentLanguage;
     private void Start()

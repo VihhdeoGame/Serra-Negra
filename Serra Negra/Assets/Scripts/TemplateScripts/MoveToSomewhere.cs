@@ -10,8 +10,12 @@ public class MoveToSomewhere : MonoBehaviour
     MainGameCanvas canvas;
     GenericCanvas parent;
     Trigger2DDialog dialog;
+    AudioSource sfxPlayer;
+    [SerializeField]
+    AudioClip transitionAudio;
     private void OnEnable()
     {
+        sfxPlayer = GameObject.FindGameObjectWithTag("SFXPlayer").GetComponent<AudioSource>();
         parent = gameObject.GetComponentInParent<GenericCanvas>();
     }
     private void OnDisable()
@@ -46,6 +50,7 @@ public class MoveToSomewhere : MonoBehaviour
     }
     IEnumerator StartMoving(int _canvas)
     {
+        if(transitionAudio != null)sfxPlayer.PlayOneShot(transitionAudio);
         moving = true;
         FadeManager.Fade.FadeIn();
         yield return new WaitForSeconds(FadeManager.Fade.WaitTime);
@@ -57,8 +62,20 @@ public class MoveToSomewhere : MonoBehaviour
     }
     IEnumerator UpdateScene(int _scene)
     {
+        if(transitionAudio != null)sfxPlayer.PlayOneShot(transitionAudio);
         FadeManager.Fade.FadeIn();
         yield return new WaitForSeconds(FadeManager.Fade.WaitTime);
         SceneManager.LoadScene(_scene);
+    }
+
+    public void GameOver(int _scene)
+    {
+        StopAllCoroutines();
+        StartCoroutine(Over());
+        IEnumerator Over()
+        {
+            yield return new WaitForSeconds(5);
+            StartCoroutine(UpdateScene(_scene));
+        }
     }
 }

@@ -9,7 +9,7 @@ using UnityEditor;
 
 public class Trigger2DDialog : TriggerDialog
 {
-    
+/*
 #if UNITY_EDITOR
     [CustomEditor(typeof(Trigger2DDialog))]
     public class Trigger2DDialogEditor : Editor
@@ -26,8 +26,8 @@ public class Trigger2DDialog : TriggerDialog
                 triggerDialog.item.name_PT = EditorGUILayout.TextField("Name PT", triggerDialog.item.name_PT);
                 triggerDialog.item.name_EN = EditorGUILayout.TextField("Name EN", triggerDialog.item.name_EN);
                 triggerDialog.item.amount = EditorGUILayout.IntField("Amount", triggerDialog.item.amount);
-                triggerDialog.item.description_PT = EditorGUILayout.TextField("Description PT", triggerDialog.item.description_PT);
-                triggerDialog.item.description_EN = EditorGUILayout.TextField("Description EN", triggerDialog.item.description_EN);
+                triggerDialog.item.description_PT = EditorGUILayout.TextArea("Description PT");
+                triggerDialog.item.description_EN = EditorGUILayout.TextArea("Description EN");
                 EditorGUILayout.BeginHorizontal();
                 EditorGUILayout.PrefixLabel("Sprite");
                 triggerDialog.item.sprite = (Sprite)EditorGUILayout.ObjectField(triggerDialog.item.sprite, typeof(Sprite), true);
@@ -86,6 +86,7 @@ public class Trigger2DDialog : TriggerDialog
         }
     }
 #endif
+*/
     private void OnEnable()
     {
         musicPlayer = FindObjectOfType<MusicManager>().GetComponent<AudioSource>();
@@ -100,5 +101,19 @@ public class Trigger2DDialog : TriggerDialog
     protected override void FinalInteraction()
     {
         base.FinalInteraction();            
+    }
+    public void Check()
+    {
+        if(requiredCheck)
+        {
+            if(CheckFlag())
+            {
+                CheckDialog(1);
+            }
+            else
+            {
+                CheckDialog(0);
+            }
+        }
     }
 }
