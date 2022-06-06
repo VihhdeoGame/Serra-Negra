@@ -1,0 +1,82 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":16,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"He ran-away?"
+        },
+        {
+            "spriteId":1,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Yes. Lilia wake up! Come on! Wake up Lilia!"
+        },
+        {
+            "spriteId":13,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"I think I'm starting to remember..."
+        },
+        {
+            "spriteId":4,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Remember what? This is no time for this, we need to wake up my sister and get out of here before he comes back."
+        },
+		{
+            "spriteId":13,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"It's still something vague like a dream... A distant memory..."
+        },
+		{
+            "spriteId":4,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Damn, I can't see anything in this dark. Alma, look for some source of light, a match… You must know what a match is… Come on Alma, help me, we have to get out of here."
+        },
+		{
+            "spriteId":1,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Wake up Lilia!"
+        },
+		{
+            "spriteId":13,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"Like a distant past, almost as if it were another life..."
+        },
+		{
+            "spriteId":2,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"That noise. That guy. You with this weird chat. I just wanted to get out of here. Lilia wake up! Somebody help me!"
+        },
+		{
+            "spriteId":12,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"I help you sister! I know how to get out of here!"
+        },
+		{
+            "spriteId":1,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Sister? Alma?"
+        }
+    ]
+}

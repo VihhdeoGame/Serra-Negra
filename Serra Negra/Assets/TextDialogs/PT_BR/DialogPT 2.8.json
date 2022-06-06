@@ -1,0 +1,19 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":14,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"Por quê você encheu esse balde com água?"
+        },
+        {
+            "spriteId":5,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Já já você vai descobrir!"
+        }
+    ]
+}

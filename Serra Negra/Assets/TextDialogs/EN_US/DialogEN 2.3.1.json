@@ -1,0 +1,12 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Must be Mr Chico's key, I'll grab it."
+        }
+    ]
+}

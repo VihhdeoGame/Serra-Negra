@@ -1,0 +1,12 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":1,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Lilia? Are you awake?> She's not here, does she have insomnia? Maybe she needs some tea too."
+        }
+    ]
+}

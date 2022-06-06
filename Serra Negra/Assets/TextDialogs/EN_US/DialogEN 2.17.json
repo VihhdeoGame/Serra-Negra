@@ -1,0 +1,12 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Another letter from “T. Wasser”, let's see if I can find something."
+        }
+    ]
+}

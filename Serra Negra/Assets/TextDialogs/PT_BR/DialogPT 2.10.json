@@ -1,0 +1,19 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":5,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Manual de sobrevivência da Zia... Prontinho! Só juntar o pano e o graveto."
+        },
+        {
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Agora temos fogo para nos proteger."
+        }
+    ]
+}

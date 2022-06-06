@@ -1,0 +1,26 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":1,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Uma colmeia! É melhor sairmos daqui e não mexermos com elas!"
+        },
+        {
+            "spriteId":12,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"Olha aquilo Zia! Parece ter algo brilhando ali no chão."
+        },
+        {
+            "spriteId":3,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Parece ser uma chave."
+        }
+    ]
+}

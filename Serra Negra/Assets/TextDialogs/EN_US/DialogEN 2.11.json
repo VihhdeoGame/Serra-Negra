@@ -1,0 +1,12 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":1,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"I was hoping Lilia had come here for some reason..."
+        }
+    ]
+}

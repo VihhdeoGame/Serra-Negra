@@ -1,0 +1,40 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"This stick is perfectly shaped for a trail stick."
+        },
+        {
+            "spriteId":14,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"Trail stick?"
+        },
+        {
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Yeah, it's an item used to help you walk through difficult places and also to poke through bushes and know if there's something that might surprise you."
+        },
+        {
+            "spriteId":4,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Unlike my sister, I exercise a lot, so… Well, I have practice with trails so I know what I'm talking about."
+        },
+        {
+            "spriteId":13,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"Alright then."
+        }
+    ]
+}

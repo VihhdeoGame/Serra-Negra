@@ -1,0 +1,26 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":2,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Alma, é uma voz masculina. Será que é o Seu Chico?"
+        },
+        {
+            "spriteId":13,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"Ou o Lucas?"
+        },
+        {
+            "spriteId":4,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Aquele desgraçado, se for eu vou matar ele!"
+        }
+    ]
+}

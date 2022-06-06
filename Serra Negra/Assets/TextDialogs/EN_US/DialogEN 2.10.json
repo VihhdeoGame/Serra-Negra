@@ -1,0 +1,19 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":5,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Zia's Survival Manual... Done! Just add the cloth and the stick together."
+        },
+        {
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Now we have fire to protect ourselves."
+        }
+    ]
+}

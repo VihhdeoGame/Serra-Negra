@@ -1,0 +1,12 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":2,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"A porta do quarto da Lilia parece aberta. Será que ela ainda está acordada?"
+        }
+    ]
+}

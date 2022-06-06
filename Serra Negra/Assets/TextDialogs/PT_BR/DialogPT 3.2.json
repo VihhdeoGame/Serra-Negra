@@ -1,0 +1,26 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":1,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"Zia, você está ouvindo esse sussurro como um cântico?"
+        },
+        {
+            "spriteId":13,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Agora que você disse realmente eu achei que era só o uivo do vento nas árvores, mas parece alguém cantando mesmo."
+        },
+        {
+            "spriteId":2,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Vamos nos aproximar devagar."
+        }
+    ]
+}

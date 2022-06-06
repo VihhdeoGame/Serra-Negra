@@ -1,0 +1,19 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":13,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"What is that?"
+        },
+        {
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"It looks like a torn up letter.>I think I can fix it and see what was written."
+        }
+    ]
+}

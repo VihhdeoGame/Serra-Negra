@@ -1,0 +1,12 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":4,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Olha só! Parece que seu Chico esqueceu o balde de pesca aqui."
+        }
+    ]
+}

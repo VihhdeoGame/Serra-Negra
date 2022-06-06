@@ -1,0 +1,33 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":1,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Esse é o galpão que o caseiro, Seu Chico, guarda as ferramentas de trabalho."
+        },
+        {
+            "spriteId":13,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"Você acha que sua irmã pode estar aí dentro?"
+        },
+        {
+            "spriteId":1,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Humm! Não vejo motivos para ela entrar aí sem mais nem menos, ainda mais nessa hora da noite."
+        },
+        {
+            "spriteId":13,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"A menos que ela estivesse procurando uma lanterna ou algo assim."
+        }
+    ]
+}

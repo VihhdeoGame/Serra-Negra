@@ -1,0 +1,33 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":4,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Que saco! Agora não consigo ver nada."
+        },
+        {
+            "spriteId":5,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Lilia apareça! O que você está fazendo aqui fora, isso não é hora para brincadeiras."
+        },
+        {
+            "spriteId":2,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Já estou ficando com frio e irritada.> Uuhhh! LILIAAAAAA! LILIAAAA!"
+        },
+        {
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Nossa tem tanta neblina que é impossível enxergar algo! Com certeza ela não passou por aqui!>Melhor eu voltar e procurar ela em outro lugar."
+        }
+    ]
+}

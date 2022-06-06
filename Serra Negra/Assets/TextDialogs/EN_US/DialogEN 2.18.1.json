@@ -1,0 +1,12 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":3,
+            "musicIds":[],
+            "sfxIds":[1],
+            "name":"ZIA",
+            "sentenses":"Now that we have all the wood, we are able to create a bridge to cross!*"
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":4,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Oxi ela não está aqui, melhor procurar por ela para saber se ela esta bem."
+        }
+    ]
+}

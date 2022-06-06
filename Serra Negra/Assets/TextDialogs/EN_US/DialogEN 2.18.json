@@ -1,0 +1,33 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":2,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"This is the back exit of the farm, and here there was a cattle grid for the animals not to escape but it disappeared."
+        },
+        {
+            "spriteId":13,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"By the way, I haven't seen any animals around here."
+        },
+        {
+            "spriteId":1,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"As our family only comes here for a few days or parties, we do not raise animals."
+        },
+        {
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Anyway, we need to find a way to get through this hole."
+        }
+    ]
+}

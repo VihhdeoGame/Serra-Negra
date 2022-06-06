@@ -1,0 +1,19 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":16,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"Então isso que é uma chave?"
+        },
+        {
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Sim, vamos testar para ver se é do galpão ou do portão dos fundos."
+        }
+    ]
+}

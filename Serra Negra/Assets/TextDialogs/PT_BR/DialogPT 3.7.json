@@ -1,0 +1,110 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":7,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"LILIA",
+            "sentenses":"Aí minha cabeça! O que aconteceu aqui?"
+        },
+        {
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Irmã! Você acordou, vamos temos que sair daqui depois eu te explico."
+        },
+        {
+            "spriteId":8,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"LILIA",
+            "sentenses":"Uhhh! Ai, estou toda dolorida."
+        },
+        {
+            "spriteId":4,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Você foi sequestrada ou sei lá o que aquele maluco do doutor Flávio estava tentando fazer com você."
+        },
+		{
+            "spriteId":11,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"LILIA",
+            "sentenses":"Você é maluca! O que o doutor Flávio iria querer comigo? E o que ele estaria fazendo aqui?"
+        },
+		{
+            "spriteId":4,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Esse na verdade nem era o nome dele, pelo que parece ele era um maníaco. Estava dizendo algo sobre uma deusa antiga das águas e algo sobre sacrifício."
+        },
+		{
+            "spriteId":8,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"LILIA",
+            "sentenses":"Sacrifício? Meus Deus! Eu ia ser sacrificada?!"
+        },
+		{
+            "spriteId":3,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Acho que sim, mas te salvamos! Bem, vamos sair daqui antes que ele volte."
+        },
+		{
+            "spriteId":8,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"LILIA",
+            "sentenses":"Salvamos?"
+        },
+		{
+            "spriteId":2,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Tinha uma ave me ajudando, mas houve um clarão e ela sumiu."
+        },
+		{
+            "spriteId":7,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"LILIA",
+            "sentenses":"Olha só o seu tamanho! Eu sou apenas uma garota fraca."
+        },
+		{
+            "spriteId":8,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"LILIA",
+            "sentenses":"Você lutou por mim, você me salvou mais uma vez. Como naquela vez que aquela mulher queria me bater."
+        },
+		{
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Bem que você poderia me ouvir mais e aprender a se defender não é?"
+        },
+		{
+            "spriteId":9,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"LILIA",
+            "sentenses":"Você tem razão, se eu soubesse me defender nada disso teria acontecido."
+        },
+		{
+            "spriteId":6,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"LILIA",
+            "sentenses":"Vamos Zia, vamos embora daqui. Algo me diz que devemos ir em direção a fonte da cidade."
+        }
+    ]
+}

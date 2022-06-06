@@ -1,0 +1,26 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":2,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Eu pensei que ela não estava aqui, mas tinha esperanças."
+        },
+        {
+            "spriteId":12,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"Bom mas aqui pelo menos tem mais daquelas coisas brilhantes."
+        },
+        {
+            "spriteId":3,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Sim, acho que é a chave do portão dos fundos. Isso é bom porque eu esqueci as chaves na casa então eu teria que pular o portão."
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Não lembrava da porta estar trancada antes, ainda bem que peguei a chave do Seu Chico."
+        }
+    ]
+}

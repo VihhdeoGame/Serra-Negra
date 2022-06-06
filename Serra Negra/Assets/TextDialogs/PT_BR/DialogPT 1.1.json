@@ -1,0 +1,33 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":3,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Finalmente chegamos Lilia! Nem acredito que temos as férias inteira com a casa só para nós!"
+        },
+        {
+            "spriteId":8,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"LILIA",
+            "sentenses":"Sim, aliás o que você tinha ido fazer no médico hoje de manhã quando chegamos? Você está doente Zia?"
+        },
+        {
+            "spriteId":4,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Não! Só fui pegar alguns remédios para dormir, ando tendo muitos problemas de insônia ultimamente."
+        },
+        {
+            "spriteId":7,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"LILIA",
+            "sentenses":"Aaahhh."
+        }
+    ]
+}

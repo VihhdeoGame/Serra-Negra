@@ -1,0 +1,82 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":16,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"Ele fugiu?"
+        },
+        {
+            "spriteId":1,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Sim. Lilia acorda! Vamos! Acorda Lilia!"
+        },
+        {
+            "spriteId":13,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"Acho que estou começando a me lembrar…"
+        },
+        {
+            "spriteId":4,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Se lembrar do que? Não é hora para isso, precisamos acordar minha irmã e sairmos daqui, antes que ele volte."
+        },
+		{
+            "spriteId":13,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"Ainda é algo vago como se fosse um sonho… Uma lembrança distante…"
+        },
+		{
+            "spriteId":4,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Droga, não consigo enxergar nada nesse escuro. Alma, procure alguma fonte de luz, um fósforo… Você deve saber o que é um fósforo… Vamos Alma me ajude, temos que sair daqui."
+        },
+		{
+            "spriteId":1,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Acorde logo Lilia!"
+        },
+		{
+            "spriteId":13,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"Como um passado longínquo, quase como se fosse uma outra vida…"
+        },
+		{
+            "spriteId":2,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Esse barulho. Esse cara. Você com esse papo estranho. Eu só queria sair daqui. Lilia acorde! Alguém me ajude!"
+        },
+		{
+            "spriteId":12,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"Eu te ajudo irmã! Eu sei como sair daqui!"
+        },
+		{
+            "spriteId":1,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Irmã? Alma?"
+        }
+    ]
+}

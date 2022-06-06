@@ -1,0 +1,54 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Mr. Chico used these woods to build the cattle grid and the tool shed, I think this one ended up left over and he left it here."
+        },
+        {
+            "spriteId":14,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"Who is Mr. Chico?"
+        },
+        {
+            "spriteId":3,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"He is the caretaker of the farm, he who takes care of the farm especially when there is no one from my family around."
+        },
+        {
+            "spriteId":13,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"So he knows your sister?"
+        },
+        {
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Yes, since she was little."
+        },
+        {
+            "spriteId":13,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"So let's ask him where she is!"
+        },
+        {
+            "spriteId":3,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"I hope I find him around here, I'd be more relieved."
+        }
+    ]
+}

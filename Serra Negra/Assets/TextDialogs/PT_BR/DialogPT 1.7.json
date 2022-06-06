@@ -1,0 +1,152 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":14,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"???",
+            "sentenses":"Aí minha cabeça! O que aconteceu aqui?"
+        },
+        {
+            "spriteId":4,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Espera, você sabe falar?"
+        },
+        {
+            "spriteId":16,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"???",
+            "sentenses":"Claro que sei, o que eu seria se não soubesse?"
+        },
+        {
+            "spriteId":5,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Mas os pássaros não sabem falar, o máximo são papagaios e corvos que falam algumas palavras ou frases, agora conversar mesmo isso não é possível."
+        },
+        {
+            "spriteId":15,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"???",
+            "sentenses":"Uhhh! Ai, estou toda dolorida."
+        },
+        {
+            "spriteId":1,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Ah isso? Bem você me atacou primeiro então só revidei."
+        },
+        {
+            "spriteId":16,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"???",
+            "sentenses":"Você é maluca! > Olha só o seu tamanho! Eu sou apenas…"
+        },
+        {
+            "spriteId":13,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"???",
+            "sentenses":"Eu sou…"
+        },
+        {
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Um pássaro!"
+        },
+        {
+            "spriteId":13,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"???",
+            "sentenses":"Eu não consigo me lembrar quem eu sou."
+        },
+        {
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Estranho, mas não se preocupe você logo lembrará. > Escuta! Você viu uma garota parecida comigo, andando por aí? "
+        },
+        {
+            "spriteId":13,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"???",
+            "sentenses":"Eu não sei... Eu estava dormindo e então ouvi um barulhos, e daí... Eu te ataquei por algum motivo mas não consigo me lembrar."
+        },
+        {
+            "spriteId":1,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Nossa, estou tão preocupada que acabei não te perguntando qual seu nome?"
+        },
+        {
+            "spriteId":13,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"???",
+            "sentenses":"Nome? Eu não me lembro de ter um nome..."
+        },
+        {
+            "spriteId":2,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Olha você parece bem confusa, e eu não estou gostando muito dessa neblina toda por aqui, estou com um mal pressentimento. > Eu vou continuar procurando minha irmã, se você quiser me acompanhar para não ficar sozinha."
+        },
+        {
+            "spriteId":13,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"???",
+            "sentenses":"Acho melhor andar com você por enquanto, também estou sentindo uma sensação ruim no ar."
+        },
+        {
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Vamos por aqui Alma!"
+        },
+        {
+            "spriteId":14,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"Alma?"
+        },
+        {
+            "spriteId":2,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"É, acho que vou te chamar assim por enquanto, só até você se lembrar de quem é."
+        },
+        {
+            "spriteId":12,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"Tudo bem, eu acho."
+        },
+        {
+            "spriteId":3,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Eu sou Zia, a propósito."
+        }
+    ]
+}

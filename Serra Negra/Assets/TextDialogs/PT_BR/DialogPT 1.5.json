@@ -1,0 +1,19 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":4,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Já procurei pela casa toda e não encontrei ela."
+        },
+		{
+			"spriteId":1,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Ué, a porta do quintal está aberta. Para onde será que ela foi a esta hora?"
+		}
+    ]
+}

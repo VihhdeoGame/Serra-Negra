@@ -1,0 +1,68 @@
+{
+    "dialogs": 
+    [
+        {
+            "spriteId":2,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Espera! Esse óculos é da Lilia!"
+        },
+        {
+            "spriteId":14,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"Por quê ela deixaria seu óculos aqui?"
+        },
+        {
+            "spriteId":5,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Ninguém deixa um óculos assim."
+        },
+        {
+            "spriteId":2,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Algo com certeza aconteceu, e eu estou com um mal pressentimento."
+        },
+        {
+            "spriteId":13,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"E o que de ruim poderia ter acontecido? Esse lugar é seguro, não é?"
+        },
+        {
+            "spriteId":4,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Não faço ideia. A única pessoa que estava causando problemas para ela ultimamente era o Luke, seu ex namorado ciumento que vivia tentando controlar a vida e as companhias da minha irmã."
+        },
+        {
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Mas desde que eu disse poucas e boas para ele e o ameacei uns dias atrás ele não apareceu mais."
+        },
+        {
+            "spriteId":13,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ALMA",
+            "sentenses":"Você acha que ele esteve aqui?"
+        },
+        {
+            "spriteId":0,
+            "musicIds":[],
+            "sfxIds":[],
+            "name":"ZIA",
+            "sentenses":"Espero que não pelo bem dele."
+        }
+    ]
+}
